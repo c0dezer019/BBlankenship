@@ -1,6 +1,7 @@
 {
   "name": "bblankenship",
   "version": "0.1.0",
+  "license": "",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,8 +9,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
     "next": "10.0.3",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "react-transition-group": "^4.4.1"
   }
 }
