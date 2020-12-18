@@ -7,7 +7,7 @@ const Home = () => {
       <Head>
         <title>Brian Blankenship</title>
         <meta name="description" content="" />
-      </Head>
+      </Head> 
     </Container>
   )
 };
