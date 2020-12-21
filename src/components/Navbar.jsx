@@ -7,22 +7,26 @@ import StyledBreadcrumb from '../../styles/MaterialUI/StyledBreadcrumb';
 const Navbar = () => (
   <AppBar position="static">
     <Breadcrumbs aria-label="breadcrumb">
-      <StyledBreadcrumb
-        components={Link}
-        href="/"
-        icon={<HomeIcon fontSize="small" />}
-        label={<a>Home</a>}
-      />
-      <StyledBreadcrumb
-        components={Link}
-        href="/portfolio"
-        label={<a>Portfolio</a>}
-      />
-      <Link href="/About">
-        About
+      <Link href="/" passHref>
+        <StyledBreadcrumb
+          icon={<HomeIcon fontSize="small" />}
+          label={<a>Home</a>}
+        />
       </Link>
-      <Link href="/Contact">
-        <a>Contact</a>
+      <Link href="/portfolio" passHref>
+        <StyledBreadcrumb
+          label={<a>Portfolio</a>}
+        />
+      </Link>
+      <Link href="/About" passHref>
+        <StyledBreadcrumb
+          label={<a>About</a>}
+        />
+      </Link>
+      <Link href="/Contact" passHref>
+        <StyledBreadcrumb
+          label={<a>Contact</a>}
+        />
       </Link>
     </Breadcrumbs>
   </AppBar>

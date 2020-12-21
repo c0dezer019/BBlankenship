@@ -11,8 +11,8 @@ const Layout = ({ children }) => (
       <meta name="description" content="A portfolio about Brian Blankenship." />
       <meta name="og:title" content={siteTitle} />
     </Head>
+    <Navbar />
     <main>
-      <Navbar />
       {children}
     </main>
   </Container>
