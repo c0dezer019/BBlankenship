@@ -1,35 +1,40 @@
 import React from 'react';
 import Link from 'next/link';
-import HomeIcon from '@material-ui/icons/Home';
-import { AppBar, Breadcrumbs } from '@material-ui/core';
+import {
+  ContactSupportOutlined, FolderSpecialOutlined, HomeOutlined, InfoOutlined,
+} from '@material-ui/icons';
+import { Breadcrumbs, Container } from '@material-ui/core';
 import StyledBreadcrumb from '../../styles/MaterialUI/StyledBreadcrumb';
 
 const NavBar = () => (
-  <AppBar position="static">
+  <Container id="appNavigation" position="static">
     <Breadcrumbs aria-label="breadcrumb">
       <Link href="/" passHref>
         <StyledBreadcrumb
-          icon={<HomeIcon fontSize="small" />}
+          icon={<HomeOutlined fontSize="medium" />}
           label={<a>Home</a>}
-        />
-      </Link>
-      <Link href="/portfolio" passHref>
-        <StyledBreadcrumb
-          label={<a>Portfolio</a>}
         />
       </Link>
       <Link href="/About" passHref>
         <StyledBreadcrumb
+          icon={<InfoOutlined fontSize="medium" />}
           label={<a>About</a>}
+        />
+      </Link>
+      <Link href="/portfolio" passHref>
+        <StyledBreadcrumb
+          icon={<FolderSpecialOutlined fontSize="medium" />}
+          label={<a>Portfolio</a>}
         />
       </Link>
       <Link href="/Contact" passHref>
         <StyledBreadcrumb
+          icon={<ContactSupportOutlined fontSize="medium" />}
           label={<a>Contact</a>}
         />
       </Link>
     </Breadcrumbs>
-  </AppBar>
+  </Container>
 );
 
 export default NavBar;
