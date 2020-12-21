@@ -4,7 +4,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import { AppBar, Breadcrumbs } from '@material-ui/core';
 import StyledBreadcrumb from '../../styles/MaterialUI/StyledBreadcrumb';
 
-const Navbar = () => (
+const NavBar = () => (
   <AppBar position="static">
     <Breadcrumbs aria-label="breadcrumb">
       <Link href="/" passHref>
@@ -32,4 +32,4 @@ const Navbar = () => (
   </AppBar>
 );
 
-export default Navbar;
+export default NavBar;

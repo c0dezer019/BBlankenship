@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from '@material-ui/core';
 import Head from 'next/head';
-import Navbar from './Navbar';
+import NavBar from './NavBar';
 
 export const siteTitle = 'Brian Blankenship';
 
@@ -11,7 +11,7 @@ const Layout = ({ children }) => (
       <meta name="description" content="A portfolio about Brian Blankenship." />
       <meta name="og:title" content={siteTitle} />
     </Head>
-    <Navbar />
+    <NavBar />
     <main>
       {children}
     </main>
