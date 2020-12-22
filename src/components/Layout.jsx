@@ -6,7 +6,7 @@ import NavBar from './NavBar';
 export const siteTitle = 'Brian Blankenship';
 
 const Layout = ({ children }) => (
-  <Container>
+  <Container maxWidth="xl">
     <Head>
       <meta name="description" content="A portfolio about Brian Blankenship." />
       <meta name="og:title" content={siteTitle} />
