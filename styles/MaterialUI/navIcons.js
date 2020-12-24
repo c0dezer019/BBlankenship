@@ -1,7 +1,8 @@
 import { makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles(({
+const useStyles = makeStyles(theme => ({
   icon: {
+    color: theme.palette.grey[200],
     marginRight: '-2em',
     width: 100,
     height: '1em',

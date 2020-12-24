@@ -13,25 +13,25 @@ const NavBar = () => {
   return (
     <Container id="appNavigation" position="static" maxWidth="xl">
       <Breadcrumbs aria-label="breadcrumb">
-        <Link href="/" passHref>
+        <Link color="#eeeeee" href="/" passHref>
           <StyledBreadcrumb
-            icon={<HomeOutlined className={classes.icon} />}
+            icon={<HomeOutlined className={classes.icon} color="#eeeeee" />}
             label={<a>Home</a>}
           />
         </Link>
-        <Link href="/About" passHref>
+        <Link color="#eeeeee" href="/About" passHref>
           <StyledBreadcrumb
             icon={<InfoOutlined className={classes.icon} />}
             label={<a>About</a>}
           />
         </Link>
-        <Link href="/portfolio" passHref>
+        <Link color="#eeeeee" href="/portfolio" passHref>
           <StyledBreadcrumb
             icon={<FolderSpecialOutlined className={classes.icon} />}
             label={<a>Portfolio</a>}
           />
         </Link>
-        <Link href="/Contact" passHref>
+        <Link color="#eeeeee" href="/Contact" passHref>
           <StyledBreadcrumb
             icon={<ContactSupportOutlined className={classes.icon} />}
             label={<a>Contact</a>}
