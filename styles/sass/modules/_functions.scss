@@ -1,9 +1,0 @@
-@use 'sass:map';
-
-$prefixes: ("web": -webkit-, "o":-o-, "moz":-moz-, "ms": -ms-);
-
-@function prefixer($pre, $value) {
- @each $prefix, $glyph in $prefixes {
-   @debug map.set($prefixes, $prefix, $glyph':'$value);
- }
-}
