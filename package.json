@@ -1,12 +1,15 @@
 {
   "name": "bblankenship",
+  "homepage": "https://c0dezer019.github.io/BBlankenship",
   "version": "0.1.0",
   "license": "",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.2",
