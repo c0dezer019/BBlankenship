@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core';
 const useStyles = makeStyles(theme => ({
   icon: {
     color: theme.palette.grey[200],
-    marginRight: '-2em',
+    marginRight: '-1.45em',
     width: 100,
     height: '1em',
     position: 'relative',
