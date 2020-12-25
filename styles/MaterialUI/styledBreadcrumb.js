@@ -9,7 +9,6 @@ const styledBreadcrumb = withStyles(theme => ({
     fontSize: '1.3rem',
     fontFamily: '"Fira Code", sans-serif',
     fontWeight: 500,
-    justifyContent: 'center',
     height: theme.spacing(5),
     marginLeft: '5em',
     marginRight: '5em',

@@ -31,6 +31,15 @@ a {
   color: white;
 }
 
+.MuiChip-label {
+  overflow: visible !important;
+}
+
+.navLink {
+  position: relative;
+  right: 0.8em;
+}
+
 * {
   box-sizing: border-box;
 }

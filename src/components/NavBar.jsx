@@ -15,26 +15,26 @@ const NavBar = () => {
       <Breadcrumbs separator="|" aria-label="breadcrumb">
         <Link color="inherit" href="/" passHref>
           <StyledBreadcrumb
-            icon={<HomeOutlined className={classes.icon} color="#eeeeee" />}
-            label={<a>Home</a>}
+            icon={<HomeOutlined className={classes.icon} />}
+            label={<a className="navLink">Home</a>}
           />
         </Link>
         <Link color="inherit" href="/about" passHref>
           <StyledBreadcrumb
             icon={<InfoOutlined className={classes.icon} />}
-            label={<a>About</a>}
+            label={<a className="navLink">About</a>}
           />
         </Link>
         <Link color="inherit" href="/portfolio" passHref>
           <StyledBreadcrumb
             icon={<FolderSpecialOutlined className={classes.icon} />}
-            label={<a>Portfolio</a>}
+            label={<a className="navLink">Portfolio</a>}
           />
         </Link>
         <Link color="inherit" href="/contact" passHref>
           <StyledBreadcrumb
             icon={<ContactSupportOutlined className={classes.icon} />}
-            label={<a>Contact</a>}
+            label={<a className="navLink">Contact</a>}
           />
         </Link>
       </Breadcrumbs>

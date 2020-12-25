@@ -8,6 +8,7 @@ const useStyles = makeStyles(theme => ({
     height: '1em',
     position: 'relative',
     bottom: '0.1em',
+    right: '0.5em',
   },
 }));
 
