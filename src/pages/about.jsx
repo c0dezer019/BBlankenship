@@ -3,7 +3,7 @@ import { Box } from '@material-ui/core';
 import Head from 'next/head';
 
 const About = () => (
-  <Box className="homeBody" maxWidth="xl">
+  <Box className="body" maxWidth="xl">
     <Head>
       <title>About</title>
       <meta name="description" content="About Brian Blankenship" />
