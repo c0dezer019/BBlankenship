@@ -1,3 +1,40 @@
+.body {
+  margin-top: 10%;
+  width: 100%;
+}
 
+.and {
+  font-size: 24px;
+  position: relative;
+  bottom: 27%;
+  left: 7%;
+}
+
+.heading1 {
+  position: relative;
+  left: 5%;
+}
+
+.heading2 {
+  position: relative;
+  top: 15%;
+  left: 37%;
+}
+
+.heading3 {
+  position: relative;
+  top: 23%;
+  left: 45%;
+}
+
+.heading4 {
+  position: relative;
+  top: 27%;
+  left: 62%;
+}
+
+.intro {
+  font-size: 24px;
+}
 
 /*# sourceMappingURL=home.module.css.map */
