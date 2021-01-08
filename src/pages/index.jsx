@@ -13,44 +13,26 @@ const Home = () => {
         <title>Brian Blankenship</title>
       </Head>
       <Grid container id="text-container">
-        <Grid item xl={1}>
-          &nbsp;
-        </Grid>
-        <Grid item xl={11}>
+        <Grid item xl={12}>
           <p className={styles.intro}>
             I am
             <span> Brian Blankenship</span>
             , a
           </p>
         </Grid>
-        <Grid item xl={2}>
-          &nbsp;
-        </Grid>
-        <Grid item xl={10} id="heading-1">
+        <Grid item xl={12} id="heading-1">
           <Typography className={classes.root} id="test" variant="h3">Software Engineer,</Typography>
         </Grid>
-        <Grid item xl={5}>
-          &nbsp;
-        </Grid>
-        <Grid item xl={7} id="heading-2">
+        <Grid item xl={12} id="heading-2">
           <Typography className={classes.root} variant="h4">Thinker,</Typography>
         </Grid>
-        <Grid item xl={6}>
-          &nbsp;
-        </Grid>
-        <Grid item xl={6} id="heading-3">
+        <Grid item xl={12} id="heading-3">
           <Typography className={classes.root} variant="h5">Problem solver,</Typography>
         </Grid>
-        <Grid item xl={7}>
-          &nbsp;
-        </Grid>
-        <Grid item xl={5}>
+        <Grid item xl={12}>
           <p className={styles.and}>and</p>
         </Grid>
-        <Grid item xl={8}>
-          &nbsp;
-        </Grid>
-        <Grid item xl={4} id="heading-4">
+        <Grid item xl={12} id="heading-4">
           <Typography className={classes.root} variant="h6">Professional Coffee Drinker.</Typography>
         </Grid>
       </Grid>
