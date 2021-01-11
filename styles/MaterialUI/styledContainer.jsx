@@ -7,6 +7,7 @@ const styledContainer = withStyles({
     position: 'relative',
     margin: 'auto',
     marginTop: '50px',
+    paddingLeft: '10%',
     width: '100%',
   },
 })(({ classes, children }) => (
