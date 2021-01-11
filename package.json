@@ -1,12 +1,13 @@
 {
   "name": "bblankenship",
-  "homepage": "https://c0dezer019.github.io/BBlankenship",
+  "homepage": "https://bblankenship.me",
   "version": "0.1.0",
   "license": "",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
+    "dev": "next dev",
+    "export": "next export",
     "start": "next start"
   },
   "dependencies": {
