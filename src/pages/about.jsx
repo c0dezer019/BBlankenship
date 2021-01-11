@@ -1,9 +1,9 @@
 import React from 'react';
-import { Container } from '@material-ui/core';
+import { Box } from '@material-ui/core';
 import Head from 'next/head';
 
 const About = () => (
-  <Container>
+  <Box className="body" maxWidth="xl">
     <Head>
       <title>About</title>
       <meta name="description" content="About Brian Blankenship" />
@@ -11,7 +11,7 @@ const About = () => (
     <div>
       <h1>Hello</h1>
     </div>
-  </Container>
+  </Box>
 );
 
 export default About;
