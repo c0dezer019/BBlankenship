@@ -2,9 +2,9 @@ import React from 'react';
 import Head from 'next/head';
 import { Box, Grid, Typography } from '@material-ui/core';
 import classNames from 'classnames';
-import styledTypo from '../../styles/MaterialUI/styledTypo';
-import StyledContainer from '../../styles/MaterialUI/styledContainer';
-import styles from '../../styles/sass/home.module.css';
+import styledTypo from '../styles/MaterialUI/styledTypo';
+import StyledContainer from '../styles/MaterialUI/styledContainer';
+import styles from '../styles/sass/home.module.css';
 
 const Home = () => {
   const classes = styledTypo();

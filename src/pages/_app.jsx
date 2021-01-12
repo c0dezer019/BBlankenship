@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Head from 'next/head';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Layout from '../components/Layout';
-import '../../styles/sass/globals.css';
+import '../styles/sass/globals.css';
 
 const MyApp = ({ Component, pageProps }) => {
   useEffect(() => {
