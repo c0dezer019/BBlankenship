@@ -13,7 +13,6 @@ app
   .then(() => {
     createServer((req, res) => {
       const parsedUrl = parse(req.url, true);
-      const { pathname, query } = parsedUrl;
       handle(req, res, parsedUrl);
     }).listen(port, (err) => {
       if (err) throw err;
