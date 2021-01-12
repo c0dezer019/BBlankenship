@@ -1,0 +1,47 @@
+html,
+body {
+  background: url("public/images/caspar-camille-rubin-89xuP-XmyrA-unsplash.jpg");
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#__next {
+  background: rgba(63, 63, 63, 0.4);
+  color: #c6b3b3;
+  font-family: "Fira Code Light", sans-serif;
+  height: 100%;
+  padding: 10px;
+}
+
+#appNavigation {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.MuiBreadcrumbs-separator {
+  color: white;
+}
+
+.MuiChip-label {
+  overflow: visible !important;
+}
+
+.navLink {
+  position: relative;
+  right: 0.8em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=globals.css.map */
