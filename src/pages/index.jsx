@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { Box, Grid, Typography } from '@material-ui/core';
 import classNames from 'classnames';
 import styledTypo from '../styles/MaterialUI/styledTypo';
-import StyledContainer from '../styles/MaterialUI/styledContainer';
+import StyledContainer from '../styles/MaterialUI/StyledContainer';
 import styles from '../styles/sass/home.module.css';
 
 const Home = () => {
@@ -15,7 +15,7 @@ const Home = () => {
   const h4 = classNames(classes.root, styles.h4);
 
   return (
-    <Box className={styles.body} maxWidth="xl">
+    <Box className="contentContainer" maxWidth="xl">
       <Head>
         <title>Brian Blankenship</title>
       </Head>
