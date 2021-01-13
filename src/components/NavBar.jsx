@@ -28,7 +28,7 @@ const NavBar = () => {
         <Link color="inherit" href="/portfolio" passHref>
           <StyledBreadcrumb
             icon={<FolderSpecialOutlined className={classes.icon} />}
-            label={<a className="navLink">Portfolio</a>}
+            label={<a className="navLink">Projects</a>}
           />
         </Link>
         <Link color="inherit" href="/contact" passHref>
