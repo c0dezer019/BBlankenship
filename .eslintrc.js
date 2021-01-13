@@ -45,5 +45,6 @@ module.exports = {
     'no-plusplus': 0,
     'jsx-a11y/anchor-is-valid': 0,
     'import/newline-after-import': 0,
+    'max-len': ['error', 119],
   },
 };
