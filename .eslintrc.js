@@ -46,5 +46,6 @@ module.exports = {
     'jsx-a11y/anchor-is-valid': 0,
     'import/newline-after-import': 0,
     'max-len': ['error', 119],
+    'operator-linebreak': 0,
   },
 };
