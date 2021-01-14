@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, withStyles } from '@material-ui/core';
 
-const styledContainer = withStyles({
+const StyledContainer = withStyles({
   root: {
     height: '100%',
     position: 'relative',
@@ -16,4 +16,4 @@ const styledContainer = withStyles({
   </Container>
 ));
 
-export default styledContainer;
+export default StyledContainer;
