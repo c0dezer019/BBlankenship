@@ -31,16 +31,20 @@ const About = () => {
             </article>
           </section>
         </Container>
-        <Container maxWidth="xl" id="technologiesContainer">
-          <section id="technologies">
-            <Typography className={ classes.root } variant="h4">#technologies</Typography>
-            <TechGrid category="Languages" items={ languages } />
-            <TechGrid category="Frameworks and Libraries" items={ fnl } />
-            <TechGrid category="Database" items={ database } />
-            <TechGrid category="Cloud" items={ cloud } />
-            <TechGrid category="Operating Systems" items={ os } />
-          </section>
-        </Container>
+        <StyledContainer maxWidth="xl" id="technologiesContainer" cStyle="second">
+          <article id="technologies">
+            <div id="containerTitle">
+              <Typography className={ classes.root } variant="h4">#technologies</Typography>
+            </div>
+            <div className={styles.techContainer} id="techContainer">
+              <TechGrid category="Languages" tech={ languages } />
+              <TechGrid category="Frameworks and Libraries" tech={ fnl } />
+              <TechGrid category="Database" tech={ database } />
+              <TechGrid category="Cloud" tech={ cloud } />
+              <TechGrid category="Operating Systems" tech={ os } />
+            </div>
+          </article>
+        </StyledContainer>
       </StyledContainer>
     </Box>
   );
