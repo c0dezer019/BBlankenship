@@ -1,7 +1,7 @@
-const projectData = [
+const data = [
   {
     languages: ['HTML', 'CSS', 'JS', 'Python'],
-    frameworksAndLibraries: [
+    fnl: [
       'React.js',
       'Next.js',
       'EJS',
@@ -25,7 +25,7 @@ const projectData = [
           + 'selects a random grid square on the opponent\'s grid to try and hit an enemy ship. The goal is to sink '
           + 'all enemy ships to win.',
         screenshot: 'https://imgur.com/mZ3Fw9X',
-        usedTech: ['HTML5', 'CSS', 'Javascript'],
+        tech: ['HTML5', 'CSS', 'Javascript'],
         url: 'https://c0dezer019.github.io/Battleship',
       },
       {
@@ -34,7 +34,7 @@ const projectData = [
           + 'programming world. I developed this with a small team of engineers, which I was the project lead. Our '
           + 'goal was to create a cleaner and more lenient app then that of StackOverflow or Quora.',
         screenshot: 'https://i.imgur.com/kw5mfc6.png',
-        usedTech: ['Azure', 'Bootstrap', 'Express.js', 'EJS', 'PostgreSQL'],
+        tech: ['Azure', 'Bootstrap', 'Express.js', 'EJS', 'PostgreSQL'],
         url: 'https://404anf.azurewebsites.net/',
       },
       {
@@ -43,8 +43,8 @@ const projectData = [
           ' with this app is to make it a convenient place to get weather conditions and forecast for a user\'s' +
           ' current and searched locations as well as provide some jokes to provide some humor with each update.',
         screenshot: '',
-        usedTech: ['Axios', 'Material-UI', 'Fetch', 'React', 'SASS'],
-        usedAPI: ['OpenWeatherMap', 'canhazdadjoke'],
+        tech: ['Axios', 'Material-UI', 'Fetch', 'React', 'SASS'],
+        API: ['OpenWeatherMap', 'canhazdadjoke'],
         url: 'https://github.com/c0dezer019/Stormcaster',
       },
     ],
@@ -58,8 +58,12 @@ const projectData = [
           ' astronomical data such as NEO tracking (Near-Earth Objects) and meteor storms.',
         plannedTech: ['Axios', 'React', 'React Native', 'XState', 'RequireJS or Webpack', 'SASS'],
       },
+      {
+        name: 'The Coffee Shop',
+        description: '',
+      },
     ],
   },
 ];
 
-export default projectData;
+export default data;
