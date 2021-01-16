@@ -21,6 +21,7 @@ out
 *.pem
 storybook-static
 .storybook
+src/stories
 
 # debug
 npm-debug.log*
