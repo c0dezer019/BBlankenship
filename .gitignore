@@ -9,15 +9,19 @@
 /coverage
 
 # next.js
-/.next/
-/out/
+out
+.next
 
 # production
 /build
 
 # misc
 .DS_Store
+.idea
 *.pem
+storybook-static
+.storybook
+src/stories
 
 # debug
 npm-debug.log*
@@ -29,7 +33,6 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
-.idea
 
 # vercel
 .vercel

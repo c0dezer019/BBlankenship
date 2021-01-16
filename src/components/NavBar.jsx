@@ -4,8 +4,8 @@ import {
   ContactSupportOutlined, FolderSpecialOutlined, HomeOutlined, InfoOutlined,
 } from '@material-ui/icons';
 import { Breadcrumbs, Container } from '@material-ui/core';
-import StyledBreadcrumb from '../../styles/MaterialUI/styledBreadcrumb';
-import useStyles from '../../styles/MaterialUI/navIcons';
+import StyledBreadcrumb from '../styles/MaterialUI/styledBreadcrumb';
+import useStyles from '../styles/MaterialUI/navIcons';
 
 const NavBar = () => {
   const classes = useStyles();
@@ -28,7 +28,7 @@ const NavBar = () => {
         <Link color="inherit" href="/portfolio" passHref>
           <StyledBreadcrumb
             icon={<FolderSpecialOutlined className={classes.icon} />}
-            label={<a className="navLink">Portfolio</a>}
+            label={<a className="navLink">Projects</a>}
           />
         </Link>
         <Link color="inherit" href="/contact" passHref>
