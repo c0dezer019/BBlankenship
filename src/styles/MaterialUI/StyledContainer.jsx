@@ -13,19 +13,43 @@ const StyledContainer = withStyles({
   second: {
     marginTop: '3rem',
   },
-})(({ classes, children, cStyle }) => {
-  if (cStyle === 'second') {
-    return (
-      <Container className={ classes.second } maxWidth="xl">
-        { children }
-      </Container>
-    );
+  flexCol: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  flexRow: {
+    display: 'flex',
+  },
+})(({ classes, children, cStyle, flex = false, column = false }) => {
+  switch (cStyle) {
+    case 'second':
+      return (
+        <Container className={ classes.second }>
+          { children }
+        </Container>
+      );
+    case flex:
+      switch (column) {
+        case true:
+          return (
+            <Container className={ classes.flexCol }>
+              { children }
+            </Container>
+          );
+        default:
+          return (
+            <Container className={ classes.flexRow }>
+              { children }
+            </Container>
+          );
+      }
+    default:
+      return (
+        <Container className={ classes.root } maxWidth="xl">
+          { children }
+        </Container>
+      );
   }
-  return (
-    <Container className={ classes.root } maxWidth="xl">
-      { children }
-    </Container>
-  );
 });
 
 StyledContainer.propTypes = {
