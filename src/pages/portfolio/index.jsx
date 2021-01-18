@@ -1,14 +1,22 @@
 import React from 'react';
 import Head from 'next/head';
-import { Box } from '@material-ui/core';
+import data from '../../data/projectData';
+import ProjectCard from '../../components/ProjectCard';
+import StyledContainer from '../../styles/MaterialUI/StyledContainer';
 
-const AppGallery = () => (
-  <Box className="body" maxWidth="xl">
-    <Head>
-      <title>App Gallery</title>
-    </Head>
-    <h1>Gallery of Apps</h1>
-  </Box>
-);
+const AppGallery = () => {
+  const { projects } = data[1];
+
+  return (
+    <StyledContainer className="body" maxWidth="xl">
+      <Head>
+        <title>App Gallery</title>
+      </Head>
+      { projects.map((project, i) => (
+        <ProjectCard key={ `${i}_project` } project={ project } />
+      )) }
+    </StyledContainer>
+  );
+};
 
 export default AppGallery;
