@@ -13,6 +13,9 @@ const StyledContainer = withStyles({
   second: {
     marginTop: '3rem',
   },
+  image: {
+    width: 'fit-content',
+  },
   flexCol: {
     display: 'flex',
     flexDirection: 'column',
@@ -20,44 +23,51 @@ const StyledContainer = withStyles({
   flexRow: {
     display: 'flex',
   },
-})(({ classes, children, cStyle, flex = false, column = false }) => {
-  switch (cStyle) {
-    case 'second':
+})(({ classes, children, containerStyle, display, flexDirection }) => {
+  if (containerStyle === 'second') {
+    return (
+      <Container className={ classes.second } maxWidth="xl">
+        { children }
+      </Container>
+    );
+  } else if (containerStyle === 'image') {
+    return (
+      <Container className={ classes.image }>
+        { children }
+      </Container>
+    );
+  } else if (display === 'flex') {
+    if (flexDirection === 'col') {
       return (
-        <Container className={ classes.second }>
+        <Container className={ classes.flexCol } maxWidth="xl">
           { children }
         </Container>
       );
-    case flex:
-      switch (column) {
-        case true:
-          return (
-            <Container className={ classes.flexCol }>
-              { children }
-            </Container>
-          );
-        default:
-          return (
-            <Container className={ classes.flexRow }>
-              { children }
-            </Container>
-          );
-      }
-    default:
-      return (
-        <Container className={ classes.root } maxWidth="xl">
-          { children }
-        </Container>
-      );
+    }
+    return (
+      <Container className={ classes.flexRow } maxWidth="xl">
+        { children }
+      </Container>
+    );
   }
+
+  return (
+    <Container className={ classes.root } maxWidth="xl">
+      { children }
+    </Container>
+  );
 });
 
 StyledContainer.propTypes = {
-  cStyle: PropTypes.string,
+  containerStyle: PropTypes.string,
+  display: PropTypes.string,
+  flexDirection: PropTypes.string,
 };
 
 StyledContainer.defaultProps = {
-  cStyle: null,
+  containerStyle: '',
+  display: '',
+  flexDirection: 'row',
 };
 
 export default StyledContainer;
