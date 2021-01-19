@@ -31,7 +31,7 @@ const About = () => {
             </article>
           </section>
         </Container>
-        <StyledContainer maxWidth="xl" id="technologiesContainer" cStyle="second">
+        <StyledContainer maxWidth="xl" id="technologiesContainer" containerStyle="second">
           <article id="technologies">
             <div id="containerTitle">
               <Typography className={ classes.root } variant="h4">#technologies</Typography>

@@ -13,14 +13,45 @@ const StyledContainer = withStyles({
   second: {
     marginTop: '3rem',
   },
-})(({ classes, children, cStyle }) => {
-  if (cStyle === 'second') {
+  image: {
+    width: 'fit-content',
+  },
+  flexCol: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  flexRow: {
+    display: 'flex',
+    width: 1200,
+  },
+})(({ classes, children, containerStyle, display, flexDirection }) => {
+  if (containerStyle === 'second') {
     return (
       <Container className={ classes.second } maxWidth="xl">
         { children }
       </Container>
     );
+  } else if (containerStyle === 'image') {
+    return (
+      <Container className={ classes.image }>
+        { children }
+      </Container>
+    );
+  } else if (display === 'flex') {
+    if (flexDirection === 'col') {
+      return (
+        <Container className={ classes.flexCol } maxWidth="xl">
+          { children }
+        </Container>
+      );
+    }
+    return (
+      <Container className={ classes.flexRow } maxWidth="xl">
+        { children }
+      </Container>
+    );
   }
+
   return (
     <Container className={ classes.root } maxWidth="xl">
       { children }
@@ -29,11 +60,15 @@ const StyledContainer = withStyles({
 });
 
 StyledContainer.propTypes = {
-  cStyle: PropTypes.string,
+  containerStyle: PropTypes.string,
+  display: PropTypes.string,
+  flexDirection: PropTypes.string,
 };
 
 StyledContainer.defaultProps = {
-  cStyle: null,
+  containerStyle: '',
+  display: '',
+  flexDirection: 'row',
 };
 
 export default StyledContainer;

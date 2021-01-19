@@ -1,3 +1,5 @@
+import styles from '../styles/sass/project.module.css';
+
 const data = [
   {
     languages: ['HTML', 'CSS', 'JS', 'Python'],
@@ -24,7 +26,8 @@ const data = [
           + '90 degree rotations. Once pieces are set for both players, the game begins. On each turn, the player '
           + 'selects a random grid square on the opponent\'s grid to try and hit an enemy ship. The goal is to sink '
           + 'all enemy ships to win.',
-        screenshot: 'https://imgur.com/mZ3Fw9X',
+        screenshot: 'https://i.imgur.com/D8EB2VS.png?1',
+        tag: 'BS',
         tech: ['HTML5', 'CSS', 'Javascript'],
         url: 'https://c0dezer019.github.io/Battleship',
       },
@@ -34,6 +37,7 @@ const data = [
           + 'programming world. I developed this with a small team of engineers, which I was the project lead. Our '
           + 'goal was to create a cleaner and more lenient app then that of StackOverflow or Quora.',
         screenshot: 'https://i.imgur.com/kw5mfc6.png',
+        tag: 'ANF',
         tech: ['Azure', 'Bootstrap', 'Express.js', 'EJS', 'PostgreSQL'],
         url: 'https://404anf.azurewebsites.net/',
       },
@@ -42,7 +46,8 @@ const data = [
         description: 'Stormcaster is a WIP weather app that is the first phase to a much larger project. My goal' +
           ' with this app is to make it a convenient place to get weather conditions and forecast for a user\'s' +
           ' current and searched locations as well as provide some jokes to provide some humor with each update.',
-        screenshot: '',
+        screenshot: 'https://i.imgur.com/eRrYTGb.png',
+        tag: 'SC',
         tech: ['Axios', 'Material-UI', 'Fetch', 'React', 'SASS'],
         API: ['OpenWeatherMap', 'canhazdadjoke'],
         url: 'https://github.com/c0dezer019/Stormcaster',
