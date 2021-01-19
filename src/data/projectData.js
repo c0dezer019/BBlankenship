@@ -46,7 +46,7 @@ const data = [
         description: 'Stormcaster is a WIP weather app that is the first phase to a much larger project. My goal' +
           ' with this app is to make it a convenient place to get weather conditions and forecast for a user\'s' +
           ' current and searched locations as well as provide some jokes to provide some humor with each update.',
-        screenshot: '',
+        screenshot: 'https://i.imgur.com/eRrYTGb.png',
         tag: 'SC',
         tech: ['Axios', 'Material-UI', 'Fetch', 'React', 'SASS'],
         API: ['OpenWeatherMap', 'canhazdadjoke'],
