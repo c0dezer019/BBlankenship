@@ -1,5 +1,3 @@
-import styles from '../styles/sass/project.module.css';
-
 const data = [
   {
     languages: ['HTML', 'CSS', 'JS', 'Python'],
