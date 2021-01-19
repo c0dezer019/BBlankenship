@@ -2,22 +2,18 @@
   display: flex;
 }
 
-.answerNotFoundSS {
-  width: 70%;
-  max-width: 70%;
-}
-
-.battleshipSS {
-  width: 90%;
-  max-width: 90%;
-}
-
-.battleshipDesc {
-  margin-left: 150px;
+.screenshotImage {
+  width: 100%;
+  height: 200px;
 }
 
 .imageContainer {
+  width: 400px;
+}
+
+.projectTextArea {
   width: 100%;
+  padding: 0 2%;
 }
 
 /*# sourceMappingURL=project.module.css.map */
