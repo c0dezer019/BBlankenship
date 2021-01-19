@@ -20,7 +20,7 @@ const data = [
   {
     projects: [
       {
-        name: 'Battleship',
+        name: 'battleship',
         description: 'A clone of the classic game, Battleship. It is a turn-based game where each player has their '
           + 'own play field represented by a grid. The player places pieces in random locations on the grid in random '
           + '90 degree rotations. Once pieces are set for both players, the game begins. On each turn, the player '
@@ -42,7 +42,7 @@ const data = [
         url: 'https://404anf.azurewebsites.net/',
       },
       {
-        name: 'Stormcaster',
+        name: 'stormcaster',
         description: 'Stormcaster is a WIP weather app that is the first phase to a much larger project. My goal' +
           ' with this app is to make it a convenient place to get weather conditions and forecast for a user\'s' +
           ' current and searched locations as well as provide some jokes to provide some humor with each update.',
