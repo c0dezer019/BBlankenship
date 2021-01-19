@@ -19,25 +19,31 @@ const ProjectCard = ({ project }) => {
         <Box className={ projectImage } id={ `${tag}_image` }>
           <img className={ styles.screenshotImage } src={ screenshot } alt={ name } />
         </Box>
-        <Box className={projectTextArea} id={ `${tag}_info` }>
+        <Box className={ projectTextArea } id={ `${tag}_info` }>
           <Box className="projectDesc" id={ `${tag}_desc` }>
             <article id="descriptionText">
               <header>
-                <Typography className={classes.root} variant="h6">#{name}</Typography>
+                <Typography className={ classes.root } variant="h6">#{ name }</Typography>
               </header>
               <p>
                 { description }
               </p>
             </article>
           </Box>
-          <Box className="projectStack" id={`${tag}_stack`}>
+          <Box className="projectStack" id={ `${tag}_stack` }>
             <section>
               <header>
-                <Typography className={classes.root} variant="h6">tech_stack</Typography>
+                <Typography className={ classes.root } variant="h6">tech_stack</Typography>
               </header>
-              { tech.map((tech, i) => (
-                <StyledChip key={`${i + 1}_chip`} label={ tech } variant="outlined" />
-              )) }
+              <article>
+                <p>
+                  <span>
+                    {tech.map((v, i) => (
+                      <StyledChip className="techChip" key={`${i + 1}_${v}`} label={ v } />
+                    ))}
+                  </span>
+                </p>
+              </article>
             </section>
           </Box>
         </Box>

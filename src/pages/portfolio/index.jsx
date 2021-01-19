@@ -10,7 +10,7 @@ const AppGallery = () => {
   return (
     <StyledContainer className="body" maxWidth="xl">
       <Head>
-        <title>App Gallery</title>
+        <title>App Portfolio</title>
       </Head>
       { projects.map((project, i) => (
         <ProjectCard key={ `${i}_project` } project={ project } />
