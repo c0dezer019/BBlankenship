@@ -7,6 +7,7 @@ const StyledChip = withStyles({
     borderColor: '#c41206',
     color: 'yellow',
     height: '2em',
+    margin: '0.5%',
   },
 })(({ children, classes, label }) => (
   <Chip className={ classes.root } color="secondary" label={ label }>
