@@ -26,8 +26,6 @@ const data = [
           + '90 degree rotations. Once pieces are set for both players, the game begins. On each turn, the player '
           + 'selects a random grid square on the opponent\'s grid to try and hit an enemy ship. The goal is to sink '
           + 'all enemy ships to win.',
-        descStyleRule: styles.battleshipDesc,
-        screenshotStyleRule: styles.battleshipSS,
         screenshot: 'https://i.imgur.com/D8EB2VS.png?1',
         tag: 'BS',
         tech: ['HTML5', 'CSS', 'Javascript'],
@@ -38,9 +36,7 @@ const data = [
         description: 'This app was inspired by Quora and StackedOverflow and is a Q&A site purely dedicated to the '
           + 'programming world. I developed this with a small team of engineers, which I was the project lead. Our '
           + 'goal was to create a cleaner and more lenient app then that of StackOverflow or Quora.',
-        descStyleRule: styles.answerNotFoundDesc,
         screenshot: 'https://i.imgur.com/kw5mfc6.png',
-        screenshotStyleRule: styles.answerNotFoundSS,
         tag: 'ANF',
         tech: ['Azure', 'Bootstrap', 'Express.js', 'EJS', 'PostgreSQL'],
         url: 'https://404anf.azurewebsites.net/',

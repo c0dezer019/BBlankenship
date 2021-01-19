@@ -22,6 +22,7 @@ const StyledContainer = withStyles({
   },
   flexRow: {
     display: 'flex',
+    width: 1200,
   },
 })(({ classes, children, containerStyle, display, flexDirection }) => {
   if (containerStyle === 'second') {
