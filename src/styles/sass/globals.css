@@ -9,6 +9,10 @@ body {
   height: 100%;
 }
 
+main {
+  height: 100%;
+}
+
 #__next {
   background: rgba(63, 63, 63, 0.4);
   color: #c6b3b3;
