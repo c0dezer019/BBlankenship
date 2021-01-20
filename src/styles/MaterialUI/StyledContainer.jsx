@@ -19,6 +19,12 @@ const StyledContainer = withStyles({
   flexCol: {
     display: 'flex',
     flexDirection: 'column',
+    alignItems: 'center',
+    height: '100%',
+    position: 'relative',
+    marginTop: '50px',
+    paddingLeft: '10%',
+    width: '100%',
   },
   flexRow: {
     display: 'flex',
