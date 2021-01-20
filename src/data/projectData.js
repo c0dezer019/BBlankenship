@@ -16,6 +16,16 @@ const data = [
     os: ['Fedora', 'Kali', 'Ubuntu', 'Windows 10'],
   },
   {
+    contact: {
+      discord: 'c0dezer019#4224',
+      email: 'c0dezer019@zohomail.com',
+      linkedIn: 'brian-blankenship',
+      reddit: 'MrChurch2015',
+      skype: 'live:briandb1222',
+      twitter: 'c0dezer091',
+    },
+  },
+  {
     projects: [
       {
         name: 'battleship',

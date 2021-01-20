@@ -5,7 +5,7 @@ import ProjectCard from '../../components/ProjectCard';
 import StyledContainer from '../../styles/MaterialUI/StyledContainer';
 
 const AppGallery = () => {
-  const { projects } = data[1];
+  const { projects } = data[2];
 
   return (
     <StyledContainer className="body" maxWidth="xl">

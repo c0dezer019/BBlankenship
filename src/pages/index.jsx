@@ -5,22 +5,25 @@ import classNames from 'classnames';
 import styledTypo from '../styles/MaterialUI/styledTypo';
 import StyledContainer from '../styles/MaterialUI/StyledContainer';
 import styles from '../styles/sass/home.module.css';
+import useStyles from '../styles/MaterialUI/muiStyles';
 
 const Home = () => {
   const classes = styledTypo();
+  const box = useStyles();
 
+  const boxClass = classNames('contentContainer', box.root);
   const h1 = classNames(classes.root, styles.h1);
   const h2 = classNames(classes.root, styles.h2);
   const h3 = classNames(classes.root, styles.h3);
   const h4 = classNames(classes.root, styles.h4);
 
   return (
-    <Box className="contentContainer" maxWidth="xl">
+    <Box className={boxClass} maxWidth="xl">
       <Head>
         <title>Brian Blankenship</title>
       </Head>
       <StyledContainer>
-        <Grid container id="text-container" spacing={6}>
+        <Grid container className={box.grid} id="text-container" spacing={6}>
           <Grid item xl={12}>
             <p className={styles.intro}>
               I am

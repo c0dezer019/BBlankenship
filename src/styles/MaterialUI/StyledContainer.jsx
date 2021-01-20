@@ -4,7 +4,7 @@ import { Container, withStyles } from '@material-ui/core';
 
 const StyledContainer = withStyles({
   root: {
-    height: '100%',
+    height: '945px',
     position: 'relative',
     marginTop: '50px',
     paddingLeft: '10%',
@@ -20,6 +20,7 @@ const StyledContainer = withStyles({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    justifyContent: 'center',
     height: '100%',
     position: 'relative',
     marginTop: '50px',
@@ -31,7 +32,7 @@ const StyledContainer = withStyles({
     width: 1200,
     padding: '1%',
   },
-})(({ classes, children, containerStyle, display, flexDirection }) => {
+})(({ classes, children, col, containerStyle, flex }) => {
   if (containerStyle === 'second') {
     return (
       <Container className={ classes.second } maxWidth="xl">
@@ -44,8 +45,8 @@ const StyledContainer = withStyles({
         { children }
       </Container>
     );
-  } else if (display === 'flex') {
-    if (flexDirection === 'col') {
+  } else if (flex) {
+    if (col) {
       return (
         <Container className={ classes.flexCol } maxWidth="xl">
           { children }
