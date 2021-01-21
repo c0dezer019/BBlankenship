@@ -18,11 +18,11 @@ const Home = () => {
   const h4 = classNames(classes.root, styles.h4);
 
   return (
-    <Box className={boxClass} maxWidth="xl">
+    <Box className="body" maxWidth="xl">
       <Head>
         <title>Brian Blankenship</title>
       </Head>
-      <StyledContainer>
+      <StyledContainer flex>
         <Grid container className={box.grid} id="text-container" spacing={6}>
           <Grid item xl={12}>
             <p className={styles.intro}>
