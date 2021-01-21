@@ -16,13 +16,64 @@ const data = [
     os: ['Fedora', 'Kali', 'Ubuntu', 'Windows 10'],
   },
   {
-    contact: {
-      discord: 'c0dezer019#4224',
-      email: 'c0dezer019@zohomail.com',
-      linkedIn: 'brian-blankenship',
-      reddit: 'MrChurch2015',
-      skype: 'live:briandb1222',
-      twitter: 'c0dezer091',
+    contactInfo: {
+      discord: {
+        user: 'c0dezer019#4224',
+        icon: 'images/social_media/Discord-Logo+Wordmark-Color.svg',
+      },
+      email: {
+        email: 'c0dezer019@zohomail.com',
+        address: `mailto:${this.email}`,
+        icon: 'images/social_media/message.svg',
+      },
+      gitHub: {
+        user: 'c0dezer019',
+        profile: `https://github.com/${this.user}`,
+        icon: 'images/tech_icons/Octocat.png',
+      },
+      linkedIn: {
+        user: 'brian-blankenship',
+        profile: `https://www.linkedin.com/in/${this.user}/`,
+        icon: 'images/social_media/LI-Logo.png',
+      },
+      reddit: {
+        user: 'MrChurch2015',
+        profile: `https://www.reddit.com/user/${this.user}`,
+        icon: 'images/social_media/Reddit_Lockup_OnDark.svg',
+      },
+      skype: {
+        user: 'live:briandb1222',
+        icon: 'images/social_media/skype-icon.svg',
+      },
+      twitter: {
+        user: 'c0dezer019',
+        profile: `https://twitter.com/${this.user}`,
+        icon: 'images/social_media/Twitter_Social_Icon_Rounded_Square_Color.svg',
+      },
+    },
+    get contactDossier() {
+      return this.contactInfo;
+    },
+    set updateDiscord(newUser) {
+      this.discord.user = newUser;
+    },
+    set updateEmail(newEmail) {
+      this.email.email = newEmail;
+    },
+    set updateGitHub(newUser) {
+      this.gitHub.user = newUser;
+    },
+    set updateLinkedIn(newUser) {
+      this.linkedIn.user = newUser;
+    },
+    set updateReddit(newProfile) {
+      this.reddit.user = newProfile;
+    },
+    set updateSkype(newUser) {
+      this.skype.user = newUser;
+    },
+    set updateTwitter(newUser) {
+      this.twitter.user = newUser;
     },
   },
   {
