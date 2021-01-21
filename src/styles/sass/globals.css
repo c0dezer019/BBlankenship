@@ -9,6 +9,10 @@ body {
   height: 100vh;
 }
 
+main {
+  height: 776px;
+}
+
 #__next {
   background: rgba(63, 63, 63, 0.4);
   color: #c6b3b3;

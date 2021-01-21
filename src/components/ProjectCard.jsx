@@ -14,7 +14,7 @@ const ProjectCard = ({ project }) => {
   const classes = styledTypo();
 
   return (
-    <StyledContainer className="projectCard" display="flex" id={ `${tag}_card` } maxWidth="xl">
+    <StyledContainer className="projectCard" id={ `${tag}_card` } maxWidth="xl" flex>
       <section className={ styles.dataContainer }>
         <Box className={ projectImage } id={ `${tag}_image` }>
           <img className={ styles.screenshotImage } src={ screenshot } alt={ name } />
