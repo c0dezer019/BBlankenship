@@ -14,7 +14,7 @@ const AppGallery = () => {
         <title>App Portfolio</title>
       </Head>
       { projects.map((project, i) => (
-        <ProjectCard key={ `${i + 1}_project` } project={ project } />
+        <ProjectCard key={ `${ i + 1 }_project` } project={ project } />
       )) }
     </Box>
   );
