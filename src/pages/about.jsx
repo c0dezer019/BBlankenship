@@ -1,23 +1,27 @@
 import React from 'react';
 import Head from 'next/head';
 import { Box, Container, Typography } from '@material-ui/core';
+import className from 'classnames';
 import data from '../data/projectData';
 import StyledContainer from '../styles/MaterialUI/StyledContainer';
 import styledTypo from '../styles/MaterialUI/styledTypo';
 import styles from '../styles/sass/about.module.css';
 import TechGrid from '../components/TechGrid';
+import muiStyles from '../styles/MaterialUI/muiStyles';
 
 const About = () => {
   const classes = styledTypo();
+  const boxStyle = muiStyles();
   const { languages, fnl, database, cloud, os } = data[0];
+  const root = className('contentContainer', boxStyle.root);
 
   return (
-    <Box className="contentContainer" maxWidth="xl">
-      <Head>
-        <title>About</title>
-        <meta name="description" content="About Brian Blankenship" />
-      </Head>
-      <StyledContainer>
+    <Box className={root}>
+      <StyledContainer maxWidth="xl">
+        <Head>
+          <title>About</title>
+          <meta name="description" content="About Brian Blankenship" />
+        </Head>
         <Container maxWidth="xl" id="missionStatementContainer">
           <section id="missionStatement">
             <article className={ styles.missionStatement }>
@@ -36,7 +40,7 @@ const About = () => {
             <div id="containerTitle">
               <Typography className={ classes.root } variant="h4">#technologies</Typography>
             </div>
-            <div className={styles.techContainer} id="techContainer">
+            <div className={ styles.techContainer } id="techContainer">
               <TechGrid category="Languages" tech={ languages } />
               <TechGrid category="Frameworks and Libraries" tech={ fnl } />
               <TechGrid category="Database" tech={ database } />

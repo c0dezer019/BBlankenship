@@ -1,5 +1,3 @@
-import styles from '../styles/sass/project.module.css';
-
 const data = [
   {
     languages: ['HTML', 'CSS', 'JS', 'Python'],
@@ -18,9 +16,85 @@ const data = [
     os: ['Fedora', 'Kali', 'Ubuntu', 'Windows 10'],
   },
   {
+    contactInfo: {
+      discord: {
+        user: 'c0dezer019#4224',
+        icon: 'images/social_media/Discord-Logo+Wordmark-Color.svg',
+      },
+      email: {
+        address: 'c0dezer019@zohomail.com',
+        // eslint-disable-next-line func-names
+        url: function () {
+          return `mailto:${ this.address }`;
+        },
+        icon: 'images/social_media/message.svg',
+      },
+      gitHub: {
+        user: 'c0dezer019',
+        // eslint-disable-next-line func-names
+        url: function () {
+          return `https://github.com/${ this.user }`;
+        },
+        image: 'images/tech_icons/Octocat.png',
+      },
+      linkedIn: {
+        user: 'brian-blankenship',
+        // eslint-disable-next-line func-names
+        url: function () {
+          return `https://www.linkedin.com/in/${ this.user }/`;
+        },
+        image: 'images/social_media/LI-Logo.png',
+      },
+      reddit: {
+        user: 'MrChurch2015',
+        // eslint-disable-next-line func-names
+        url: function () {
+          return `https://www.reddit.com/user/${ this.user }`;
+        },
+        image: 'images/social_media/Reddit_Lockup_OnDark.svg',
+      },
+      skype: {
+        user: 'live:briandb1222',
+        image: 'images/social_media/skype-icon.svg',
+      },
+      twitter: {
+        user: 'c0dezer019',
+        // eslint-disable-next-line func-names
+        url: function () {
+          return `https://twitter.com/${ this.user }`;
+        },
+        image: 'images/social_media/Twitter_Social_Icon_Rounded_Square_Color.svg',
+      },
+    },
+    get contactDossier() {
+      return this.contactInfo;
+    },
+    set updateDiscord(newUser) {
+      this.discord.user = newUser;
+    },
+    set updateEmail(newEmail) {
+      this.email.email = newEmail;
+    },
+    set updateGitHub(newUser) {
+      this.gitHub.user = newUser;
+    },
+    set updateLinkedIn(newUser) {
+      this.linkedIn.user = newUser;
+    },
+    set updateReddit(newProfile) {
+      this.reddit.user = newProfile;
+    },
+    set updateSkype(newUser) {
+      this.skype.user = newUser;
+    },
+    set updateTwitter(newUser) {
+      this.twitter.user = newUser;
+    },
+  },
+  {
     projects: [
       {
-        name: 'Battleship',
+        name: 'battleship',
         description: 'A clone of the classic game, Battleship. It is a turn-based game where each player has their '
           + 'own play field represented by a grid. The player places pieces in random locations on the grid in random '
           + '90 degree rotations. Once pieces are set for both players, the game begins. On each turn, the player '
@@ -42,7 +116,7 @@ const data = [
         url: 'https://404anf.azurewebsites.net/',
       },
       {
-        name: 'Stormcaster',
+        name: 'stormcaster',
         description: 'Stormcaster is a WIP weather app that is the first phase to a much larger project. My goal' +
           ' with this app is to make it a convenient place to get weather conditions and forecast for a user\'s' +
           ' current and searched locations as well as provide some jokes to provide some humor with each update.',

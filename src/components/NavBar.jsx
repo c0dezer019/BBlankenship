@@ -4,7 +4,7 @@ import {
   ContactSupportOutlined, FolderSpecialOutlined, HomeOutlined, InfoOutlined,
 } from '@material-ui/icons';
 import { Breadcrumbs, Container } from '@material-ui/core';
-import StyledBreadcrumb from '../styles/MaterialUI/styledBreadcrumb';
+import StyledBreadcrumb from '../styles/MaterialUI/StyledBreadcrumb';
 import useStyles from '../styles/MaterialUI/navIcons';
 
 const NavBar = () => {

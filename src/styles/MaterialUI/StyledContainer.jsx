@@ -4,7 +4,7 @@ import { Container, withStyles } from '@material-ui/core';
 
 const StyledContainer = withStyles({
   root: {
-    height: '100%',
+    height: '945px',
     position: 'relative',
     marginTop: '50px',
     paddingLeft: '10%',
@@ -19,12 +19,25 @@ const StyledContainer = withStyles({
   flexCol: {
     display: 'flex',
     flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100%',
+    position: 'relative',
+    marginTop: '50px',
+    paddingLeft: '10%',
+    width: '100%',
   },
   flexRow: {
     display: 'flex',
     width: 1200,
+    padding: '1%',
   },
-})(({ classes, children, containerStyle, display, flexDirection }) => {
+  gridFlex: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+  },
+})(({ classes, children, col, containerStyle, flex, gridFlex }) => {
   if (containerStyle === 'second') {
     return (
       <Container className={ classes.second } maxWidth="xl">
@@ -37,8 +50,8 @@ const StyledContainer = withStyles({
         { children }
       </Container>
     );
-  } else if (display === 'flex') {
-    if (flexDirection === 'col') {
+  } else if (flex) {
+    if (col) {
       return (
         <Container className={ classes.flexCol } maxWidth="xl">
           { children }
@@ -47,6 +60,12 @@ const StyledContainer = withStyles({
     }
     return (
       <Container className={ classes.flexRow } maxWidth="xl">
+        { children }
+      </Container>
+    );
+  } else if (gridFlex) {
+    return (
+      <Container className={ classes.gridFlex } maxWidth="xl">
         { children }
       </Container>
     );

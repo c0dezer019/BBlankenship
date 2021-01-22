@@ -5,9 +5,11 @@ import classNames from 'classnames';
 import styledTypo from '../styles/MaterialUI/styledTypo';
 import StyledContainer from '../styles/MaterialUI/StyledContainer';
 import styles from '../styles/sass/home.module.css';
+import muiStyles from '../styles/MaterialUI/muiStyles';
 
 const Home = () => {
   const classes = styledTypo();
+  const box = muiStyles();
 
   const h1 = classNames(classes.root, styles.h1);
   const h2 = classNames(classes.root, styles.h2);
@@ -15,12 +17,12 @@ const Home = () => {
   const h4 = classNames(classes.root, styles.h4);
 
   return (
-    <Box className="contentContainer" maxWidth="xl">
+    <Box className="body" maxWidth="xl">
       <Head>
         <title>Brian Blankenship</title>
       </Head>
-      <StyledContainer>
-        <Grid container id="text-container" spacing={6}>
+      <StyledContainer flex>
+        <Grid container className={box.grid} id="text-container" spacing={6}>
           <Grid item xl={12}>
             <p className={styles.intro}>
               I am

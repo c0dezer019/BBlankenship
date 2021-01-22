@@ -1,21 +1,25 @@
 .h1 {
   position: relative;
   left: 25%;
+  width: fit-content;
 }
 
 .h2 {
   position: relative;
   left: 40%;
+  width: fit-content;
 }
 
 .h3 {
   position: relative;
   left: 50%;
+  width: fit-content;
 }
 
 .h4 {
   position: relative;
   left: 70%;
+  width: fit-content;
 }
 
 .intro {
