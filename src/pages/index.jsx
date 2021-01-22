@@ -5,13 +5,12 @@ import classNames from 'classnames';
 import styledTypo from '../styles/MaterialUI/styledTypo';
 import StyledContainer from '../styles/MaterialUI/StyledContainer';
 import styles from '../styles/sass/home.module.css';
-import useStyles from '../styles/MaterialUI/muiStyles';
+import muiStyles from '../styles/MaterialUI/muiStyles';
 
 const Home = () => {
   const classes = styledTypo();
-  const box = useStyles();
+  const box = muiStyles();
 
-  const boxClass = classNames('contentContainer', box.root);
   const h1 = classNames(classes.root, styles.h1);
   const h2 = classNames(classes.root, styles.h2);
   const h3 = classNames(classes.root, styles.h3);

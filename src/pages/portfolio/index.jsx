@@ -3,12 +3,10 @@ import Head from 'next/head';
 import { Box } from '@material-ui/core';
 import data from '../../data/projectData';
 import ProjectCard from '../../components/ProjectCard';
-import StyledContainer from '../../styles/MaterialUI/StyledContainer';
-import useStyles from '../../styles/MaterialUI/muiStyles';
+import muiStyles from '../../styles/MaterialUI/muiStyles';
 
 const AppGallery = () => {
   const { projects } = data[2];
-  const classes = useStyles();
 
   return (
     <Box className="body" maxWidth="xl">
