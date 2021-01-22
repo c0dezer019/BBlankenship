@@ -22,33 +22,48 @@ const data = [
         icon: 'images/social_media/Discord-Logo+Wordmark-Color.svg',
       },
       email: {
-        email: 'c0dezer019@zohomail.com',
-        address: `mailto:${this.email}`,
+        address: 'c0dezer019@zohomail.com',
+        // eslint-disable-next-line func-names
+        url: function () {
+          return `mailto:${ this.address }`;
+        },
         icon: 'images/social_media/message.svg',
       },
       gitHub: {
         user: 'c0dezer019',
-        profile: `https://github.com/${this.user}`,
-        icon: 'images/tech_icons/Octocat.png',
+        // eslint-disable-next-line func-names
+        url: function () {
+          return `https://github.com/${ this.user }`;
+        },
+        image: 'images/tech_icons/Octocat.png',
       },
       linkedIn: {
         user: 'brian-blankenship',
-        profile: `https://www.linkedin.com/in/${this.user}/`,
-        icon: 'images/social_media/LI-Logo.png',
+        // eslint-disable-next-line func-names
+        url: function () {
+          return `https://www.linkedin.com/in/${ this.user }/`;
+        },
+        image: 'images/social_media/LI-Logo.png',
       },
       reddit: {
         user: 'MrChurch2015',
-        profile: `https://www.reddit.com/user/${this.user}`,
-        icon: 'images/social_media/Reddit_Lockup_OnDark.svg',
+        // eslint-disable-next-line func-names
+        url: function () {
+          return `https://www.reddit.com/user/${ this.user }`;
+        },
+        image: 'images/social_media/Reddit_Lockup_OnDark.svg',
       },
       skype: {
         user: 'live:briandb1222',
-        icon: 'images/social_media/skype-icon.svg',
+        image: 'images/social_media/skype-icon.svg',
       },
       twitter: {
         user: 'c0dezer019',
-        profile: `https://twitter.com/${this.user}`,
-        icon: 'images/social_media/Twitter_Social_Icon_Rounded_Square_Color.svg',
+        // eslint-disable-next-line func-names
+        url: function () {
+          return `https://twitter.com/${ this.user }`;
+        },
+        image: 'images/social_media/Twitter_Social_Icon_Rounded_Square_Color.svg',
       },
     },
     get contactDossier() {
