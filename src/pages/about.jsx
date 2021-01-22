@@ -7,11 +7,11 @@ import StyledContainer from '../styles/MaterialUI/StyledContainer';
 import styledTypo from '../styles/MaterialUI/styledTypo';
 import styles from '../styles/sass/about.module.css';
 import TechGrid from '../components/TechGrid';
-import useStyles from '../styles/MaterialUI/muiStyles';
+import muiStyles from '../styles/MaterialUI/muiStyles';
 
 const About = () => {
   const classes = styledTypo();
-  const boxStyle = useStyles();
+  const boxStyle = muiStyles();
   const { languages, fnl, database, cloud, os } = data[0];
   const root = className('contentContainer', boxStyle.root);
 
