@@ -32,7 +32,12 @@ const StyledContainer = withStyles({
     width: 1200,
     padding: '1%',
   },
-})(({ classes, children, col, containerStyle, flex }) => {
+  gridFlex: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+  },
+})(({ classes, children, col, containerStyle, flex, gridFlex }) => {
   if (containerStyle === 'second') {
     return (
       <Container className={ classes.second } maxWidth="xl">
@@ -55,6 +60,12 @@ const StyledContainer = withStyles({
     }
     return (
       <Container className={ classes.flexRow } maxWidth="xl">
+        { children }
+      </Container>
+    );
+  } else if (gridFlex) {
+    return (
+      <Container className={ classes.gridFlex } maxWidth="xl">
         { children }
       </Container>
     );

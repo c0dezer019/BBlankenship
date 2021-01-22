@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles({
+const muiStyles = makeStyles({
   root: {
     height: '100%',
   },
@@ -9,6 +9,17 @@ const useStyles = makeStyles({
     position: 'relative',
     top: 120,
   },
+  gridList: {
+    flexWrap: 'none',
+    transform: 'translateZ(0)',
+    width: 500,
+  },
+  gridListTile: {
+    height: 64,
+  },
+  gridListContainer: {
+    width: '100%',
+  },
 });
 
-export default useStyles;
+export default muiStyles;
