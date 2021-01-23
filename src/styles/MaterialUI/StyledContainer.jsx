@@ -35,7 +35,9 @@ const StyledContainer = withStyles({
   footer: {
     backgroundColor: '#282e2a',
     display: 'flex',
+    flexDirection: 'column',
     justifyContent: 'center',
+    alignItems: 'center',
     margin: 0,
     padding: 0,
     width: '100%',
