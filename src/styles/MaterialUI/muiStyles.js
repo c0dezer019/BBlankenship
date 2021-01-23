@@ -12,10 +12,11 @@ const muiStyles = makeStyles({
   gridList: {
     flexWrap: 'none',
     transform: 'translateZ(0)',
-    width: 500,
+    width: '100%',
+    justifyContent: 'center',
   },
   gridListTile: {
-    height: 64,
+    height: 32,
   },
   gridListContainer: {
     width: '100%',

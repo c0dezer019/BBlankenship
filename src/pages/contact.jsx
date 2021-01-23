@@ -20,22 +20,24 @@ const Contact = () => {
     contactDossier.linkedIn,
     contactDossier.reddit,
     contactDossier.skype,
-    contactDossier.twitter];
+    contactDossier.twitter,
+  ];
 
   return (
     <Box className={ classes.root } maxWidth="xl">
       <Head>
-        <title>Contact</title>
+        <title>Contact Me</title>
       </Head>
       <StyledContainer id="contentContainer" flex col>
-        <section className={ styles.contact } id="contact">
-          <header>
-            <Typography className={ typo.root } variant="h5">#contact_me</Typography>
-          </header>
+        <header>
+          <Typography className={ typo.root } variant="h5">#contact_me</Typography>
+        </header>
+        <section className={ styles.contact } id="contact"></section>
+        <footer className={ styles.footer }>
           <StyledContainer gridFlex>
             <GridTiles data={ contactMethods } />
           </StyledContainer>
-        </section>
+        </footer>
       </StyledContainer>
     </Box>
   );
