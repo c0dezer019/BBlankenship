@@ -32,11 +32,13 @@ const Contact = () => {
         <header>
           <Typography className={ typo.root } variant="h5">#contact_me</Typography>
         </header>
-        <section className={ styles.contact } id="contact"></section>
+        <section className={ styles.contact } id="contact">
+          <p>
+            Hello World
+          </p>
+        </section>
         <footer className={ styles.footer }>
-          <StyledContainer gridFlex>
-            <GridTiles data={ contactMethods } />
-          </StyledContainer>
+          <GridTiles data={ contactMethods } />
         </footer>
       </StyledContainer>
     </Box>
