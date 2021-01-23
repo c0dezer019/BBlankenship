@@ -19,7 +19,7 @@ const data = [
     contactInfo: {
       discord: {
         user: 'c0dezer019#4224',
-        icon: 'images/social_media/Discord-Logo+Wordmark-Color.svg',
+        image: 'images/social_media/Discord-Logo+Wordmark-Color.svg',
       },
       email: {
         address: 'c0dezer019@zohomail.com',
@@ -27,7 +27,7 @@ const data = [
         url: function () {
           return `mailto:${ this.address }`;
         },
-        icon: 'images/social_media/message.svg',
+        image: 'images/social_media/message.svg',
       },
       gitHub: {
         user: 'c0dezer019',
