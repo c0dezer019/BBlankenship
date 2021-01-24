@@ -4,6 +4,9 @@ const contactFormStyle = makeStyles({
   root: {
     marginTop: '10%',
   },
+  gridCell: {
+    textAlign: 'right',
+  },
   fields: {
     color: 'red',
     width: '100%',

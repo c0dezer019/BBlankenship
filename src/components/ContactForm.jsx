@@ -76,8 +76,16 @@ const ContactForm = () => {
           />
           { errors.message && 'You can\'t expect me to respond to an empty message!' }
         </Grid>
-        <Grid item xl={ 3 }>
-          <Button color="primary" label="Submit" type="submit" variant="contained">Submit</Button>
+        <Grid className={ classes.gridCell } item xs={ 12 }>
+          <Button
+            color="primary"
+            id="submitButton"
+            label="Submit"
+            type="submit"
+            variant="contained"
+          >
+            Submit
+          </Button>
         </Grid>
       </Grid>
     </form>

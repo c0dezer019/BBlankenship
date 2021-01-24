@@ -20,7 +20,6 @@ const Tile = ({ data }) => {
 
 Tile.propTypes = {
   data: PropTypes.objectOf(PropTypes.string).isRequired,
-  key: PropTypes.string.isRequired,
 };
 
 export default Tile;

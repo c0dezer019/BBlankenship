@@ -6,7 +6,7 @@ const styledTypo = makeStyles({
   },
   contactHeader: {
     fontFamily: '"Fira Code", sans-serif',
-    margin: '0 auto 0 30rem',
+    margin: '0 auto 0 33rem',
     position: 'relative',
     top: '5rem',
     width: 'max-content',
