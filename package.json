@@ -15,6 +15,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.2",
     "@material-ui/icons": "^4.11.2",
+    "browserslist": "^4.16.1",
     "classnames": "^2.2.6",
     "emailjs-com": "^2.6.4",
     "http": "^0.0.1-security",

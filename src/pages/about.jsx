@@ -11,18 +11,18 @@ import muiStyles from '../styles/material_ui/muiStyles';
 
 const About = () => {
   const classes = styledTypo();
-  const boxStyle = muiStyles();
+  const muiStyle = muiStyles();
   const { languages, fnl, database, cloud, os } = data[0];
-  const root = className('contentContainer', boxStyle.root);
+  const root = className('pageContainer', muiStyle.root);
 
   return (
-    <Box className={root}>
-      <StyledContainer maxWidth="xl">
-        <Head>
-          <title>About</title>
-          <meta name="description" content="About Brian Blankenship" />
-        </Head>
-        <Container maxWidth="xl" id="missionStatementContainer">
+    <Box className={root} maxWidth="xl">
+      <Head>
+        <title>About</title>
+        <meta name="description" content="About Brian Blankenship" />
+      </Head>
+      <StyledContainer className="contentContainer" flex>
+        <StyledContainer id="missionStatementContainer" containerStyle="second">
           <section id="missionStatement">
             <article className={ styles.missionStatement }>
               <Typography className={ classes.root } id="missionStatementText" variant="h4">#mission</Typography>
@@ -34,7 +34,7 @@ const About = () => {
               </p>
             </article>
           </section>
-        </Container>
+        </StyledContainer>
         <StyledContainer maxWidth="xl" id="technologiesContainer" containerStyle="second">
           <article id="technologies">
             <div id="containerTitle">

@@ -16,8 +16,6 @@ const muiStyles = makeStyles(theme => ({
   },
   grid: {
     flexDirection: 'column',
-    position: 'relative',
-    top: 120,
   },
   techGrid: {
     margin: 0,

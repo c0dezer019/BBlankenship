@@ -24,7 +24,7 @@ const Contact = () => {
   ];
 
   return (
-    <Box className={ classes.contact } maxWidth="xl">
+    <Box className="pageContainer" maxWidth="xl">
       <Head>
         <title>Contact Me</title>
       </Head>
