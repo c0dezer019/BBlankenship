@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container, GridList } from '@material-ui/core';
+import { GridList } from '@material-ui/core';
 import Tile from './subcomponents/Tile';
-import muiStyles from '../styles/MaterialUI/muiStyles';
+import muiStyles from '../styles/material_ui/muiStyles';
 
 const GridTiles = ({ data }) => {
   const classes = muiStyles();

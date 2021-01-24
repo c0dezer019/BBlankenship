@@ -19,38 +19,27 @@ const data = [
     contactInfo: {
       discord: {
         user: 'c0dezer019#4224',
-        icon: 'images/social_media/Discord-Logo+Wordmark-Color.svg',
+        url: 'https://discordapp.com/users/c0dezer019#4224',
+        image: 'images/social_media/Discord-Logo+Wordmark-Color.svg',
       },
       email: {
         address: 'c0dezer019@zohomail.com',
-        // eslint-disable-next-line func-names
-        url: function () {
-          return `mailto:${ this.address }`;
-        },
-        icon: 'images/social_media/message.svg',
+        url: 'mailto:c0dezer019@zohomail.com',
+        image: 'images/social_media/message.svg',
       },
       gitHub: {
         user: 'c0dezer019',
-        // eslint-disable-next-line func-names
-        url: function () {
-          return `https://github.com/${ this.user }`;
-        },
+        url: 'https://github.com/c0dezer019',
         image: 'images/tech_icons/Octocat.png',
       },
       linkedIn: {
         user: 'brian-blankenship',
-        // eslint-disable-next-line func-names
-        url: function () {
-          return `https://www.linkedin.com/in/${ this.user }/`;
-        },
+        url: 'https://www.linkedin.com/in/brian-blankenship',
         image: 'images/social_media/LI-Logo.png',
       },
       reddit: {
         user: 'MrChurch2015',
-        // eslint-disable-next-line func-names
-        url: function () {
-          return `https://www.reddit.com/user/${ this.user }`;
-        },
+        url: 'https://www.reddit.com/user/MrChurch2015',
         image: 'images/social_media/Reddit_Lockup_OnDark.svg',
       },
       skype: {
@@ -59,10 +48,7 @@ const data = [
       },
       twitter: {
         user: 'c0dezer019',
-        // eslint-disable-next-line func-names
-        url: function () {
-          return `https://twitter.com/${ this.user }`;
-        },
+        url: 'https://twitter.com/c0dezer019',
         image: 'images/social_media/Twitter_Social_Icon_Rounded_Square_Color.svg',
       },
     },

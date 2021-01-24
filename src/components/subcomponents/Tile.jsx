@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { GridListTile } from '@material-ui/core';
-import muiStyles from '../../styles/MaterialUI/muiStyles';
+import muiStyles from '../../styles/material_ui/muiStyles';
 import styles from '../../styles/sass/contact.module.css';
 
 const Tile = ({ data }) => {

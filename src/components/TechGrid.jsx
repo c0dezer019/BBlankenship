@@ -1,20 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Container, Grid, Typography } from '@material-ui/core';
-import StyledChip from '../styles/MaterialUI/StyledChip';
-import useStyles from '../styles/MaterialUI/styledGrid';
+import StyledChip from '../styles/material_ui/StyledChip';
+import muiStyles from '../styles/material_ui/muiStyles';
 
 const TechGrid = ({ category, tech }) => {
-  const classes = useStyles();
+  const classes = muiStyles();
 
   return (
-    <Container className={classes.root}>
+    <Container className={classes.techGrid}>
       <Typography variant="h6">
         { category }
       </Typography>
       <Grid container className="techStack" id={ category } spacing={2}>
         { tech.map((name, i) => (
-          <Grid className={ classes.cell } item key={ i + 1 } xl={ 2 }>
+          <Grid className={ classes.techGridCell } item key={ i + 1 } xl={ 2 }>
             <StyledChip label={ name } variant="outlined" />
           </Grid>
         )) }
