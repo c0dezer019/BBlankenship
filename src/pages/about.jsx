@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { Box, Container, Typography } from '@material-ui/core';
+import { Box, Typography } from '@material-ui/core';
 import className from 'classnames';
 import data from '../data/projectData';
 import StyledContainer from '../styles/material_ui/StyledContainer';

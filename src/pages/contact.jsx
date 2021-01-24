@@ -5,11 +5,9 @@ import data from '../data/projectData';
 import ContactForm from '../components/ContactForm';
 import GridTiles from '../components/GridTiles';
 import styledTypo from '../styles/material_ui/styledTypo';
-import muiStyles from '../styles/material_ui/muiStyles';
 import styles from '../styles/sass/contact.module.css';
 
 const Contact = () => {
-  const classes = muiStyles();
   const typo = styledTypo();
   const { contactDossier } = data[1];
 
