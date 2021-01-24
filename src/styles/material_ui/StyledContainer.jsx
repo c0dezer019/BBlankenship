@@ -4,7 +4,7 @@ import { Container, withStyles } from '@material-ui/core';
 
 const StyledContainer = withStyles({
   root: {
-    height: '945px',
+    height: 'auto',
     position: 'relative',
     marginTop: '50px',
     paddingLeft: '10%',

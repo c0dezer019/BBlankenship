@@ -3,9 +3,16 @@ import { makeStyles } from '@material-ui/core';
 const muiStyles = makeStyles(theme => ({
   root: {
     height: '100%',
+    position: 'relative',
+    marginTop: '50px',
+    paddingLeft: '10%',
+    width: '100%',
   },
-  contactForm: {
-    width: 800,
+  contact: {
+    height: '100%',
+    marginTop: '50px',
+    paddingLeft: '10%',
+    width: '100%',
   },
   grid: {
     flexDirection: 'column',
