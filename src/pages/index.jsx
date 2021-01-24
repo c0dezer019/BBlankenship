@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { Box } from '@material-ui/core';
 import IntroGrid from '../components/IntroGrid';
-import StyledContainer from '../styles/MaterialUI/StyledContainer';
+import StyledContainer from '../styles/material_ui/StyledContainer';
 
 const Home = () => (
   <Box className="body" maxWidth="xl">

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Typography } from '@material-ui/core';
 import classNames from 'classnames';
-import styledTypo from '../../styles/MaterialUI/styledTypo';
+import styledTypo from '../../styles/material_ui/styledTypo';
 import styles from '../../styles/sass/home.module.css';
 
 const IntroGridItems = () => {

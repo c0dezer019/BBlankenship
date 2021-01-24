@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Box, Typography } from '@material-ui/core';
-import StyledChip from '../styles/MaterialUI/StyledChip';
-import StyledContainer from '../styles/MaterialUI/StyledContainer';
-import styledTypo from '../styles/MaterialUI/styledTypo';
+import StyledChip from '../styles/material_ui/StyledChip';
+import StyledContainer from '../styles/material_ui/StyledContainer';
+import styledTypo from '../styles/material_ui/styledTypo';
 import styles from '../styles/sass/project.module.css';
 
 const ProjectCard = ({ project }) => {
@@ -14,13 +14,13 @@ const ProjectCard = ({ project }) => {
   const classes = styledTypo();
 
   return (
-    <StyledContainer className="projectCard" id={ `${tag}_card` } maxWidth="xl" flex>
+    <StyledContainer className="projectCard" id={ `${ tag }_card` } maxWidth="xl" flex>
       <section className={ styles.dataContainer }>
-        <Box className={ projectImage } id={ `${tag}_image` }>
+        <Box className={ projectImage } id={ `${ tag }_image` }>
           <img className={ styles.screenshotImage } src={ screenshot } alt={ name } />
         </Box>
-        <Box className={ projectTextArea } id={ `${tag}_info` }>
-          <Box className="projectDesc" id={ `${tag}_desc` }>
+        <Box className={ projectTextArea } id={ `${ tag }_info` }>
+          <Box className="projectDesc" id={ `${ tag }_desc` }>
             <article id="descriptionText">
               <header>
                 <Typography className={ classes.root } variant="h6">#{ name }</Typography>
@@ -30,7 +30,7 @@ const ProjectCard = ({ project }) => {
               </p>
             </article>
           </Box>
-          <Box className="projectStack" id={ `${tag}_stack` }>
+          <Box className="projectStack" id={ `${ tag }_stack` }>
             <section>
               <header>
                 <Typography className={ classes.root } variant="h6">tech_stack</Typography>
@@ -39,7 +39,7 @@ const ProjectCard = ({ project }) => {
                 <p>
                   <span>
                     {tech.map((v, i) => (
-                      <StyledChip className="techChip" key={`${i + 1}_${v}`} label={ v } />
+                      <StyledChip className="techChip" key={`${ i + 1 }_${ v }`} label={ v } />
                     ))}
                   </span>
                 </p>

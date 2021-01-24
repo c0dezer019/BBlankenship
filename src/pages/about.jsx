@@ -3,11 +3,11 @@ import Head from 'next/head';
 import { Box, Container, Typography } from '@material-ui/core';
 import className from 'classnames';
 import data from '../data/projectData';
-import StyledContainer from '../styles/MaterialUI/StyledContainer';
-import styledTypo from '../styles/MaterialUI/styledTypo';
+import StyledContainer from '../styles/material_ui/StyledContainer';
+import styledTypo from '../styles/material_ui/styledTypo';
 import styles from '../styles/sass/about.module.css';
 import TechGrid from '../components/TechGrid';
-import muiStyles from '../styles/MaterialUI/muiStyles';
+import muiStyles from '../styles/material_ui/muiStyles';
 
 const About = () => {
   const classes = styledTypo();

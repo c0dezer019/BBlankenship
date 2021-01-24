@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { Box } from '@material-ui/core';
 import data from '../../data/projectData';
 import ProjectCard from '../../components/ProjectCard';
-import muiStyles from '../../styles/MaterialUI/muiStyles';
+import muiStyles from '../../styles/material_ui/muiStyles';
 
 const AppGallery = () => {
   const { projects } = data[2];

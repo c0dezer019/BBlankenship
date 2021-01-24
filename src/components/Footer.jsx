@@ -1,5 +1,5 @@
 import React from 'react';
-import StyledContainer from '../styles/MaterialUI/StyledContainer';
+import StyledContainer from '../styles/material_ui/StyledContainer';
 
 const Footer = () => (
   <StyledContainer maxWidth="xl" footer>
