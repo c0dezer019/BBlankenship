@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { init } from 'emailjs-com';
 import { Button, Grid, TextField } from '@material-ui/core';
-import classNames from 'classnames';
 import contactFormStyle from '../styles/material_ui/contactFormStyle';
 import styles from '../styles/sass/contact.module.css';
 
@@ -22,6 +21,7 @@ const ContactForm = () => {
           <TextField
             aria-labelledby="contactForm"
             aria-placeholder="John Doe"
+            className={ classes.fields }
             id="nameField"
             label="Name"
             name="name"
