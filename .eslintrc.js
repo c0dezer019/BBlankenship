@@ -41,6 +41,7 @@ module.exports = {
     'no-else-return': 0,
     'no-plusplus': 0,
     'no-param-reassign': 0,
+    'no-useless-escape': 0,
     'object-curly-newline': 0,
     'object-shorthand': 0,
     'operator-linebreak': 0,
