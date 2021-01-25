@@ -89,7 +89,7 @@ const data = [
         screenshot: 'https://i.imgur.com/D8EB2VS.png?1',
         tag: 'BS',
         tech: ['HTML5', 'CSS', 'Javascript'],
-        url: 'https://c0dezer019.github.io/Battleship',
+        url: 'https://battleship.bblankenship.me',
       },
       {
         name: '404AnswerNotFound',
