@@ -1,15 +1,15 @@
 import React from 'react';
 import { Grid, Typography } from '@material-ui/core';
 import classNames from 'classnames';
-import styledTypo from '../../styles/material_ui/styledTypo';
+import muiStyles from '../../styles/material_ui/muiStyles';
 import styles from '../../styles/sass/home.module.css';
 
 const IntroGridItems = () => {
-  const classes = styledTypo();
-  const h1 = classNames(classes.root, styles.h1);
-  const h2 = classNames(classes.root, styles.h2);
-  const h3 = classNames(classes.root, styles.h3);
-  const h4 = classNames(classes.root, styles.h4);
+  const classes = muiStyles();
+  const h1 = classNames(classes.typography, styles.h1);
+  const h2 = classNames(classes.typography, styles.h2);
+  const h3 = classNames(classes.typography, styles.h3);
+  const h4 = classNames(classes.typography, styles.h4);
 
   return (
     <>
