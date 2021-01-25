@@ -15,7 +15,7 @@ const muiStyles = makeStyles(theme => ({
   },
   contactHeader: {
     fontFamily: '"Fira Code", sans-serif',
-    margin: '0 auto 0 33rem',
+    margin: '0 auto 0 36rem',
     position: 'relative',
     top: '5rem',
     width: 'max-content',

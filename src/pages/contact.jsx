@@ -5,12 +5,10 @@ import classNames from 'classnames';
 import data from '../data/projectData';
 import ContactForm from '../components/ContactForm';
 import GridTiles from '../components/GridTiles';
-import styledTypo from '../styles/material_ui/styledTypo';
 import styles from '../styles/sass/contact.module.css';
 import muiStyles from '../styles/material_ui/muiStyles';
 
 const Contact = () => {
-  const typo = styledTypo();
   const classes = muiStyles();
   const root = classNames('pageContainer', classes.root);
   const { contactDossier } = data[1];

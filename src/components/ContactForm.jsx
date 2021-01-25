@@ -1,21 +1,59 @@
-import React, { useEffect } from 'react';
-import { useForm } from 'react-hook-form';
+import React, { useEffect, useState } from 'react';
 import { init } from 'emailjs-com';
 import { Button, Grid, TextField } from '@material-ui/core';
 import contactFormStyle from '../styles/material_ui/contactFormStyle';
 import styles from '../styles/sass/contact.module.css';
 
 const ContactForm = () => {
-  const { register, errors, handleSubmit } = useForm();
-  const onSubmit = data => console.log(data);
+  const [senderName, setSenderName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+  const [answer, setAnswer] = useState('');
+
   const classes = contactFormStyle();
+  const securityAnswer = 'The Matrix';
+
+  const handleChange = e => {
+    if (e !== undefined) {
+      switch (e.target.name) {
+        case 'answer':
+          setAnswer(e.target.value);
+          break;
+        case 'name':
+          setSenderName(e.target.value);
+          break;
+        case 'email':
+          setEmail(e.target.value);
+          break;
+        case 'subject':
+          setSubject(e.target.value);
+          break;
+        case 'message':
+          setMessage(e.target.value);
+          break;
+
+        default:
+          break;
+      }
+    }
+  };
+
+  const handleSubmit = () => {
+    if (answer !== '') {
+      if (answer === securityAnswer) {
+        console.log('you pass!');
+      }
+    }
+    console.log('Not verified');
+  };
 
   useEffect(() => {
     init('user_w9WaYDdbti6jFxoH7rlfr');
-  });
+  }, []);
 
   return (
-    <form className={ styles.contactForm } id="contactForm" onSubmit={ handleSubmit(onSubmit) }>
+    <form className={ styles.contactForm } id="contactForm" onSubmit={ handleSubmit }>
       <Grid container spacing={ 3 }>
         <Grid item xs={ 6 }>
           <TextField
@@ -25,10 +63,10 @@ const ContactForm = () => {
             id="nameField"
             label="Name"
             name="name"
-            ref={ register({ required: true }) }
+            onChange={ handleChange }
             variant="outlined"
+            required
           />
-          { errors.name && 'Name is required.' }
         </Grid>
         <Grid item xs={ 6 }>
           <TextField
@@ -38,15 +76,11 @@ const ContactForm = () => {
             id="emailField"
             label="Email"
             name="email"
-            ref={ register({
-              // eslint-disable-next-line max-len
-              pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/g,
-              required: true,
-            }) }
+            onChange={ handleChange }
             type="email"
             variant="outlined"
+            required
           />
-          { errors.email && 'Email is required.' }
         </Grid>
         <Grid item xs={ 12 }>
           <TextField
@@ -56,10 +90,10 @@ const ContactForm = () => {
             id="subjectField"
             label="Subject"
             name="subject"
-            ref={ register({ required: true }) }
+            onChange={ handleChange }
             variant="outlined"
+            required
           />
-          { errors.subject && 'Subject is required.' }
         </Grid>
         <Grid item xs={ 12 }>
           <TextField
@@ -69,12 +103,25 @@ const ContactForm = () => {
             id="messageField"
             label="Message body"
             name="message"
-            ref={ register({ required: true }) }
+            onChange={ handleChange }
             multiline
             rows={ 10 }
             variant="outlined"
+            required
           />
-          { errors.message && 'You can\'t expect me to respond to an empty message!' }
+        </Grid>
+        <Grid className={ classes.gridCell } item xs={ 12 }>
+          <p>What movie is the phrase: &quot;There is no spoon&quot; from?</p>
+          <TextField
+            aria-labelledby="contactForm"
+            aria-placeholder="Answer"
+            className={ classes.fields }
+            id="botCheck"
+            label="Answer"
+            name="answer"
+            onChange={ handleChange }
+            variant="outlined"
+          />
         </Grid>
         <Grid className={ classes.gridCell } item xs={ 12 }>
           <Button
