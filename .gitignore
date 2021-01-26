@@ -9,6 +9,8 @@
 /coverage
 
 # next.js
+out
+.next
 
 # production
 /build
@@ -17,6 +19,9 @@
 .DS_Store
 .idea
 *.pem
+storybook-static
+.storybook
+src/stories
 
 # debug
 npm-debug.log*

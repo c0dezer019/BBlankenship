@@ -1,7 +1,7 @@
 import { emphasize, withStyles } from '@material-ui/core/styles';
 import Chip from '@material-ui/core/Chip';
 
-const styledBreadcrumb = withStyles(theme => ({
+const StyledBreadcrumb = withStyles(theme => ({
   root: {
     backgroundColor: 'rgba(38, 33, 33, 0.0)',
     borderRadius: 8,
@@ -23,4 +23,4 @@ const styledBreadcrumb = withStyles(theme => ({
   },
 }))(Chip);
 
-export default styledBreadcrumb;
+export default StyledBreadcrumb;
