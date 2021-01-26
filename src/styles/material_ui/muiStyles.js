@@ -5,7 +5,6 @@ const muiStyles = makeStyles(theme => ({
     height: '100%',
     position: 'relative',
     marginTop: '50px',
-    paddingLeft: '10%',
     width: '100%',
   },
   contact: {
@@ -14,10 +13,15 @@ const muiStyles = makeStyles(theme => ({
     paddingLeft: '10%',
     width: '100%',
   },
+  contactHeader: {
+    fontFamily: '"Fira Code", sans-serif',
+    margin: '0 auto 0 36rem',
+    position: 'relative',
+    top: '5rem',
+    width: 'max-content',
+  },
   grid: {
     flexDirection: 'column',
-    position: 'relative',
-    top: 120,
   },
   techGrid: {
     margin: 0,
@@ -26,6 +30,9 @@ const muiStyles = makeStyles(theme => ({
   },
   techGridCell: {
     flexBasis: 0,
+  },
+  typography: {
+    fontFamily: '"Fira Code", sans-serif',
   },
   gridList: {
     transform: 'translateZ(0)',

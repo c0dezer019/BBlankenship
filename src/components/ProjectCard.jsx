@@ -4,14 +4,14 @@ import classNames from 'classnames';
 import { Box, Typography } from '@material-ui/core';
 import StyledChip from '../styles/material_ui/StyledChip';
 import StyledContainer from '../styles/material_ui/StyledContainer';
-import styledTypo from '../styles/material_ui/styledTypo';
+import muiStyles from '../styles/material_ui/muiStyles';
 import styles from '../styles/sass/project.module.css';
 
 const ProjectCard = ({ project }) => {
   const { description, name, screenshot, tag, tech, url } = project;
   const projectTextArea = classNames('projectInfo', styles.projectTextArea);
   const projectImage = classNames('projectImage', styles.imageContainer);
-  const classes = styledTypo();
+  const classes = muiStyles();
 
   return (
     <StyledContainer className="projectCard" id={ `${ tag }_card` } maxWidth="xl" flex>
@@ -23,7 +23,7 @@ const ProjectCard = ({ project }) => {
           <Box className="projectDesc" id={ `${ tag }_desc` }>
             <article id="descriptionText">
               <header>
-                <Typography className={ classes.root } variant="h6">#{ name }</Typography>
+                <Typography className={ classes.typography } variant="h6">#{ name }</Typography>
               </header>
               <p>
                 { description }
@@ -33,7 +33,7 @@ const ProjectCard = ({ project }) => {
           <Box className="projectStack" id={ `${ tag }_stack` }>
             <section>
               <header>
-                <Typography className={ classes.root } variant="h6">tech_stack</Typography>
+                <Typography className={ classes.typography } variant="h6">tech_stack</Typography>
               </header>
               <article>
                 <p>
