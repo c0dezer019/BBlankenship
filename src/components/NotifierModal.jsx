@@ -61,7 +61,7 @@ NotifierModal.propTypes = {
 
 NotifierModal.defaultProps = {
   error: {},
-  reset: null,
+  reset: () => {},
 };
 
 export default NotifierModal;
