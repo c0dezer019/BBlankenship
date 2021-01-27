@@ -28,7 +28,7 @@ const ContactForm = () => {
   };
 
   const resetStatus = () => {
-    setMessageSent(false);
+    if (messageSent) setMessageSent(false);
     setErr({});
     setSendFailed(false);
   };
@@ -168,12 +168,12 @@ const ContactForm = () => {
           </Grid>
         </Grid>
       </form>
-      { messageSent && (<NotifierModal message="Message sent!" signal="open" />) }
+      { messageSent && (<NotifierModal message="Message sent!" resetStatus={ resetStatus } signal="open" />) }
       { sendFailed && (
         <NotifierModal
           message="Failed to send. Please notify website owner with error message:"
           error={ err }
-          reset={ resetStatus }
+          resetStatus={ resetStatus }
           signal="open"
         />
       ) }

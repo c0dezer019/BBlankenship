@@ -6,16 +6,16 @@ import HighligtOffIcon from '@material-ui/icons/HighlightOff';
 import modalStyle from '../styles/material_ui/modalStyle';
 import muiStyles from '../styles/material_ui/muiStyles';
 
-const NotifierModal = ({ error, message, reset, signal }) => {
+const NotifierModal = ({ error, message, resetStatus, signal }) => {
   const [open, setOpen] = useState(false);
 
   const classes = muiStyles();
   const modal = modalStyle();
-  const modalHeader = classNames(classes.typography, modal.headerText);
   const modalMsg = classNames(classes.typography, modal.message);
 
   const handleClose = () => {
     setOpen(false);
+    resetStatus();
   };
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const NotifierModal = ({ error, message, reset, signal }) => {
   const body = (
     <Box className={ modal.root }>
       <Container className={ modal.header }>
-        <Typography className={ modalHeader } id="modalTitle" variant="h5">Message Status</Typography>
+        <Typography className={ classes.typography } id="modalTitle" variant="h5">Message Status</Typography>
         <HighligtOffIcon />
       </Container>
       <hr className={ modal.divider } />
@@ -55,13 +55,11 @@ const NotifierModal = ({ error, message, reset, signal }) => {
 NotifierModal.propTypes = {
   error: PropTypes.object,
   message: PropTypes.string.isRequired,
-  reset: PropTypes.func,
   signal: PropTypes.string.isRequired,
 };
 
 NotifierModal.defaultProps = {
   error: {},
-  reset: () => {},
 };
 
 export default NotifierModal;
