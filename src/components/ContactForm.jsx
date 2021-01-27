@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { init, sendForm } from 'emailjs-com';
-import { Container, Button, Grid, TextField } from '@material-ui/core';
+import { Button, Container, Grid, TextField } from '@material-ui/core';
 import NotifierModal from './NotifierModal';
 import contactFormStyle from '../styles/material_ui/contactFormStyle';
+import StyledContainer from '../styles/material_ui/StyledContainer';
 import styles from '../styles/sass/contact.module.css';
 
 const ContactForm = () => {
@@ -11,6 +12,8 @@ const ContactForm = () => {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
   const [messageSent, setMessageSent] = useState(false);
+  const [sendFailed, setSendFailed] = useState(false);
+  const [err, setErr] = useState({});
   const [answer, setAnswer] = useState('');
 
   const classes = contactFormStyle();
@@ -22,6 +25,12 @@ const ContactForm = () => {
     setSubject('');
     setMessage('');
     setAnswer('');
+  };
+
+  const resetStatus = () => {
+    setMessageSent(false);
+    setErr({});
+    setSendFailed(false);
   };
 
   const handleChange = e => {
@@ -55,6 +64,9 @@ const ContactForm = () => {
         sendForm('service_9zltocb', 'template_kkt9e5f', '#contactForm').then(response => {
           setMessageSent(true);
           resetForm();
+        }, error => {
+          setSendFailed(true);
+          setErr(error);
         });
       }
     }
@@ -66,7 +78,7 @@ const ContactForm = () => {
   }, []);
 
   return (
-    <Container maxWidth="xl">
+    <Container id="contactFormContainer" maxWidth="xl">
       <form className={ styles.contactForm } id="contactForm" onSubmit={ handleSubmit }>
         <Grid container spacing={ 3 }>
           <Grid item xs={ 6 }>
@@ -156,7 +168,15 @@ const ContactForm = () => {
           </Grid>
         </Grid>
       </form>
-      { messageSent && (<NotifierModal message="hello" signal="open" />) }
+      { messageSent && (<NotifierModal message="Message sent!" signal="open" />) }
+      { sendFailed && (
+        <NotifierModal
+          message="Failed to send. Please notify website owner with error message:"
+          error={ err }
+          reset={ resetStatus }
+          signal="open"
+        />
+      ) }
     </Container>
   );
 };
