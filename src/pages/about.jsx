@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import { Box, Button, Typography } from '@material-ui/core';
 import className from 'classnames';
 import data from '../data/projectData';
@@ -33,12 +34,16 @@ const About = () => {
             </article>
           </section>
           <section>
-            <Button href="../../documents/brian_blankenship.pdf" target="_blank" variant="contained">
-              Resume
-            </Button>&nbsp;
-            <Button href="../../documents/ga_cert.pdf" target="_blank" variant="contained">
-              Certificate
-            </Button>
+            <Link href="../../documents/brian_blankenship.pdf" passHref>
+              <Button className={ classes.link } target="_blank" variant="contained">
+                Resume
+              </Button>
+            </Link>
+            <Link href="../../documents/ga_cert.pdf" passHref>
+              <Button className={ classes.link } target="_blank" variant="contained">
+                Certificate
+              </Button>
+            </Link>
           </section>
         </StyledContainer>
         <StyledContainer maxWidth="xl" id="technologiesContainer" flex col>

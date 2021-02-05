@@ -23,6 +23,29 @@ const muiStyles = makeStyles(theme => ({
   grid: {
     flexDirection: 'column',
   },
+  gridList: {
+    transform: 'translateZ(0)',
+    width: '100%',
+    justifyContent: 'center',
+  },
+  gridListContainer: {
+    width: '100%',
+  },
+  gridListTile: {
+    height: 32,
+  },
+  icon: {
+    color: theme.palette.grey[200],
+    marginRight: '-1.45em',
+    width: 100,
+    height: '1em',
+    position: 'relative',
+    bottom: '0.1em',
+    right: '0.5em',
+  },
+  link: {
+    margin: '10px',
+  },
   techGrid: {
     margin: 0,
     marginBottom: '1rem',
@@ -36,26 +59,6 @@ const muiStyles = makeStyles(theme => ({
   },
   typography: {
     fontFamily: '"Fira Code", sans-serif',
-  },
-  gridList: {
-    transform: 'translateZ(0)',
-    width: '100%',
-    justifyContent: 'center',
-  },
-  gridListTile: {
-    height: 32,
-  },
-  gridListContainer: {
-    width: '100%',
-  },
-  icon: {
-    color: theme.palette.grey[200],
-    marginRight: '-1.45em',
-    width: 100,
-    height: '1em',
-    position: 'relative',
-    bottom: '0.1em',
-    right: '0.5em',
   },
 }));
 
