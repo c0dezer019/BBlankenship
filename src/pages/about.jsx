@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { Box, Typography } from '@material-ui/core';
+import { Box, Button, Typography } from '@material-ui/core';
 import className from 'classnames';
 import data from '../data/projectData';
 import StyledContainer from '../styles/material_ui/StyledContainer';
@@ -31,6 +31,14 @@ const About = () => {
                 and Python.
               </p>
             </article>
+          </section>
+          <section>
+            <Button href="../../documents/brian_blankenship.pdf" target="_blank" variant="contained">
+              Resume
+            </Button>&nbsp;
+            <Button href="../../documents/ga_cert.pdf" target="_blank" variant="contained">
+              Certificate
+            </Button>
           </section>
         </StyledContainer>
         <StyledContainer maxWidth="xl" id="technologiesContainer" flex col>

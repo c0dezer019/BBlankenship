@@ -29,7 +29,10 @@ const muiStyles = makeStyles(theme => ({
     padding: 0,
   },
   techGridCell: {
+    display: 'flex',
+    alignItems: 'center',
     flexBasis: 0,
+    justifyContent: 'center',
   },
   typography: {
     fontFamily: '"Fira Code", sans-serif',
