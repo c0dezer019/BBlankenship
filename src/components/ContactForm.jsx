@@ -3,7 +3,6 @@ import { init, sendForm } from 'emailjs-com';
 import { Button, Container, Grid, TextField } from '@material-ui/core';
 import NotifierModal from './NotifierModal';
 import contactFormStyle from '../styles/material_ui/contactFormStyle';
-import StyledContainer from '../styles/material_ui/StyledContainer';
 import styles from '../styles/sass/contact.module.css';
 
 const ContactForm = () => {
