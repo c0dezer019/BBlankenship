@@ -1,10 +1,87 @@
 const data = [
   {
-    languages: ['html5.svg', 'css3.svg', 'javascript.png', 'python.svg'],
-    fnl: ['bootstrap.svg', 'nextjs.svg', 'EJS', 'Express.JS', 'flask.svg', 'nodejs.svg', 'mui.svg'],
-    database: ['postgresql.svg', 'sequelize.svg'],
-    cloud: ['azure.svg'],
-    os: ['Fedora', 'Kali', 'Ubuntu', 'Windows 10'],
+    languages: [
+      {
+        name: 'HTML5',
+        image: 'html5.svg',
+      },
+      {
+        name: 'CSS3',
+        image: 'css3.svg',
+      },
+      {
+        name: 'Javascript',
+        image: 'javascript.png',
+      },
+      {
+        name: 'Python',
+        image: 'python.svg',
+      },
+    ],
+    fnl: [
+      {
+        name: 'Bootstrap',
+        image: 'bootstrap.svg',
+      },
+      {
+        name: 'Next.js',
+        image: 'nextjs.svg',
+      },
+      {
+        name: 'EJS',
+        image: '',
+      },
+      {
+        name: 'Express.js',
+        image: '',
+      },
+      {
+        name: 'Flask',
+        image: 'flask.svg',
+      },
+      {
+        name: 'Node.js',
+        image: 'nodejs.svg',
+      },
+      {
+        name: 'Material UI',
+        image: 'mui.svg',
+      },
+    ],
+    database: [
+      {
+        name: 'PostgreSQL',
+        image: 'postgresql.svg',
+      },
+      {
+        name: 'Sequelize',
+        image: 'sequelize.svg',
+      },
+    ],
+    cloud: [
+      {
+        name: 'Azure',
+        image: 'azure.svg',
+      },
+    ],
+    os: [
+      {
+        name: 'Fedora',
+        image: '',
+      },
+      {
+        name: 'Kali',
+        image: '',
+      },
+      {
+        name: 'Ubuntu',
+        image: '',
+      },
+      {
+        name: 'Windows 10',
+        image: '',
+      },
+    ],
   },
   {
     contactInfo: {
