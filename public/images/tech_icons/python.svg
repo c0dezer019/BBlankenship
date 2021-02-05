@@ -154,7 +154,6 @@
        fy="132.28575"
        id="radialGradient2801"
        xlink:href="#linearGradient2795"
-       gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(1,0,0,0.177966,0,108.7434)" />
     <linearGradient
        x1="150.96111"
@@ -182,7 +181,6 @@
        fy="132.28575"
        id="radialGradient1480"
        xlink:href="#linearGradient2795"
-       gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(2.382716e-8,-0.296405,1.43676,4.683673e-7,-128.544,150.5202)" />
   </defs>
   <g
