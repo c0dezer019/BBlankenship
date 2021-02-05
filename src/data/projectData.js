@@ -1,18 +1,9 @@
 const data = [
   {
-    languages: ['HTML', 'CSS', 'JS', 'Python'],
-    fnl: [
-      'React.js',
-      'Next.js',
-      'EJS',
-      'Express.js',
-      'Flask',
-      'Node.js',
-      'Bootstrap',
-      'MaterialUI',
-    ],
-    database: ['PostgreSQL', 'Sequelize', 'ORM'],
-    cloud: ['Azure'],
+    languages: ['html5.svg', 'css3.svg', 'javascript.png', 'python.svg'],
+    fnl: ['bootstrap.svg', 'nextjs.svg', 'EJS', 'Express.JS', 'flask.svg', 'nodejs.svg', 'mui.svg'],
+    database: ['postgresql.svg', 'sequelize.svg'],
+    cloud: ['azure.svg'],
     os: ['Fedora', 'Kali', 'Ubuntu', 'Windows 10'],
   },
   {
@@ -30,7 +21,7 @@ const data = [
       gitHub: {
         user: 'c0dezer019',
         url: 'https://github.com/c0dezer019',
-        image: 'images/tech_icons/Octocat.png',
+        image: 'images/tech_icons/octocat.png',
       },
       linkedIn: {
         user: 'brian-blankenship',
