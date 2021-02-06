@@ -3,29 +3,29 @@ const data = [
     languages: [
       {
         name: 'HTML5',
-        image: 'html5.svg',
+        image: 'images/tech_icons/html5.png',
       },
       {
         name: 'CSS3',
-        image: 'css3.svg',
+        image: 'images/tech_icons/css3.png',
       },
       {
         name: 'Javascript',
-        image: 'javascript.png',
+        image: 'images/tech_icons/javascript.png',
       },
       {
         name: 'Python',
-        image: 'python.svg',
+        image: 'images/tech_icons/python.png',
       },
     ],
     fnl: [
       {
         name: 'Bootstrap',
-        image: 'bootstrap.svg',
+        image: 'images/tech_icons/bootstrap.png',
       },
       {
         name: 'Next.js',
-        image: 'nextjs.svg',
+        image: 'images/tech_icons/nextjs.png',
       },
       {
         name: 'EJS',
@@ -37,31 +37,31 @@ const data = [
       },
       {
         name: 'Flask',
-        image: 'flask.svg',
+        image: 'images/tech_icons/flask.png',
       },
       {
         name: 'Node.js',
-        image: 'nodejs.svg',
+        image: 'images/tech_icons/nodejs.png',
       },
       {
         name: 'Material UI',
-        image: 'mui.svg',
+        image: 'images/tech_icons/mui.png',
       },
     ],
     database: [
       {
         name: 'PostgreSQL',
-        image: 'postgresql.svg',
+        image: 'images/tech_icons/postgresql.png',
       },
       {
         name: 'Sequelize',
-        image: 'sequelize.svg',
+        image: 'images/tech_icons/sequelize.png',
       },
     ],
     cloud: [
       {
         name: 'Azure',
-        image: 'azure.svg',
+        image: 'images/tech_icons/azure.png',
       },
     ],
     os: [
