@@ -26,13 +26,13 @@ const muiStyles = makeStyles(theme => ({
   gridList: {
     transform: 'translateZ(0)',
     width: '100%',
-    justifyContent: 'center',
   },
   gridListContainer: {
     width: '100%',
   },
   gridListTile: {
-    height: 32,
+    width: 'max-content',
+    padding: 5,
   },
   icon: {
     color: theme.palette.grey[200],
