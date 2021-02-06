@@ -1,0 +1,33 @@
+.tech_icons {
+  width: 32px;
+  height: 32px;
+  margin: auto 1em 0 auto;
+}
+
+.bootstrap {
+  width: 100px;
+}
+
+.ejs {
+  margin-top: 20px;
+}
+
+.python {
+  width: 100px;
+}
+
+.nextjs {
+  height: 20px;
+  margin-top: 5px;
+}
+
+.nodejs {
+  width: 152px;
+  height: 152px;
+}
+
+.social_media_icons {
+  width: 32px;
+}
+
+/*# sourceMappingURL=icons.module.css.map */
