@@ -29,10 +29,14 @@ const muiStyles = makeStyles(theme => ({
   },
   gridListContainer: {
     width: '100%',
+    overflow: 'visible',
   },
   gridListTile: {
     width: 'max-content',
     padding: 5,
+    '& .MuiGridListTile-tile': {
+      overflow: 'visible',
+    },
   },
   icon: {
     color: theme.palette.grey[200],

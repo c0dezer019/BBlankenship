@@ -67,7 +67,7 @@ const data = [
     os: [
       {
         name: 'Fedora',
-        image: '',
+        image: 'images/tech_icons/fedora.png',
       },
       {
         name: 'Kali',
@@ -78,7 +78,7 @@ const data = [
         image: '',
       },
       {
-        name: 'Windows 10',
+        name: 'Windows',
         image: '',
       },
     ],
