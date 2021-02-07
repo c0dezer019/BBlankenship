@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { Box, Divider, Typography } from '@material-ui/core';
+import { Box, Typography } from '@material-ui/core';
 import classNames from 'classnames';
 import data from '../data/projectData';
 import ContactForm from '../components/ContactForm';
