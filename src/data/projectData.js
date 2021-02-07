@@ -88,12 +88,12 @@ const data = [
       discord: {
         user: 'c0dezer019#4224',
         url: 'https://discordapp.com/users/c0dezer019#4224',
-        image: 'images/social_media/Discord-Logo+Wordmark-Color.svg',
+        image: 'images/social_media/discord.png',
       },
       email: {
         address: 'c0dezer019@zohomail.com',
         url: 'mailto:c0dezer019@zohomail.com',
-        image: 'images/social_media/message.svg',
+        image: 'images/social_media/email.png',
       },
       gitHub: {
         user: 'c0dezer019',
@@ -103,21 +103,17 @@ const data = [
       linkedIn: {
         user: 'brian-blankenship',
         url: 'https://www.linkedin.com/in/brian-blankenship',
-        image: 'images/social_media/LI-Logo.png',
+        image: 'images/social_media/linkedin.png',
       },
       reddit: {
         user: 'MrChurch2015',
         url: 'https://www.reddit.com/user/MrChurch2015',
-        image: 'images/social_media/Reddit_Lockup_OnDark.svg',
-      },
-      skype: {
-        user: 'live:briandb1222',
-        image: 'images/social_media/skype-icon.svg',
+        image: 'images/social_media/reddit.png',
       },
       twitter: {
         user: 'c0dezer019',
         url: 'https://twitter.com/c0dezer019',
-        image: 'images/social_media/Twitter_Social_Icon_Rounded_Square_Color.svg',
+        image: 'images/social_media/twitter.png',
       },
     },
     get contactDossier() {
@@ -178,7 +174,7 @@ const data = [
         tag: 'SC',
         tech: ['Axios', 'Material-UI', 'Fetch', 'React', 'SASS'],
         API: ['OpenWeatherMap', 'canhazdadjoke'],
-        url: 'https://github.com/c0dezer019/Stormcaster',
+        url: 'https://stormcaster.bblankenship.me',
       },
     ],
   },

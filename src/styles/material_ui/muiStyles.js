@@ -23,8 +23,12 @@ const muiStyles = makeStyles(theme => ({
   grid: {
     flexDirection: 'column',
   },
-  gridList: {
-    transform: 'translateZ(0)',
+  gridListSocial: {
+    display: 'flex',
+    justifyContent: 'center',
+    width: '100%',
+  },
+  gridListTech: {
     width: '100%',
   },
   gridListContainer: {

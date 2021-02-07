@@ -63,6 +63,7 @@ const ContactForm = () => {
         sendForm('service_9zltocb', 'template_kkt9e5f', '#contactForm').then(response => {
           setMessageSent(true);
           resetForm();
+          console.log(response);
         }, error => {
           setSendFailed(true);
           setErr(error);
