@@ -19,7 +19,6 @@
     "emailjs-com": "^2.6.4",
     "express": "^4.17.1",
     "http": "^0.0.1-security",
-    "mixpanel-browser": "^2.40.1",
     "next": "^10.0.5",
     "prop-types": "^15.7.2",
     "react": "17.0.1",

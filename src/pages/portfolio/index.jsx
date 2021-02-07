@@ -16,6 +16,7 @@ const AppGallery = () => {
     <Box className={ root } maxWidth="xl">
       <Head>
         <title>App Portfolio</title>
+        <meta name="description" content="Projects I have undertaken." />
       </Head>
       <StyledContainer flex col>
         { projects.map((project, i) => (
