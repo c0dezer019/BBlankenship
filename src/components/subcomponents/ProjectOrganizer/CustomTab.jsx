@@ -1,5 +1,6 @@
 import React from 'react';
-import { Tab, withStyles } from '@material-ui/core';
+import { Tab } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 
 const CustomTab = withStyles(theme => ({
   root: {

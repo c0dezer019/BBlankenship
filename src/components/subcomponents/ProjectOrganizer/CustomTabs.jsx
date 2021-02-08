@@ -1,5 +1,6 @@
 import React from 'react';
-import { Tabs, withStyles } from '@material-ui/core';
+import { Tabs } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 
 const CustomTabs = withStyles({
   indicator: {
@@ -7,7 +8,7 @@ const CustomTabs = withStyles({
     justifyContent: 'center',
     backgroundColor: 'transparent',
     '& > span': {
-      maxWidth: 40,
+      maxWidth: '65%',
       width: '100%',
       backgroundColor: '#635ee7',
     },
