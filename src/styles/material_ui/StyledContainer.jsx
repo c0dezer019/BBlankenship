@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container, withStyles } from '@material-ui/core';
+import { Container } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 
 const StyledContainer = withStyles({
   root: {

@@ -21,4 +21,8 @@ const plugins = [
   ]
 ];
 
-module.exports = {plugins};
+const presets = [
+  require("@babel/preset-react"),
+]
+
+module.exports = {plugins, presets};
