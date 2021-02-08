@@ -61,7 +61,6 @@ ProjectCard.propTypes = {
     tech: PropTypes.arrayOf(PropTypes.string).isRequired,
     url: PropTypes.string.isRequired,
   }).isRequired,
-  status: PropTypes.string.isRequired,
 };
 
 export default ProjectCard;
