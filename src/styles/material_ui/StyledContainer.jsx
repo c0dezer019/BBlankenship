@@ -24,7 +24,6 @@ const StyledContainer = withStyles({
     justifyContent: 'center',
     height: '100%',
     position: 'relative',
-    paddingLeft: '10%',
     marginBottom: '20px',
     width: '100%',
   },
