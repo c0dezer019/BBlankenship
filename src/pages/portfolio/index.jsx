@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { Box } from '@material-ui/core';
 import classNames from 'classnames';
 import data from '../../data/projectData';
-import ProjectCard from '../../components/ProjectCard';
+import ProjectCard from '../../components/subcomponents/ProjectOrganizer/ProjectCard';
 import StyledContainer from '../../styles/material_ui/StyledContainer';
 import muiStyles from '../../styles/material_ui/muiStyles';
 

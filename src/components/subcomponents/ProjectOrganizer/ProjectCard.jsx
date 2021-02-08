@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Box, Typography } from '@material-ui/core';
-import StyledChip from '../styles/material_ui/StyledChip';
-import StyledContainer from '../styles/material_ui/StyledContainer';
-import muiStyles from '../styles/material_ui/muiStyles';
-import styles from '../styles/sass/project.module.css';
+import StyledChip from '../../../styles/material_ui/StyledChip';
+import StyledContainer from '../../../styles/material_ui/StyledContainer';
+import muiStyles from '../../../styles/material_ui/muiStyles';
+import styles from '../../../styles/sass/project.module.css';
 
 const ProjectCard = ({ project }) => {
   const { description, name, screenshot, tag, tech, url } = project;
@@ -38,9 +38,9 @@ const ProjectCard = ({ project }) => {
               <article>
                 <p>
                   <span>
-                    {tech.map((v, i) => (
-                      <StyledChip className="techChip" key={`${ i + 1 }_${ v }`} label={ v } />
-                    ))}
+                    { tech.map((v, i) => (
+                      <StyledChip className="techChip" key={ `${ i + 1 }_${ v }` } label={ v } />
+                    )) }
                   </span>
                 </p>
               </article>
@@ -61,6 +61,7 @@ ProjectCard.propTypes = {
     tech: PropTypes.arrayOf(PropTypes.string).isRequired,
     url: PropTypes.string.isRequired,
   }).isRequired,
+  status: PropTypes.string.isRequired,
 };
 
 export default ProjectCard;
