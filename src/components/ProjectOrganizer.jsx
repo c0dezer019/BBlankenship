@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { Typography } from '@material-ui/core';
 import { Tab, Tabs } from './subcomponents/ProjectOrganizer/project_organizer';
 import TabPanel from './subcomponents/ProjectOrganizer/TabPanel';
 import ProjectCard from './subcomponents/ProjectOrganizer/ProjectCard';
 import muiStyles from '../styles/material_ui/muiStyles';
+import styles from '../styles/sass/project.module.css';
 
 const a11yProps = index => ({
   id: `custom-tab-${ index }`,
@@ -16,16 +18,17 @@ const ProjectOrganizer = ({ data }) => {
   const cards = [];
   const classes = muiStyles();
 
-  Object.entries(data).map(el => console.log(el));
+  Object.values(data).map(el => cards.push(<ProjectCard project={ el } />));
 
   const handleChange = (e, newValue) => {
     setValue(newValue);
   };
 
   return (
-    <div>
+    <div className={ styles.container }>
       <Tabs
         aria-label="project-tabs"
+        className={ classes.tabs }
         value={ value }
         onChange={ handleChange }
       >
@@ -35,11 +38,15 @@ const ProjectOrganizer = ({ data }) => {
         <Tab label="publications" { ...a11yProps(3) } />
         <Tab label="other_works" { ...a11yProps(4) } />
       </Tabs>
-      <TabPanel value={ value } index={ 0 }><p>Hello</p></TabPanel>
-      <TabPanel value={ value } index={ 1 }><p>Good Bye</p></TabPanel>
+      <TabPanel value={ value } index={ 0 }>
+        <Typography className={ classes.typography } variant="h4">
+          more coming soon(tm)
+        </Typography>
+      </TabPanel>
+      <TabPanel value={ value } index={ 1 }>{ cards }</TabPanel>
       <TabPanel value={ value } index={ 2 }><p>NOOOOO!</p></TabPanel>
       <TabPanel value={ value } index={ 3 }><p>May the force be with you.</p></TabPanel>
-      <TabPanel value={ value } index={ 4 }><p>You don't know the power of the dark side.</p></TabPanel>
+      <TabPanel value={ value } index={ 4 }><p>You don&apos;t know the power of the dark side.</p></TabPanel>
     </div>
   );
 };
