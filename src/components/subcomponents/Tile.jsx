@@ -33,12 +33,12 @@ const Tile = ({ data, source }) => {
   };
 
   return (
-    <GridListTile className={ classes.gridListTile } cols={ 2 }>
+    <GridListTile className={ classes.gridListTile } cols={ 1 }>
       { url !== '' ? (
         <a href="#" onClick={ handleClick }>
           <img className={ iconClass } src={ data.image } alt={ data.name } />
         </a>
-      ) : image ? (
+      ) : data.image !== '' ? (
         <div>
           <img className={ iconClass } src={ data.image } alt={ data.name } />
         </div>
