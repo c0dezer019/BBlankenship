@@ -13,6 +13,6 @@ const CustomTabs = withStyles({
       backgroundColor: '#635ee7',
     },
   },
-})(props => <Tabs { ...props } TabIndicatorProps={{ children: <span /> }} />);
+})(props => <Tabs id="tab-container" { ...props } TabIndicatorProps={{ children: <span /> }} />);
 
 export default CustomTabs;

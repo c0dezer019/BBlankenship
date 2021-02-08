@@ -15,8 +15,8 @@ const TabPanel = ({ children, value, index, ...other }) => {
       { ...other }
     >
       { value === index && (
-        <Box p={ 3 }>
-          <Typography className={ classes.typography }>{ children }</Typography>
+        <Box className={ classes.tabpanel } p={ 3 }>
+          <Box className={ classes.panelChild }><section>{ children }</section></Box>
         </Box>
       ) }
     </div>

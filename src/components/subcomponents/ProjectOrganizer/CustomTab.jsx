@@ -8,7 +8,8 @@ const CustomTab = withStyles(theme => ({
     color: '#fff',
     fontFamily: 'Fira Code',
     fontWeight: theme.typography.fontWeightRegular,
-    fontSize: theme.typography.pxToRem(15),
+    fontSize: theme.typography.pxToRem(18),
+    margin: '0 20px 0 20px',
   },
 }))(props => <Tab disableRipple { ...props } />);
 
