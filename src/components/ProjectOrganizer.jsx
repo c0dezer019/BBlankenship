@@ -38,15 +38,29 @@ const ProjectOrganizer = ({ data }) => {
         <Tab label="publications" { ...a11yProps(3) } />
         <Tab label="other_works" { ...a11yProps(4) } />
       </Tabs>
-      <TabPanel value={ value } index={ 0 }>
+      <TabPanel value={ value } index={ 0 } placeholder>
         <Typography className={ classes.typography } variant="h4">
-          more coming soon(tm)
+          coming soon(tm)
         </Typography>
       </TabPanel>
-      <TabPanel value={ value } index={ 1 }>{ cards }</TabPanel>
-      <TabPanel value={ value } index={ 2 }><p>NOOOOO!</p></TabPanel>
-      <TabPanel value={ value } index={ 3 }><p>May the force be with you.</p></TabPanel>
-      <TabPanel value={ value } index={ 4 }><p>You don&apos;t know the power of the dark side.</p></TabPanel>
+      <TabPanel value={ value } index={ 1 }>
+        { cards }
+      </TabPanel>
+      <TabPanel value={ value } index={ 2 } placeholder>
+        <Typography className={ classes.typography } variant="h4">
+          coming soon(tm)
+        </Typography>
+      </TabPanel>
+      <TabPanel value={ value } index={ 3 } placeholder>
+        <Typography className={ classes.typography } variant="h4">
+          coming soon(tm)
+        </Typography>
+      </TabPanel>
+      <TabPanel value={ value } index={ 4 } placeholder>
+        <Typography className={ classes.typography } variant="h4">
+          coming soon(tm)
+        </Typography>
+      </TabPanel>
     </div>
   );
 };
