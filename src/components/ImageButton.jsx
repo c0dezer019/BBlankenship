@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import { ButtonBase, Typography } from '@material-ui/core';
 import btnStyle from '../styles/material_ui/imageButtonStyle';
 
