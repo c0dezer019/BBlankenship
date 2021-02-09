@@ -7,6 +7,10 @@
   margin-top: 0.4rem;
 }
 
+.tabpanel {
+  height: 80%;
+}
+
 .dataContainer {
   display: flex;
 }

@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 const muiStyles = makeStyles(theme => ({
   root: {
     height: '100%',
-    position: 'relative',
     marginTop: '50px',
     width: '100%',
   },
@@ -87,16 +86,20 @@ const muiStyles = makeStyles(theme => ({
     alignItems: 'center',
     flexDirection: 'column',
     justifyContent: 'center',
+    width: '100%',
   },
   panelChild: {
     width: '65%',
   },
   placeholder: {
+    height: '100%',
+  },
+  placeholderChild: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
     alignItems: 'center',
-    height: '70%',
+    justifyContent: 'center',
+    height: '100%',
   },
   typography: {
     fontFamily: '"Fira Code", sans-serif',

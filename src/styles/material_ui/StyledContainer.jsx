@@ -53,7 +53,7 @@ const StyledContainer = withStyles({
     justifyContent: 'space-around',
     width: '100%',
   },
-})(({ classes, children, col, containerStyle, flex, footer, gridFlex }) => {
+})(({ classes, children, col, containerStyle, flex, footer, gridFlex, paddingLeft }) => {
   if (containerStyle === 'second') {
     return (
       <Container className={ classes.second } maxWidth="xl">
@@ -69,7 +69,7 @@ const StyledContainer = withStyles({
   } else if (flex) {
     if (col) {
       return (
-        <Container className={ classes.flexCol } maxWidth="xl">
+        <Container className={ classes.flexCol } maxWidth="xl" style={{ paddingLeft: paddingLeft }}>
           { children }
         </Container>
       );
