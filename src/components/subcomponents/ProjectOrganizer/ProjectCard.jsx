@@ -1,23 +1,36 @@
 import React from 'react';
+import Link from 'next/link';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { Box, Typography } from '@material-ui/core';
+import { Box, Container, Typography } from '@material-ui/core';
+import ImageButton from '../../ImageButton';
 import StyledChip from '../../../styles/material_ui/StyledChip';
 import StyledContainer from '../../../styles/material_ui/StyledContainer';
 import muiStyles from '../../../styles/material_ui/muiStyles';
 import styles from '../../../styles/sass/project.module.css';
 
 const ProjectCard = ({ project }) => {
-  const { description, name, screenshot, tag, tech, url } = project;
+  const { description, demo, github, name, screenshot, tag, tech } = project;
   const projectTextArea = classNames('projectInfo', styles.projectTextArea);
-  const projectImage = classNames('projectImage', styles.imageContainer);
+  const projectImagePane = classNames('projectImage', styles.imageContainer);
   const classes = muiStyles();
 
   return (
     <StyledContainer className="projectCard" id={ `${ tag }_card` } maxWidth="xl" flex>
       <section className={ styles.dataContainer }>
-        <Box className={ projectImage } id={ `${ tag }_image` }>
-          <img className={ styles.screenshotImage } src={ screenshot } alt={ name } />
+        <Box className={ projectImagePane } id={ `${ tag }_image` }>
+          <ImageButton image={ screenshot } title={ name } url={ demo } />
+          <Container className={ classes.linkContainer }>
+            <Link className={ classes.link } href={ github } passHref>
+              <a target="_blank">
+                <img
+                  className={ styles.github }
+                  src="images/tech_icons/github.png"
+                  alt="Github"
+                />
+              </a>
+            </Link>
+          </Container>
         </Box>
         <Box className={ projectTextArea } id={ `${ tag }_info` }>
           <Box className="projectDesc" id={ `${ tag }_desc` }>
