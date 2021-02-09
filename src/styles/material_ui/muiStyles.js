@@ -91,8 +91,16 @@ const muiStyles = makeStyles(theme => ({
   panelChild: {
     width: '65%',
   },
+  placeholder: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '70%',
+  },
   typography: {
     fontFamily: '"Fira Code", sans-serif',
+    width: 'max-content',
   },
 }));
 
