@@ -4,7 +4,7 @@ const plugins = [
     {
       'libraryName': '@material-ui/core',
       // Use "'libraryDirectory': ''," if your bundler does not support ES modules
-      'libraryDirectory': 'esm',
+      'libraryDirectory': '',
       'camel2DashComponentName': false
     },
     'core'
@@ -14,7 +14,7 @@ const plugins = [
     {
       'libraryName': '@material-ui/icons',
       // Use "'libraryDirectory': ''," if your bundler does not support ES modules
-      'libraryDirectory': 'esm',
+      'libraryDirectory': '',
       'camel2DashComponentName': false
     },
     'icons'
@@ -22,7 +22,7 @@ const plugins = [
 ];
 
 const presets = [
-  require("@babel/preset-react"),
+  require("@babel/preset-react")
 ]
 
 module.exports = {plugins, presets};
