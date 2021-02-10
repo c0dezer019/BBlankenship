@@ -6,16 +6,13 @@ import styles from '../../styles/sass/icons.module.css';
 
 const Tile = ({ data, source }) => {
   const [url, setUrl] = useState('');
-  const [image, setImage] = useState('');
   const [name, setName] = useState('');
   const reg = /[ .\-]/g;
-  const imgStyle = source === 'tech_icons' ? styles.tech_icons :
-    source === 'social_media' ? styles.social_media_icons : null;
+  const imgStyle = source === 'tech_icons' ? styles.tech_icons : 'social';
 
   useEffect(() => {
     if (Object.prototype.hasOwnProperty.call(data, 'url') && Object.prototype.hasOwnProperty.call(data, 'image')) {
       setUrl(data.url);
-      setImage(data.image);
     }
 
     if (Object.prototype.hasOwnProperty.call(data, 'name')) setName(data.name);
@@ -33,12 +30,12 @@ const Tile = ({ data, source }) => {
   };
 
   return (
-    <GridListTile className={ classes.gridListTile } cols={ 2 }>
+    <GridListTile className={ classes.gridListTile } cols={ 1 }>
       { url !== '' ? (
         <a href="#" onClick={ handleClick }>
           <img className={ iconClass } src={ data.image } alt={ data.name } />
         </a>
-      ) : image ? (
+      ) : data.image !== '' ? (
         <div>
           <img className={ iconClass } src={ data.image } alt={ data.name } />
         </div>

@@ -8,7 +8,7 @@ const GridTiles = ({ data, source }) => {
   const iconStyle = source === 'tech_icons' ? classes.gridListTech : classes.gridListSocial;
   const tiles = [];
 
-  Object.entries(data).map((el, i) => tiles.push(<Tile data={ el[1] } key={ `${ i }_tile` } source={ source } />));
+  Object.values(data).map((el, i) => tiles.push(<Tile data={ el } key={ `${ i }_tile` } source={ source } />));
 
   return (
     <GridList className={ iconStyle } cols={ 2 }>

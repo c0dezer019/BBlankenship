@@ -15,7 +15,7 @@
 }
 
 .contactIcon {
-  height: 64px;
+  height: 40px;
 }
 
 .ejs {
@@ -44,10 +44,6 @@
 
 .nextjs {
   margin-top: 0.5em;
-}
-
-.social_media_icons {
-  width: 100%;
 }
 
 .text {

@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { Box } from '@material-ui/core';
 import classNames from 'classnames';
 import data from '../../data/projectData';
-import ProjectCard from '../../components/ProjectCard';
+import ProjectOrganizer from '../../components/ProjectOrganizer';
 import StyledContainer from '../../styles/material_ui/StyledContainer';
 import muiStyles from '../../styles/material_ui/muiStyles';
 
@@ -19,9 +19,7 @@ const AppGallery = () => {
         <meta name="description" content="Projects I have undertaken." />
       </Head>
       <StyledContainer flex col>
-        { projects.map((project, i) => (
-          <ProjectCard key={ `${ i + 1 }_project` } project={ project } />
-        )) }
+        <ProjectOrganizer data={ projects } />
       </StyledContainer>
     </Box>
   );

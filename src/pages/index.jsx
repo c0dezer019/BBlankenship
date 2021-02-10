@@ -15,7 +15,7 @@ const Home = () => {
       <Head>
         <title>Brian Blankenship</title>
       </Head>
-      <StyledContainer flex col>
+      <StyledContainer paddingLeft="15%" flex col>
         <IntroGrid />
       </StyledContainer>
     </Box>

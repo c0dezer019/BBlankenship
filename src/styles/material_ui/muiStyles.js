@@ -1,9 +1,8 @@
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 
 const muiStyles = makeStyles(theme => ({
   root: {
     height: '100%',
-    position: 'relative',
     marginTop: '50px',
     width: '100%',
   },
@@ -30,6 +29,11 @@ const muiStyles = makeStyles(theme => ({
   },
   gridListTech: {
     width: '100%',
+    overflow: 'visible',
+    margin: 0,
+    '&.MuiGridList-root': {
+      overflowY: 'visible',
+    },
   },
   gridListContainer: {
     width: '100%',
@@ -38,6 +42,7 @@ const muiStyles = makeStyles(theme => ({
   gridListTile: {
     width: 'max-content',
     padding: 5,
+    margin: 0,
     '& .MuiGridListTile-tile': {
       overflow: 'visible',
     },
@@ -54,6 +59,9 @@ const muiStyles = makeStyles(theme => ({
   link: {
     margin: '10px',
   },
+  linkContainer: {
+    textAlign: 'center',
+  },
   techGrid: {
     margin: 0,
     marginBottom: '1rem',
@@ -65,8 +73,37 @@ const muiStyles = makeStyles(theme => ({
     flexBasis: 0,
     justifyContent: 'center',
   },
+  tab: {
+    margin: 20,
+  },
+  tabs: {
+    '& .MuiTabs-flexContainer': {
+      justifyContent: 'center',
+    },
+  },
+  tabpanel: {
+    display: 'flex',
+    alignItems: 'center',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    width: '100%',
+  },
+  panelChild: {
+    width: '65%',
+  },
+  placeholder: {
+    height: '100%',
+  },
+  placeholderChild: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100%',
+  },
   typography: {
     fontFamily: '"Fira Code", sans-serif',
+    width: 'max-content',
   },
 }));
 

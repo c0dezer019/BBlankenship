@@ -153,7 +153,8 @@ const data = [
         screenshot: 'https://i.imgur.com/D8EB2VS.png?1',
         tag: 'BS',
         tech: ['HTML5', 'CSS', 'Javascript'],
-        url: 'https://battleship.bblankenship.me',
+        github: 'https://github.com/c0dezer019/Battleship',
+        demo: 'https://battleship.bblankenship.me',
       },
       {
         name: '404AnswerNotFound',
@@ -163,7 +164,8 @@ const data = [
         screenshot: 'https://i.imgur.com/kw5mfc6.png',
         tag: 'ANF',
         tech: ['Azure', 'Bootstrap', 'Express.js', 'EJS', 'PostgreSQL'],
-        url: 'https://404anf.azurewebsites.net/',
+        github: 'https://github.com/c0dezer019/404AnswerNotFound',
+        demo: 'https://404anf.azurewebsites.net/',
       },
       {
         name: 'stormcaster',
@@ -174,12 +176,13 @@ const data = [
         tag: 'SC',
         tech: ['Axios', 'Material-UI', 'Fetch', 'React', 'SASS'],
         API: ['OpenWeatherMap', 'canhazdadjoke'],
-        url: 'https://stormcaster.bblankenship.me',
+        github: 'https://github.com/c0dezer019/Stormcaster',
+        demo: 'https://stormcaster.bblankenship.me',
       },
     ],
   },
   {
-    workInProgress: [
+    upcoming: [
       {
         name: 'Project Meteorstorm',
         description: 'Project Meteorstorm is the parent project for Stormcaster. The goal of this app is to provide' +
