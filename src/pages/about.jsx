@@ -4,9 +4,9 @@ import Link from 'next/link';
 import { Box, Button, Typography } from '@material-ui/core';
 import className from 'classnames';
 import data from '../data/projectData';
+import GridTiles from '../components/GridTiles';
 import StyledContainer from '../styles/material_ui/StyledContainer';
 import styles from '../styles/sass/about.module.css';
-import TechGrid from '../components/TechGrid';
 import muiStyles from '../styles/material_ui/muiStyles';
 
 const About = () => {
@@ -15,7 +15,7 @@ const About = () => {
   const root = className('pageContainer', classes.root);
 
   return (
-    <Box className={root} maxWidth="xl">
+    <Box className={ root } maxWidth="xl">
       <Head>
         <title>About</title>
         <meta name="description" content="About Brian Blankenship" />
@@ -52,11 +52,16 @@ const About = () => {
               <Typography className={ classes.typography } variant="h4">#technologies</Typography>
             </div>
             <div className={ styles.techContainer } id="techContainer">
-              <TechGrid category="Languages" tech={ languages } />
-              <TechGrid category="Frameworks and Libraries" tech={ fnl } />
-              <TechGrid category="Database" tech={ database } />
-              <TechGrid category="Cloud" tech={ cloud } />
-              <TechGrid category="Operating Systems" tech={ os } />
+              <Typography className={ classes.typography } variant="h5">#languages</Typography>
+              <GridTiles data={ languages } source="tech_icons" />
+              <Typography className={ classes.typography } variant="h5">#frameworks_and_libraries</Typography>
+              <GridTiles data={ fnl } source="tech_icons" />
+              <Typography className={ classes.typography } variant="h5">#database</Typography>
+              <GridTiles data={ database } source="tech_icons" />
+              <Typography className={ classes.typography } variant="h5">#cloud</Typography>
+              <GridTiles data={ cloud } source="tech_icons" />
+              <Typography className={ classes.typography } variant="h5">#os</Typography>
+              <GridTiles data={ os } source="tech_icons" />
             </div>
           </article>
         </StyledContainer>

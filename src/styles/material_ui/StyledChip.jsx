@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Chip, withStyles } from '@material-ui/core';
+import { Chip } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 
 const StyledChip = withStyles({
   root: {

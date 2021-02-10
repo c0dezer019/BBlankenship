@@ -13,9 +13,9 @@ const TechGrid = ({ category, tech }) => {
       </Typography>
       <Grid container className="techStack" id={ category } spacing={ 2 }>
         { tech.map((name, i) => (
-          <Grid className={ classes.techGridCell } item key={ i + 1 } xl={ 2 }>
+          <Grid className={ classes.techGridCell } item key={ i + 1 } xl={ 3 }>
             { name === 'bootstrap.svg' || name === 'python.svg' ?
-              (<img src={ `../../images/tech_icons/${ name }` } alt={ name } width="100px" />) :
+              (<img src={ `../../images/tech_icons/${ name }` } alt={ name } width="150px" />) :
               (<img src={ `../../images/tech_icons/${ name }` } alt={ name } width="70px" />) }
           </Grid>
         )) }

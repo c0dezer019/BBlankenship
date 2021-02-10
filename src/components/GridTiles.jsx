@@ -1,23 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { GridList } from '@material-ui/core';
 import Tile from './subcomponents/Tile';
 import muiStyles from '../styles/material_ui/muiStyles';
 
-const GridTiles = ({ data }) => {
+const GridTiles = ({ data, source }) => {
   const classes = muiStyles();
+  const iconStyle = source === 'tech_icons' ? classes.gridListTech : classes.gridListSocial;
+  const tiles = [];
+
+  Object.values(data).map((el, i) => tiles.push(<Tile data={ el } key={ `${ i }_tile` } source={ source } />));
 
   return (
-    <GridList className={ classes.gridList } cols={ 3 }>
-      { data.map((method, i) => (
-        <Tile data={ method } key={ `${ i }_tile` } />
-      )) }
+    <GridList className={ iconStyle } cols={ 2 }>
+      { tiles }
     </GridList>
   );
-};
-
-GridList.propTypes = {
-  data: PropTypes.shape({}).isRequired,
 };
 
 export default GridTiles;

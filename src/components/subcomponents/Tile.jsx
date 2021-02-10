@@ -1,14 +1,28 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import { GridListTile } from '@material-ui/core';
 import muiStyles from '../../styles/material_ui/muiStyles';
-import styles from '../../styles/sass/contact.module.css';
+import styles from '../../styles/sass/icons.module.css';
 
-const Tile = ({ data }) => {
-  const [url] = useState(data.url);
+const Tile = ({ data, source }) => {
+  const [url, setUrl] = useState('');
+  const [name, setName] = useState('');
+  const reg = /[ .\-]/g;
+  const imgStyle = source === 'tech_icons' ? styles.tech_icons : 'social';
+
+  useEffect(() => {
+    if (Object.prototype.hasOwnProperty.call(data, 'url') && Object.prototype.hasOwnProperty.call(data, 'image')) {
+      setUrl(data.url);
+    }
+
+    if (Object.prototype.hasOwnProperty.call(data, 'name')) setName(data.name);
+  });
+
+  const txtStyle = classNames(styles.text, source === 'tech_icons' ?
+    styles[data.name.replace(reg, '').toLowerCase()] : styles.contactIcon);
+  const iconClass = classNames(imgStyle, source === 'tech_icons' ?
+    styles[data.name.replace(reg, '').toLowerCase()] : styles.contactIcon);
   const classes = muiStyles();
-  const methImg = classNames('contactMethodImage', styles.contactImage);
 
   const handleClick = e => {
     e.preventDefault();
@@ -17,15 +31,19 @@ const Tile = ({ data }) => {
 
   return (
     <GridListTile className={ classes.gridListTile } cols={ 1 }>
-      <a className={ styles.contactLink } href="#" onClick={ handleClick }>
-        <img className={ methImg } src={ data.image } alt="Contact" />
-      </a>
+      { url !== '' ? (
+        <a href="#" onClick={ handleClick }>
+          <img className={ iconClass } src={ data.image } alt={ data.name } />
+        </a>
+      ) : data.image !== '' ? (
+        <div>
+          <img className={ iconClass } src={ data.image } alt={ data.name } />
+        </div>
+      ) : (
+        <p className={ txtStyle }>{ name }</p>
+      ) }
     </GridListTile>
   );
-};
-
-Tile.propTypes = {
-  data: PropTypes.objectOf(PropTypes.string).isRequired,
 };
 
 export default Tile;

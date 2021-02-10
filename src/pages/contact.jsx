@@ -11,17 +11,7 @@ import muiStyles from '../styles/material_ui/muiStyles';
 const Contact = () => {
   const classes = muiStyles();
   const root = classNames('pageContainer', classes.root);
-  const { contactDossier } = data[1];
-
-  const contactMethods = [
-    contactDossier.discord,
-    contactDossier.email,
-    contactDossier.gitHub,
-    contactDossier.linkedIn,
-    contactDossier.reddit,
-    contactDossier.skype,
-    contactDossier.twitter,
-  ];
+  const { contactInfo } = data[1];
 
   return (
     <Box className={ root } maxWidth="xl">
@@ -34,8 +24,9 @@ const Contact = () => {
       <section className={ styles.contact } id="contact">
         <ContactForm />
       </section>
+      <hr className={ styles.divider } />
       <footer className={ styles.footer }>
-        <GridTiles data={ contactMethods } />
+        <GridTiles data={ contactInfo } source="social_media" />
       </footer>
     </Box>
   );

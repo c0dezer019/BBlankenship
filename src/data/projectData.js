@@ -1,22 +1,99 @@
 const data = [
   {
-    languages: ['html5.svg', 'css3.svg', 'javascript.png', 'python.svg'],
-    fnl: ['bootstrap.svg', 'nextjs.svg', 'EJS', 'Express.JS', 'flask.svg', 'nodejs.svg', 'mui.svg'],
-    database: ['postgresql.svg', 'sequelize.svg'],
-    cloud: ['azure.svg'],
-    os: ['Fedora', 'Kali', 'Ubuntu', 'Windows 10'],
+    languages: [
+      {
+        name: 'HTML5',
+        image: 'images/tech_icons/html5.png',
+      },
+      {
+        name: 'CSS3',
+        image: 'images/tech_icons/css3.png',
+      },
+      {
+        name: 'Javascript',
+        image: 'images/tech_icons/javascript.png',
+      },
+      {
+        name: 'Python',
+        image: 'images/tech_icons/python.png',
+      },
+    ],
+    fnl: [
+      {
+        name: 'Bootstrap',
+        image: 'images/tech_icons/bootstrap.png',
+      },
+      {
+        name: 'Next.js',
+        image: 'images/tech_icons/nextjs.png',
+      },
+      {
+        name: 'EJS',
+        image: '',
+      },
+      {
+        name: 'Express.js',
+        image: '',
+      },
+      {
+        name: 'Flask',
+        image: 'images/tech_icons/flask.png',
+      },
+      {
+        name: 'Node.js',
+        image: 'images/tech_icons/nodejs.png',
+      },
+      {
+        name: 'Material UI',
+        image: 'images/tech_icons/mui.png',
+      },
+    ],
+    database: [
+      {
+        name: 'PostgreSQL',
+        image: 'images/tech_icons/postgresql.png',
+      },
+      {
+        name: 'Sequelize',
+        image: 'images/tech_icons/sequelize.png',
+      },
+    ],
+    cloud: [
+      {
+        name: 'Azure',
+        image: 'images/tech_icons/azure.png',
+      },
+    ],
+    os: [
+      {
+        name: 'Fedora',
+        image: 'images/tech_icons/fedora.png',
+      },
+      {
+        name: 'Kali',
+        image: '',
+      },
+      {
+        name: 'Ubuntu',
+        image: '',
+      },
+      {
+        name: 'Windows',
+        image: '',
+      },
+    ],
   },
   {
     contactInfo: {
       discord: {
         user: 'c0dezer019#4224',
         url: 'https://discordapp.com/users/c0dezer019#4224',
-        image: 'images/social_media/Discord-Logo+Wordmark-Color.svg',
+        image: 'images/social_media/discord.png',
       },
       email: {
         address: 'c0dezer019@zohomail.com',
         url: 'mailto:c0dezer019@zohomail.com',
-        image: 'images/social_media/message.svg',
+        image: 'images/social_media/email.png',
       },
       gitHub: {
         user: 'c0dezer019',
@@ -26,21 +103,17 @@ const data = [
       linkedIn: {
         user: 'brian-blankenship',
         url: 'https://www.linkedin.com/in/brian-blankenship',
-        image: 'images/social_media/LI-Logo.png',
+        image: 'images/social_media/linkedin.png',
       },
       reddit: {
         user: 'MrChurch2015',
         url: 'https://www.reddit.com/user/MrChurch2015',
-        image: 'images/social_media/Reddit_Lockup_OnDark.svg',
-      },
-      skype: {
-        user: 'live:briandb1222',
-        image: 'images/social_media/skype-icon.svg',
+        image: 'images/social_media/reddit.png',
       },
       twitter: {
         user: 'c0dezer019',
         url: 'https://twitter.com/c0dezer019',
-        image: 'images/social_media/Twitter_Social_Icon_Rounded_Square_Color.svg',
+        image: 'images/social_media/twitter.png',
       },
     },
     get contactDossier() {
@@ -80,7 +153,8 @@ const data = [
         screenshot: 'https://i.imgur.com/D8EB2VS.png?1',
         tag: 'BS',
         tech: ['HTML5', 'CSS', 'Javascript'],
-        url: 'https://battleship.bblankenship.me',
+        github: 'https://github.com/c0dezer019/Battleship',
+        demo: 'https://battleship.bblankenship.me',
       },
       {
         name: '404AnswerNotFound',
@@ -90,7 +164,8 @@ const data = [
         screenshot: 'https://i.imgur.com/kw5mfc6.png',
         tag: 'ANF',
         tech: ['Azure', 'Bootstrap', 'Express.js', 'EJS', 'PostgreSQL'],
-        url: 'https://404anf.azurewebsites.net/',
+        github: 'https://github.com/c0dezer019/404AnswerNotFound',
+        demo: 'https://404anf.azurewebsites.net/',
       },
       {
         name: 'stormcaster',
@@ -101,12 +176,13 @@ const data = [
         tag: 'SC',
         tech: ['Axios', 'Material-UI', 'Fetch', 'React', 'SASS'],
         API: ['OpenWeatherMap', 'canhazdadjoke'],
-        url: 'https://github.com/c0dezer019/Stormcaster',
+        github: 'https://github.com/c0dezer019/Stormcaster',
+        demo: 'https://stormcaster.bblankenship.me',
       },
     ],
   },
   {
-    workInProgress: [
+    upcoming: [
       {
         name: 'Project Meteorstorm',
         description: 'Project Meteorstorm is the parent project for Stormcaster. The goal of this app is to provide' +
