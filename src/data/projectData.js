@@ -146,10 +146,10 @@ const data = [
       {
         name: 'battleship',
         description: 'A clone of the classic game, Battleship. It is a turn-based game where each player has their '
-          + 'own play field represented by a grid. The player places pieces in random locations on the grid in random '
-          + '90 degree rotations. Once pieces are set for both players, the game begins. On each turn, the player '
-          + 'selects a random grid square on the opponent\'s grid to try and hit an enemy ship. The goal is to sink '
-          + 'all enemy ships to win.',
+         + 'own play field represented by a grid. The player places pieces in random locations on the grid in random '
+         + '90 degree rotations. Once pieces are set for both players, the game begins. On each turn, the player '
+         + 'selects a random grid square on the opponent\'s grid to try and hit an enemy ship. The goal is to sink '
+         + 'all enemy ships to win.',
         screenshot: 'https://i.imgur.com/D8EB2VS.png?1',
         tag: 'BS',
         tech: ['HTML5', 'CSS', 'Javascript'],
@@ -159,8 +159,8 @@ const data = [
       {
         name: '404AnswerNotFound',
         description: 'This app was inspired by Quora and StackedOverflow and is a Q&A site purely dedicated to the '
-          + 'programming world. I developed this with a small team of engineers, which I was the project lead. Our '
-          + 'goal was to create a cleaner and more lenient app then that of StackOverflow or Quora.',
+         + 'programming world. I developed this with a small team of engineers, which I was the project lead. Our '
+         + 'goal was to create a cleaner and more lenient app then that of StackOverflow or Quora.',
         screenshot: 'https://i.imgur.com/kw5mfc6.png',
         tag: 'ANF',
         tech: ['Azure', 'Bootstrap', 'Express.js', 'EJS', 'PostgreSQL'],
@@ -170,8 +170,8 @@ const data = [
       {
         name: 'stormcaster',
         description: 'Stormcaster is a WIP weather app that is the first phase to a much larger project. My goal' +
-          ' with this app is to make it a convenient place to get weather conditions and forecast for a user\'s' +
-          ' current and searched locations as well as provide some jokes to provide some humor with each update.',
+         ' with this app is to make it a convenient place to get weather conditions and forecast for a user\'s' +
+         ' current and searched locations as well as provide some jokes to provide some humor with each update.',
         screenshot: 'https://i.imgur.com/eRrYTGb.png',
         tag: 'SC',
         tech: ['Axios', 'Material-UI', 'Fetch', 'React', 'SASS'],
@@ -186,13 +186,33 @@ const data = [
       {
         name: 'Project Meteorstorm',
         description: 'Project Meteorstorm is the parent project for Stormcaster. The goal of this app is to provide' +
-          ' total information in regards to meteorology including Earth and space weather, environmental news, and' +
-          ' astronomical data such as NEO tracking (Near-Earth Objects) and meteor storms.',
+         ' total information in regards to meteorology including Earth and space weather, environmental news, and' +
+         ' astronomical data such as NEO tracking (Near-Earth Objects) and meteor storms.',
         plannedTech: ['Axios', 'React', 'React Native', 'XState', 'RequireJS or Webpack', 'SASS'],
       },
       {
         name: 'The Coffee Shop',
-        description: '',
+        description: 'Everything about coffee',
+      },
+      {
+        name: '404AnswerNotFound Refactor',
+        description: 'Refactoring 404AnswerNotFound into a more modern and faster React app. The project will use' +
+         ' Django as a backend with PostgreSQL for the Database.',
+      },
+      {
+        name: 'EnforcerBot',
+        description: 'A Discord bot coded in Python. The bot\'s main purpose is to monitor user idle times in' +
+         ' a server and boot users that have been idle for a specified set amount of time. Idle time is based on' +
+         ' user activity from last message sent to the server and voice channel activity. The bot will not count' +
+         ' simply being marked as online and playing a game as sufficient activity to not be considered idle.' +
+         ' The intended goal of the bot is to allow server admins to ensure their server only has quality users' +
+         ' that contribute to the server.',
+      },
+      {
+        name: 'CitizenBot',
+        description: 'A Discord bot coded in C#. This bot is aimed at the Star Citizen community (an upcoming video' +
+         ' game). It aims to provide news updates, ship stats, calculators, load-out configurations, and many' +
+         ' other SC-related tools.',
       },
     ],
   },
