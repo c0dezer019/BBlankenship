@@ -1,14 +1,27 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../../styles/Home.module.css'
+import Head from 'next/head';
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Brian Blankenship</title>
-        <meta name="description" content="A portfolio for Brian Blankenship" />
-      </Head>
-    </div>
-  )
-}
+const Home = () => (
+  <div>
+    <style jsx global>
+      {`
+        body {
+          box-sizing: border-box;
+          font-family: "Fira Code", "Fira Sans", sans-serif, Roboto;
+          font-size: 16px;
+        }
+        *,
+        *:before,
+        *:after {
+          box-sizing: inherit;
+        }
+      `}
+    </style>
+
+    <Head>
+      <title>Brian Blankenship</title>
+      <meta name="description" content="A portfolio for Brian Blankenship" />
+    </Head>
+  </div>
+);
+
+export default Home;

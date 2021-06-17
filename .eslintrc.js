@@ -6,6 +6,8 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
+    'next',
+    'next/core-web-vitals',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -56,5 +58,6 @@ module.exports = {
     'react/jsx-one-expression-per-line': 0,
     'react/jsx-curly-spacing': 0,
     'react/no-array-index-key': 0,
+    'react/jsx-filename-extension': 0,
   },
 };
