@@ -1,27 +1,17 @@
 import Head from 'next/head';
+import NavBar from '../components/NavBar';
 
 const Home = () => (
-  <div>
-    <style jsx global>
-      {`
-        body {
-          box-sizing: border-box;
-          font-family: "Fira Code", "Fira Sans", sans-serif, Roboto;
-          font-size: 16px;
-        }
-        *,
-        *:before,
-        *:after {
-          box-sizing: inherit;
-        }
-      `}
-    </style>
-
+  <>
     <Head>
       <title>Brian Blankenship</title>
       <meta name="description" content="A portfolio for Brian Blankenship" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Head>
-  </div>
+    <main>
+      <NavBar />
+    </main>
+  </>
 );
 
 export default Home;
