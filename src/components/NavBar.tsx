@@ -5,11 +5,9 @@ type Props = {
   animate?: boolean;
   changeAnimatedState?: Dispatch<SetStateAction<boolean>>;
   changeVisibility?: Dispatch<SetStateAction<boolean>>;
+  isOpen?: boolean;
+  setOpen?: Dispatch<SetStateAction<boolean>>;
   visible?: boolean;
-}
-
-type NavProps = {
-  changeVisibility?: Dispatch<SetStateAction<boolean>>;
 }
 
 const rotateContainer = keyframes` 
@@ -53,22 +51,28 @@ const BottomBar = styled.div`
   width: 15px;
 `;
 
-// TODO: Pass visibility state.
 const Container = styled.div`
   height: 4.5em;
   width: 100%;
   padding: 21px;
   
   @media screen and (max-width: 1279px) {
+    border: 1px solid white;
     height: fit-content;
     padding: .5em;
-    // TODO: Should be 60%~ when menu is open.
-    width: fit-content;
+    width: ${ ({ isOpen }: Props) => (isOpen ? '60%' : 'fit-content') };
   }
 `;
 
 // TODO: Links become visible upon start of animation.
-const LinkContainer = styled.div`
+const LinkContainer = styled.div.attrs(({ changeVisibility, setOpen }: Props) => ({
+  onClick: e => {
+    if (e.target.className.match('nav-link')) {
+      changeVisibility(false);
+      setOpen(false);
+    }
+  },
+}))`
   height: 100%;
   margin: auto 0 auto 6%;
   width: 30%;
@@ -85,9 +89,7 @@ const LinkContainer = styled.div`
 `;
 
 // TODO: Scale link text to size with animation.
-const NavLink = styled.a.attrs(({ changeVisibility }: NavProps) => ({
-  onClick: () => changeVisibility(false),
-}))`
+const NavLink = styled.a`
   font-size: 1.5rem;
   margin: auto 10px;
   text-decoration: none;
@@ -106,10 +108,26 @@ const NavLink = styled.a.attrs(({ changeVisibility }: NavProps) => ({
 `;
 
 // TODO: Trigger animation on click.
-const MobileMenuIcon = styled.div.attrs(({ changeVisibility }: Props) => ({
-  onClick: () => changeVisibility(true),
+const MobileMenuIcon = styled.div.attrs(({
+  changeAnimatedState,
+  changeVisibility,
+  setOpen,
+  isOpen,
+  visible }: Props) => ({
+  onClick: () => {
+    if (!visible) changeVisibility(true);
+    else changeVisibility(false);
+    if (!isOpen) {
+      changeAnimatedState(true);
+      setOpen(true);
+    } else {
+      changeAnimatedState(false);
+      setOpen(false);
+    }
+  },
 }))`
-  animation: ${ ({ animate }: Props) => (animate ? `${ rotateContainer } .5s forwards` : null) };
+  // TODO: Figure out how to conditionally animate.
+  // animation: ;
   display: block;
   padding: 0;
   width: 30px;
@@ -133,53 +151,53 @@ const MobileMenuIcon = styled.div.attrs(({ changeVisibility }: Props) => ({
 const NavBar: FC = (): ReactElement => {
   const [visible, setVisible] = useState<boolean>(false);
   const [animate, changeAnimatedState] = useState<boolean>(false);
+  const [isOpen, setOpen] = useState<boolean>(false);
 
   // @ts-ignore
   return (
-    <Container id="nav-container">
+    <Container id="nav-container" isOpen={isOpen}>
       <MobileMenuIcon
         id="mobile-nav-container"
-        changeVisibility={setVisible}
         animate={animate}
+        changeAnimatedState={changeAnimatedState}
+        changeVisibility={setVisible}
+        isOpen={isOpen}
+        setOpen={setOpen}
+        visible={visible}
       >
         <TopBar className="menu-bar nav-top" />
         <MiddleBar className="menu-bar nav-middle" />
         <BottomBar className="menu-bar nav-bottom" />
       </MobileMenuIcon>
-      <LinkContainer id="link-container" visible={visible}>
+      <LinkContainer
+        id="link-container"
+        changeVisibility={setVisible}
+        setOpen={setOpen}
+        visible={visible}
+      >
         <NavLink
           className="nav-link"
           href="#"
-          changeVisibility={setVisible}
-          animate={animate}
         >Home
         </NavLink>
         <NavLink
           className="nav-link"
           href="#about"
-          changeVisibility={setVisible}
-          animate={animate}
         >About
         </NavLink>
         <NavLink
           className="nav-link"
           href="#techStack"
-          changeVisibility={setVisible}
-          animate={animate}
         >The Stack
         </NavLink>
         <NavLink
           className="nav-link"
           href="#projects"
-          changeVisibility={setVisible}
-          animate={animate}
         >Projects
         </NavLink>
         <NavLink
           className="nav-link"
           href="#contact"
-          changeVisibility={setVisible}
-          animate={animate}
         >Contact
         </NavLink>
       </LinkContainer>
