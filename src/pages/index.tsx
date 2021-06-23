@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import NavBar from '../components/NavBar';
+import Intro from '../components/Intro';
 
 const Home = () => (
   <>
@@ -10,6 +11,7 @@ const Home = () => (
     </Head>
     <main>
       <NavBar />
+      <Intro />
     </main>
   </>
 );
