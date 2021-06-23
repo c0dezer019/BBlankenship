@@ -1,4 +1,4 @@
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { createGlobalStyle, ThemeProvider, DefaultTheme } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   body, html {
@@ -38,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const theme = {
+const theme: DefaultTheme = {
   colors: {
     primary: '#261f1f',
   },
