@@ -24,8 +24,7 @@ const rotateIconClosed = keyframes`
 
 const Container = styled.div<Props>`
   height: 3.5em;
-  padding: .5em;
-  position: relative;
+  position: absolute;
   width: 100%;
 
   .rotate-forwards {
