@@ -10,19 +10,22 @@ const NavBar: FC = (): ReactElement => {
   const [isOpen, setOpen] = useState<boolean>(false);
   const [visible, setVisible] = useState<boolean>(false);
 
+  const containerClasses = classNames({ 'grow-container': isOpen });
   const menuClass = classNames('menu-icon', {
     'rotate-forwards': isOpen,
     'rotate-backwards': !isOpen && !initialState });
   const oddBar = classNames('bar', { 'grow-bar': isOpen, 'shrink-bar': !isOpen && !initialState });
 
   return (
-    <Container className="grow-container" id="nav-container" isOpen={isOpen}>
+    <Container className={containerClasses} id="nav-container" isOpen={isOpen}>
       <MobileMenuIcon
         className={menuClass}
         id="mobile-nav-container"
         isOpen={isOpen}
+        visible={visible}
         setOpen={setOpen}
         setInitialState={setInitialState}
+        setVisible={setVisible}
       >
         <div className={oddBar} />
         <div className="bar" />

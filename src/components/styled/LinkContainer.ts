@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Dispatch, SetStateAction } from 'react';
 
 interface Props {
@@ -7,7 +7,12 @@ interface Props {
   readonly visible?: boolean;
 }
 
-// TODO: Links become visible upon start of animation.
+const scaleContainer = keyframes`
+  from {
+    
+  }
+`;
+
 const LinkContainer = styled.div.attrs(({ changeVisibility, setOpen }: Props) => ({
   onClick: e => {
     if (e.target.className.match('nav-link')) {
@@ -16,15 +21,17 @@ const LinkContainer = styled.div.attrs(({ changeVisibility, setOpen }: Props) =>
     }
   },
 }))<Props>`
-  height: 100%;
-  margin: auto 0 auto 6%;
+  display: flex;
   width: 30%;
+  height: 100%;
 
   @media screen and (min-width: 1280px) {
     width: 100%;
   }
   @media screen and (max-width: 1279px) {
-    display: ${ ({ visible }: Props) => (visible ? 'block' : 'none') };
+    display: ${ ({ visible }: Props) => (visible ? 'flex' : 'none') };
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     text-align: center;
     margin: 0;

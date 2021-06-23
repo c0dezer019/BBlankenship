@@ -3,8 +3,10 @@ import styled, { keyframes } from 'styled-components';
 
 interface Props {
   readonly isOpen?: boolean;
+  readonly visible?: boolean;
   setInitialState?: Dispatch<SetStateAction<boolean>>;
   setOpen?: Dispatch<SetStateAction<boolean>>;
+  setVisible?: Dispatch<SetStateAction<boolean>>;
 }
 
 const growBar = keyframes`
@@ -25,15 +27,24 @@ const shrinkBar = keyframes`
   }
 `;
 
-const MobileMenuIcon = styled.div.attrs(({ setOpen, isOpen, setInitialState }: Props) => ({
+const MobileMenuIcon = styled.div.attrs(({
+  isOpen,
+  visible,
+  setInitialState,
+  setOpen,
+  setVisible,
+}: Props) => ({
   onClick: () => {
     if (!isOpen) setOpen(true);
     else setOpen(false);
+    if (!visible) setVisible(true);
+    else setVisible(false);
     setInitialState(false);
   },
-}))`
+}))<Props>`
   display: block;
   padding: 0;
+  position: absolute;
   width: 30px;
   
   .grow-bar {

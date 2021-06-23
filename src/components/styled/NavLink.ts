@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-// TODO: Scale link text to size with animation.
 const NavLink = styled.a`
   font-size: 1.5rem;
   margin: auto 10px;

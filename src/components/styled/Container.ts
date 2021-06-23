@@ -23,9 +23,10 @@ const rotateIconClosed = keyframes`
 `;
 
 const Container = styled.div<Props>`
-  height: 4.5em;
+  height: 3.5em;
+  padding: .5em;
+  position: relative;
   width: 100%;
-  padding: 21px;
 
   .rotate-forwards {
     animation: ${ rotateIconOpen } .5s forwards;
@@ -33,12 +34,23 @@ const Container = styled.div<Props>`
   .rotate-backwards {
     animation: ${ rotateIconClosed } .5s backwards;
   }
-  
+
   @media screen and (max-width: 1279px) {
-    border: 1px solid white;
-    height: fit-content;
-    padding: .5em;
-    width: ${ ({ isOpen }) => (isOpen ? '60%' : 'fit-content') };
+    transition: width .5s, height .5s;
+    width: ${ ({ isOpen }) => (isOpen ? '50%' : '3em') };
+    height: ${ ({ isOpen }) => (isOpen ? '70%' : '3.4em') };
+  }
+  @media screen and (max-width: 1024px) {
+    width: ${ ({ isOpen }) => (isOpen ? '40%' : '3em') };
+    height: ${ ({ isOpen }) => (isOpen ? '100%' : '3.4em') };
+  }
+  @media screen and (max-width: 768px) {
+    width: ${ ({ isOpen }) => (isOpen ? '50%' : '3em') };
+    height: ${ ({ isOpen }) => (isOpen ? '100%' : '3.4em') };
+  }
+  @media screen and (max-width: 450px) {
+    width: ${ ({ isOpen }) => (isOpen ? '100%' : '3em') };
+    height: ${ ({ isOpen }) => (isOpen ? '100%' : '3.4em') };
   }
 `;
 
