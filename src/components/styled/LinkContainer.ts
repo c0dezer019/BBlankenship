@@ -24,6 +24,7 @@ const LinkContainer = styled.div.attrs(({ changeVisibility, setOpen }: Props) =>
   display: flex;
   width: 30%;
   height: 100%;
+  margin: 1em 0 0 6em;
 
   @media screen and (min-width: 1280px) {
     width: 100%;
@@ -33,8 +34,9 @@ const LinkContainer = styled.div.attrs(({ changeVisibility, setOpen }: Props) =>
     flex-direction: column;
     align-items: center;
     width: 100%;
+    height: 50%;
     text-align: center;
-    margin: 0;
+    margin: 30% auto;
   }
 `;
 
