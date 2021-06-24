@@ -43,8 +43,8 @@ const MobileMenuIcon = styled.div.attrs(({
   },
 }))<Props>`
   display: block;
-  padding: 0;
   position: absolute;
+  margin: ${ 3.5 / 6 }em;
   width: 30px;
   
   .grow-bar {

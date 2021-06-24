@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { Dispatch, SetStateAction } from 'react';
 
 interface Props {
@@ -6,12 +6,6 @@ interface Props {
   setOpen?: Dispatch<SetStateAction<boolean>>;
   readonly visible?: boolean;
 }
-
-const scaleContainer = keyframes`
-  from {
-    
-  }
-`;
 
 const LinkContainer = styled.div.attrs(({ changeVisibility, setOpen }: Props) => ({
   onClick: e => {
@@ -21,8 +15,7 @@ const LinkContainer = styled.div.attrs(({ changeVisibility, setOpen }: Props) =>
     }
   },
 }))<Props>`
-  display: flex;
-  width: 30%;
+  width: fit-content;
   height: 100%;
   margin: 1em 0 0 6em;
 
@@ -33,7 +26,7 @@ const LinkContainer = styled.div.attrs(({ changeVisibility, setOpen }: Props) =>
     display: ${ ({ visible }: Props) => (visible ? 'flex' : 'none') };
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: fit-content;
     height: 50%;
     text-align: center;
     margin: 30% auto;
