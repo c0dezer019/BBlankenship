@@ -1,6 +1,6 @@
 import { FC, ReactElement, useState } from 'react';
 import classNames from 'classnames';
-import Container from './styled/Container';
+import NavContainer from './styled/NavContainer';
 import LinkContainer from './styled/LinkContainer';
 import MobileMenuIcon from './styled/MobileMenuIcon';
 import NavLink from './styled/NavLink';
@@ -10,14 +10,14 @@ const NavBar: FC = (): ReactElement => {
   const [isOpen, setOpen] = useState<boolean>(false);
   const [visible, setVisible] = useState<boolean>(false);
 
-  const containerClasses = classNames({ 'grow-container': isOpen });
+  const linkContainerClass = classNames({ 'fade-in': isOpen, 'fade-out': !isOpen });
   const menuClass = classNames('menu-icon', {
     'rotate-forwards': isOpen,
     'rotate-backwards': !isOpen && !initialState });
   const oddBar = classNames('bar', { 'grow-bar': isOpen, 'shrink-bar': !isOpen && !initialState });
 
   return (
-    <Container className={containerClasses} id="nav-container" isOpen={isOpen}>
+    <NavContainer id="nav-container" isOpen={isOpen}>
       <MobileMenuIcon
         className={menuClass}
         id="mobile-nav-container"
@@ -32,6 +32,7 @@ const NavBar: FC = (): ReactElement => {
         <div className={oddBar} />
       </MobileMenuIcon>
       <LinkContainer
+        className={linkContainerClass}
         id="link-container"
         changeVisibility={setVisible}
         setOpen={setOpen}
@@ -63,7 +64,7 @@ const NavBar: FC = (): ReactElement => {
         >Contact
         </NavLink>
       </LinkContainer>
-    </Container>
+    </NavContainer>
   );
 };
 
