@@ -1,36 +1,20 @@
 import { FC, ReactElement, useState } from 'react';
 import classNames from 'classnames';
-import NavContainer from './styled/NavContainer';
-import LinkContainer from './styled/LinkContainer';
-import MobileMenuIcon from './styled/MobileMenuIcon';
-import NavLink from './styled/NavLink';
+import MobileMenu from "../molecules/MobileMenu";
+import NavContainer from '../containers/NavContainer';
+import LinkContainer from '../containers/LinkContainer';
+import NavLink from '../atoms/NavLink';
 
 const NavBar: FC = (): ReactElement => {
-  const [initialState, setInitialState] = useState<boolean>(true);
   const [isOpen, setOpen] = useState<boolean>(false);
   const [visible, setVisible] = useState<boolean>(false);
 
   const linkContainerClass = classNames({ 'fade-in': isOpen, 'fade-out': !isOpen });
-  const menuClass = classNames('menu-icon', {
-    'rotate-forwards': isOpen,
-    'rotate-backwards': !isOpen && !initialState });
-  const oddBar = classNames('bar', { 'grow-bar': isOpen, 'shrink-bar': !isOpen && !initialState });
+
 
   return (
     <NavContainer id="nav-container" isOpen={isOpen}>
-      <MobileMenuIcon
-        className={menuClass}
-        id="mobile-nav-container"
-        isOpen={isOpen}
-        visible={visible}
-        setOpen={setOpen}
-        setInitialState={setInitialState}
-        setVisible={setVisible}
-      >
-        <div className={oddBar} />
-        <div className="bar" />
-        <div className={oddBar} />
-      </MobileMenuIcon>
+      <MobileMenu />
       <LinkContainer
         className={linkContainerClass}
         id="link-container"

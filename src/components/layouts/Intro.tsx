@@ -1,5 +1,5 @@
 import { FC, ReactElement } from 'react';
-import IntroContainer from './styled/IntroContainer';
+import IntroContainer from '../containers/IntroContainer';
 
 const Intro: FC = (): ReactElement => (
   <IntroContainer id="intro-parent-container">

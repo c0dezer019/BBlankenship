@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import NavBar from '../components/NavBar';
-import Intro from '../components/Intro';
+import NavBar from '../components/layouts/NavBar';
+import Intro from '../components/layouts/Intro';
 
 const Home = () => (
   <>
