@@ -8,6 +8,7 @@ module.exports = {
     'airbnb',
     'next',
     'next/core-web-vitals',
+    'prettier',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -59,6 +60,8 @@ module.exports = {
     'react/jsx-curly-spacing': 0,
     'react/no-array-index-key': 0,
     'react/jsx-filename-extension': 0,
+    'react/function-component-definition': 0,
     'import/extensions': 0,
+    'indent': ["error", 2]
   },
 };

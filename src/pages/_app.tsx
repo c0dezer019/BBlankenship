@@ -12,27 +12,27 @@ const GlobalStyle = createGlobalStyle`
     width: 100vw;
     height: 100vh;
   }
-  
+
   *,
   *:before,
   *:after {
     box-sizing: inherit;
   }
-  
+
   img {
     max-width: 100%;
     display: block;
   }
-  
+
   a {
     color: white;
     font-family: "Fira Code", sans-serif;
   }
-  
+
   main {
     height: 100%;
   }
-  
+
   #__next {
     height: 100%;
   }

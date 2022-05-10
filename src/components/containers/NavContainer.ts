@@ -13,7 +13,7 @@ const fade = keyframes`
   }
 `;
 
-const rotateIconOpen = keyframes` 
+const rotateIconOpen = keyframes`
   from {
     transform: rotate(0deg);
   }
@@ -32,15 +32,15 @@ const rotateIconClosed = keyframes`
 `;
 
 const NavContainer = styled.div<Props>`
-  
+
   height: 3.5em;
   position: absolute;
   width: 100%;
-  
+
   .fade-in {
     animation: ${ fade } 2s forwards;
   }
-  
+
   .fade-out {
     animation: ${ fade } 1s backwards;
   }
@@ -53,24 +53,13 @@ const NavContainer = styled.div<Props>`
     animation: ${ rotateIconClosed } .5s backwards;
   }
 
-  @media screen and (max-width: 1279px) {
+  @media screen and (max-width: 800px) {
     background-color: ${ ({ isOpen }) => (isOpen ? '#342b2b' : 'rgba(255, 255, 255, 0)') };
     transition: width .5s, height .5s, background-color .5s;
     width: ${ ({ isOpen }) => (isOpen ? '50%' : '3em') };
     height: ${ ({ isOpen }) => (isOpen ? '100%' : '3.4em') };
   }
-  @media screen and (max-width: 1024px) {
-    width: ${ ({ isOpen }) => (isOpen ? '40%' : '3em') };
-    height: ${ ({ isOpen }) => (isOpen ? '100%' : '3.4em') };
-  }
-  @media screen and (max-width: 768px) {
-    width: ${ ({ isOpen }) => (isOpen ? '50%' : '3em') };
-    height: ${ ({ isOpen }) => (isOpen ? '100%' : '3.4em') };
-  }
-  @media screen and (max-width: 450px) {
-    width: ${ ({ isOpen }) => (isOpen ? '100%' : '3em') };
-    height: ${ ({ isOpen }) => (isOpen ? '100%' : '3.4em') };
-  }
+ 
 `;
 
 export default NavContainer;
