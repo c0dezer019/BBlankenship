@@ -5,4 +5,5 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 module.exports = {
   reactStrictMode: true,
   withBundleAnalyzer: (phase, defaultConfig) => withBundleAnalyzer(defaultConfig),
+  distDir: 'dist',
 };
