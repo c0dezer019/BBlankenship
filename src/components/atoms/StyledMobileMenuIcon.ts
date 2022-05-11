@@ -1,5 +1,4 @@
-import { Dispatch, FC, ReactElement, SetStateAction, useState } from 'react';
-import classNames from 'classnames';
+import { Dispatch,SetStateAction} from 'react';
 import styled, { keyframes } from 'styled-components';
 
 interface Props {
