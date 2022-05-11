@@ -1,10 +1,13 @@
-import { FC, ReactElement, useState } from "react";
-import classNames from "classnames";
+import { FC, ReactElement, ReactNode, useState } from 'react';
+import classNames from 'classnames';
 
 import StyledMobileMenuIcon from '../atoms/StyledMobileMenuIcon';
 
+interface ContainerProps {
+  children?: ReactNode;
+}
 
-const MobileMenuContainer: FC = (): ReactElement => {
+const MobileMenuContainer: FC<ContainerProps> = ({ children }): ReactElement => {
   const [initialState, setInitialState] = useState<boolean>(true);
   const [isOpen, setOpen] = useState<boolean>(false);
   const [visible, setVisible] = useState<boolean>(false);
@@ -31,7 +34,7 @@ const MobileMenuContainer: FC = (): ReactElement => {
       <div className={oddBar} />
       <div className="bar" />
       <div className={oddBar} />
-        
+      {children}
     </StyledMobileMenuIcon>
   );
 };
