@@ -59,7 +59,6 @@ const NavContainer = styled.div<Props>`
     width: ${ ({ isOpen }) => (isOpen ? '50%' : '3em') };
     height: ${ ({ isOpen }) => (isOpen ? '100%' : '3.4em') };
   }
- 
 `;
 
 export default NavContainer;
