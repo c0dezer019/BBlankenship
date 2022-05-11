@@ -1,4 +1,5 @@
-import { Dispatch, SetStateAction } from 'react';
+import { Dispatch, FC, ReactElement, SetStateAction, useState } from 'react';
+import classNames from 'classnames';
 import styled, { keyframes } from 'styled-components';
 
 interface Props {
@@ -27,31 +28,27 @@ const shrinkBar = keyframes`
   }
 `;
 
-const MobileMenuIcon = styled.div.attrs(({
-  isOpen,
-  visible,
-  setInitialState,
-  setOpen,
-  setVisible,
-}: Props) => ({
-  onClick: () => {
-    if (!isOpen) setOpen(true);
-    else setOpen(false);
-    if (!visible) setVisible(true);
-    else setVisible(false);
-    setInitialState(false);
-  },
-}))<Props>`
+const StyledMobileMenuIcon = styled.div.attrs(
+  ({ isOpen, visible, setInitialState, setOpen, setVisible }: Props) => ({
+    onClick: () => {
+      if (!isOpen) setOpen(true);
+      else setOpen(false);
+      if (!visible) setVisible(true);
+      else setVisible(false);
+      setInitialState(false);
+    },
+  })
+)<Props>`
   display: block;
   position: absolute;
   margin: ${ 3.5 / 6 }em;
   width: 30px;
-  
+
   .grow-bar {
-    animation: ${ growBar } .5s forwards;
+    animation: ${ growBar } 0.5s forwards;
   }
   .shrink-bar {
-    animation: ${ shrinkBar } .5s backwards;
+    animation: ${ shrinkBar } 0.5s backwards;
   }
   .bar {
     background-color: white;
@@ -63,10 +60,11 @@ const MobileMenuIcon = styled.div.attrs(({
     margin: 6px auto;
     width: 15px;
   }
-  
+
   @media screen and (min-width: 1279px) {
     display: none;
   }
 `;
 
-export default MobileMenuIcon;
+
+export default StyledMobileMenuIcon;

@@ -1,8 +1,8 @@
 import { FC, ReactElement, useState } from 'react';
 import classNames from 'classnames';
-import MobileMenu from "../molecules/MobileMenu";
-import NavContainer from '../containers/NavContainer';
-import LinkContainer from '../containers/LinkContainer';
+import MobileMenu from "./MobileMenu";
+import NavContainer from '../organisms/NavContainer';
+import LinkContainer from '../organisms/LinkContainer';
 import NavLink from '../atoms/NavLink';
 
 const NavBar: FC = (): ReactElement => {

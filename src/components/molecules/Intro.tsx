@@ -1,9 +1,12 @@
 import { FC, ReactElement } from 'react';
-import IntroContainer from '../containers/IntroContainer';
+import IntroContainer from '../organisms/IntroContainer';
+import Text from '../atoms/Text';
 
 const Intro: FC = (): ReactElement => (
   <IntroContainer id="intro-parent-container">
-    <p>Test</p>
+    <Text>
+      Hello,
+    </Text>
   </IntroContainer>
 );
 

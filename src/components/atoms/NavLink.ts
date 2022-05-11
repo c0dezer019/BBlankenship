@@ -9,7 +9,7 @@ const NavLink = styled.a`
     color: #9999d2;
     text-decoration: underline;
     }
-  
+
   @media screen and (max-width: 1279px) {
     display: block;
   }
