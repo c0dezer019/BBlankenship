@@ -61,6 +61,7 @@ module.exports = {
     'react/no-array-index-key': 0,
     'react/jsx-filename-extension': 0,
     'react/function-component-definition': 0,
+    'react/require-default-props': 0,
     'import/extensions': 0,
     'indent': ["error", 2]
   },
