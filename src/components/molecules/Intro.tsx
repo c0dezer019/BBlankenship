@@ -1,12 +1,16 @@
 import { FC, ReactElement } from 'react';
 import IntroContainer from '../organisms/IntroContainer';
-import Text from '../atoms/Text';
+import Header from '../atoms/Header';
+import Subtitle from '../atoms/Subtitle';
 
 const Intro: FC = (): ReactElement => (
   <IntroContainer id="intro-parent-container">
-    <Text>
-      Hello,
-    </Text>
+    <Header>
+      Brian Blankenship
+    </Header>
+    <Subtitle>
+      Full Stack Web Developer
+    </Subtitle>
   </IntroContainer>
 );
 
