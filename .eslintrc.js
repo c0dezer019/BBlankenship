@@ -50,7 +50,7 @@ module.exports = {
     'operator-linebreak': 0,
     'prefer-const': 0,
     'prettier/prettier': 0,
-    'template-curly-spacing': ['error', 'always'],
+    'template-curly-spacing': 0,
     'react/jsx-pascal-case': 2,
     'react/self-closing-comp': 0,
     'react/jsx-props-no-spreading': 0,
