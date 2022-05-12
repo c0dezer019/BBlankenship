@@ -10,11 +10,9 @@ const NavLink = styled.a`
     text-decoration: underline;
     }
 
-  @media screen and (max-width: 1279px) {
+  @media screen and (max-width: 800px) {
     display: block;
-  }
-  @media screen and (max-width: 158px) {
-    font-size: 1.0rem;
+    font-size: 1rem;
   }
 `;
 
