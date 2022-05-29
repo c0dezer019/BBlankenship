@@ -39,7 +39,7 @@ const MobileMenuIconStyle = styled.div.attrs(
       setInitialState(false);
     },
   })
-) <Props>`
+)<Props>`
   position: absolute;
   display: block;
   margin: ${2 / 6}em;

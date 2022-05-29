@@ -5,6 +5,9 @@ import classNames from 'classnames';
 import MobileMenuIcon, { Props } from '../atoms/MobileMenuIcon';
 import NavLink from '../atoms/NavLink';
 
+const grow = keyframes``;
+const shrink = keyframes``;
+
 
 const MobileMenuContainer = styled.div.attrs(
   ({ isOpen, visible, setInitialState, setOpen, setVisible }: Props) => ({
