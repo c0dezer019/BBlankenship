@@ -64,9 +64,5 @@
   "resolutions": {
     "styled-components": "^5"
   },
-  "engines": {
-    "node": ">=16.0.0",
-    "npm": ">=8.5"
-  },
   "packageManager": "yarn@3.2.0"
 }
