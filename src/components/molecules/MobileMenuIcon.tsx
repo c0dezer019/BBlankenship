@@ -1,15 +1,9 @@
-import { Dispatch, FC, ReactElement, ReactNode, SetStateAction, useState } from 'react';
+import { FC, ReactElement, useState} from 'react';
 import styled, { keyframes } from 'styled-components';
 import classNames from 'classnames';
 
-export interface Props {
-  readonly isOpen?: boolean;
-  readonly visible?: boolean;
-  setInitialState?: Dispatch<SetStateAction<boolean>>;
-  setOpen?: Dispatch<SetStateAction<boolean>>;
-  setVisible?: Dispatch<SetStateAction<boolean>>;
-  children?: ReactNode;
-}
+import { SProps } from '../props/types';
+import Bar from '../atoms/Bar';
 
 const growBar = keyframes`
   from {
@@ -30,7 +24,7 @@ const shrinkBar = keyframes`
 `;
 
 const MobileMenuIconStyle = styled.div.attrs(
-  ({ isOpen, visible, setInitialState, setOpen, setVisible }: Props) => ({
+  ({ isOpen, visible, setInitialState, setOpen, setVisible }: SProps) => ({
     onClick: () => {
       if (!isOpen) setOpen(true);
       else setOpen(false);
@@ -39,7 +33,7 @@ const MobileMenuIconStyle = styled.div.attrs(
       setInitialState(false);
     },
   })
-)<Props>`
+)<SProps>`
   position: absolute;
   display: block;
   margin: ${2 / 6}em;
@@ -49,15 +43,11 @@ const MobileMenuIconStyle = styled.div.attrs(
   .grow-bar {
     animation: ${growBar} 0.5s forwards;
   }
+
   .shrink-bar {
     animation: ${shrinkBar} 0.5s backwards;
   }
-  .bar {
-    background-color: white;
-    border-radius: 25px;
-    height: 4px;
-    margin: 6px 0;
-  }
+
   .bar:nth-child(odd) {
     margin: 6px auto;
     width: 15px;
@@ -68,11 +58,7 @@ const MobileMenuIconStyle = styled.div.attrs(
   }
 `;
 
-interface EProps {
-  children?: ReactNode;
-}
-
-const MobileMenuIcon: FC = ({ children }: EProps): ReactElement => {
+const MobileMenuIcon: FC = (): ReactElement => {
   const [initialState, setInitialState] = useState<boolean>(true);
   const [isOpen, setOpen] = useState<boolean>(false);
   const [visible, setVisible] = useState<boolean>(false);
@@ -96,10 +82,9 @@ const MobileMenuIcon: FC = ({ children }: EProps): ReactElement => {
       setInitialState={setInitialState}
       setVisible={setVisible}
     >
-      <div className={oddBar} />
-      <div className="bar" />
-      <div className={oddBar} />
-      { children }
+      <Bar className={oddBar} />
+      <Bar />
+      <Bar className={oddBar} />
     </MobileMenuIconStyle>
   );
 };

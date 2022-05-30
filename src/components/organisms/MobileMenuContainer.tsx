@@ -1,7 +1,7 @@
 import { FC, ReactElement, ReactNode, useState } from 'react';
 import classNames from 'classnames';
 
-import StyledMobileMenuIcon from '../atoms/MobileMenuIcon';
+import StyledMobileMenuIcon from '../molecules/MobileMenuIcon';
 
 interface ContainerProps {
   children?: ReactNode;

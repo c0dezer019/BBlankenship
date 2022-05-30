@@ -2,7 +2,8 @@ import { FC, ReactElement, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import classNames from 'classnames';
 
-import MobileMenuIcon, { Props } from '../atoms/MobileMenuIcon';
+import { SProps } from '../props/types';
+import MobileMenuIcon from './MobileMenuIcon';
 import NavLink from '../atoms/NavLink';
 
 const grow = keyframes``;
@@ -10,7 +11,7 @@ const shrink = keyframes``;
 
 
 const MobileMenuContainer = styled.div.attrs(
-  ({ isOpen, visible, setInitialState, setOpen, setVisible }: Props) => ({
+  ({ isOpen, visible, setInitialState, setOpen, setVisible }: SProps) => ({
     onClick: () => {
       if (!isOpen) setOpen(true);
       else setOpen(false);
@@ -19,7 +20,7 @@ const MobileMenuContainer = styled.div.attrs(
       setInitialState(false);
     },
   })
-) <Props>`
+) <SProps>`
   position: relative;
   top: 0;
   left: 0;
