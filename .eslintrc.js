@@ -8,7 +8,7 @@ module.exports = {
     'airbnb',
     'next',
     'next/core-web-vitals',
-    'prettier',
+    'plugin:prettier/recommended',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -17,22 +17,30 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-  ],
+  plugins: ['react'],
   rules: {
-    'array-element-newline': ['error', {
-      ArrayExpression: 'consistent',
-      ArrayPattern: { minItems: 20 },
-    }],
+    'array-element-newline': [
+      'error',
+      {
+        ArrayExpression: 'consistent',
+        ArrayPattern: {
+          minItems: 20,
+        },
+      },
+    ],
     'arrow-parens': [
       0,
       'as-needed',
-      { requireForBlockBody: true },
+      {
+        requireForBlockBody: true,
+      },
     ],
     'block-spacing': 2,
     camelcase: [
-      'error', { properties: 'never' },
+      'error',
+      {
+        properties: 'never',
+      },
     ],
     'jsx-quotes': ['error', 'prefer-double'],
     'import/newline-after-import': 0,
@@ -63,6 +71,6 @@ module.exports = {
     'react/function-component-definition': 0,
     'react/require-default-props': 0,
     'import/extensions': 0,
-    'indent': ["error", 2]
+    'indent': ['error', 2],
   },
 };

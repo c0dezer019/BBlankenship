@@ -6,4 +6,5 @@ module.exports = {
   reactStrictMode: true,
   withBundleAnalyzer: (phase, defaultConfig) => withBundleAnalyzer(defaultConfig),
   distDir: 'dist',
+  styledComponents: true
 };
