@@ -10,7 +10,7 @@ module.exports = api => {
 
   const plugins = [
     ["styled-jsx/babel", { "optimizeForSpeed": true }],
-    ["styled-components", { "ssr": true }],
+    ["styled-components"],
     ["babel-plugin-styled-components"],
   ];
 
