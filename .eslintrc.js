@@ -4,12 +4,14 @@ module.exports = {
     es2021: true,
   },
   extends: [
-    'plugin:react/recommended',
     'airbnb',
     'next',
     'next/core-web-vitals',
+    'plugin:react/recommended',
     'plugin:prettier/recommended',
+    'plugin:@typescript-eslint/recommended',
   ],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -17,7 +19,10 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react'],
+  plugins: [
+    'react',
+    '@typescript-eslint',
+  ],
   rules: {
     'array-element-newline': [
       'error',
@@ -57,7 +62,6 @@ module.exports = {
     'object-shorthand': 0,
     'operator-linebreak': 0,
     'prefer-const': 0,
-    'prettier/prettier': 0,
     'template-curly-spacing': 0,
     'react/jsx-pascal-case': 2,
     'react/self-closing-comp': 0,
