@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import classNames from 'classnames';
 
 import { SProps } from '../props/types';
-import MobileMenuIcon from './MobileMenuIcon';
+import MobileMenuIcon from '../molecules/MobileMenuIcon';
 import NavLink from '../atoms/NavLink';
 
 const grow = keyframes``;

@@ -1,15 +1,15 @@
+import { Dispatch, MouseEvent, SetStateAction } from 'react';
 import styled from 'styled-components';
-import { Dispatch, SetStateAction } from 'react';
 
 interface Props {
-  changeVisibility?: Dispatch<SetStateAction<boolean>>;
-  setOpen?: Dispatch<SetStateAction<boolean>>;
-  readonly visible?: boolean;
+  readonly visible: boolean;
+  changeVisibility: Dispatch<SetStateAction<boolean>>;
+  setOpen: Dispatch<SetStateAction<boolean>>;
 }
 
 const LinkContainer = styled.div.attrs(({ changeVisibility, setOpen }: Props) => ({
-  onClick: e => {
-    if (e.target.className.match('nav-link')) {
+  onClick: (e: MouseEvent) => {
+    if (e.currentTarget.className.match('nav-link')) {
       changeVisibility(false);
       setOpen(false);
     }

@@ -1,6 +1,6 @@
 import { FC, ReactElement, useState } from 'react';
 import classNames from 'classnames';
-import MobileMenu from "./MobileMenu";
+import MobileMenu from "../organisms/MobileMenu";
 import NavContainer from '../organisms/NavContainer';
 import LinkContainer from '../organisms/LinkContainer';
 import NavLink from '../atoms/NavLink';
