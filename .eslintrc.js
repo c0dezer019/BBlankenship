@@ -6,10 +6,13 @@ module.exports = {
   extends: [
     'airbnb',
     'next',
+    'eslint:recommended',
     'next/core-web-vitals',
     'plugin:react/recommended',
     'plugin:prettier/recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'prettier',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -19,11 +22,9 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-  ],
+  plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {
+    'prettier/prettier': 0,
     'array-element-newline': [
       'error',
       {
@@ -64,6 +65,7 @@ module.exports = {
     'prefer-const': 0,
     'template-curly-spacing': 0,
     'react/jsx-pascal-case': 2,
+    'react/react-in-jsx-scope': 0,
     'react/self-closing-comp': 0,
     'react/jsx-props-no-spreading': 0,
     'react/forbid-prop-types': 0,
@@ -75,6 +77,6 @@ module.exports = {
     'react/function-component-definition': 0,
     'react/require-default-props': 0,
     'import/extensions': 0,
-    'indent': ['error', 2],
+    "eol-last": ["error"],
   },
 };

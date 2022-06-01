@@ -32,32 +32,32 @@ const rotateIconClosed = keyframes`
 `;
 
 const NavContainer = styled.div<Props>`
-
   height: 3.5em;
   position: absolute;
   width: 100%;
 
   .fade-in {
-    animation: ${ fade } 2s forwards;
+    animation: ${fade} 2s forwards;
   }
 
   .fade-out {
-    animation: ${ fade } 1s backwards;
+    animation: ${fade} 1s backwards;
   }
 
   .rotate-forwards {
-    animation: ${ rotateIconOpen } .5s forwards;
+    animation: ${rotateIconOpen} 0.5s forwards;
   }
 
   .rotate-backwards {
-    animation: ${ rotateIconClosed } .5s backwards;
+    animation: ${rotateIconClosed} 0.5s backwards;
   }
 
   @media screen and (max-width: 800px) {
-    background-color: ${ ({ isOpen }) => (isOpen ? '#342b2b' : 'rgba(255, 255, 255, 0)') };
-    transition: width .5s, height .5s, background-color .5s;
-    width: ${ ({ isOpen }) => (isOpen ? '50%' : '3em') };
-    height: ${ ({ isOpen }) => (isOpen ? '100%' : '3.4em') };
+    background-color: ${({ isOpen }) =>
+      isOpen ? '#342b2b' : 'rgba(255, 255, 255, 0)'};
+    transition: width 0.5s, height 0.5s, background-color 0.5s;
+    width: ${({ isOpen }) => (isOpen ? '50%' : '3em')};
+    height: ${({ isOpen }) => (isOpen ? '100%' : '3.4em')};
   }
 `;
 

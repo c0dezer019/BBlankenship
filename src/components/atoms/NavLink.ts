@@ -8,7 +8,7 @@ const NavLink = styled.a`
   &:hover {
     color: #9999d2;
     text-decoration: underline;
-    }
+  }
 
   @media screen and (max-width: 800px) {
     display: block;

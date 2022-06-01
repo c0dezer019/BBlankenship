@@ -10,6 +10,6 @@ const AnimatedChevron = styled.span`
   margin: 0 0 3px 4px;
   width: 16px;
   height: 16px;
-`
+`;
 
 export default AnimatedChevron;

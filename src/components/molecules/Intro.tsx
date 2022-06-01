@@ -5,12 +5,8 @@ import Subtitle from '../atoms/Subtitle';
 
 const Intro: FC = (): ReactElement => (
   <IntroContainer id="intro-parent-container">
-    <Header>
-      Brian Blankenship
-    </Header>
-    <Subtitle>
-      Full Stack Web Developer
-    </Subtitle>
+    <Header>Brian Blankenship</Header>
+    <Subtitle>Full Stack Web Developer</Subtitle>
   </IntroContainer>
 );
 

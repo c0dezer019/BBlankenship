@@ -15,9 +15,7 @@ const StyledMouse = styled.div`
 `;
 
 const MouseContainer: FC<Props> = ({ children }: Props): ReactElement => (
-  <StyledMouse>
-    {children}
-  </StyledMouse>
+  <StyledMouse>{children}</StyledMouse>
 );
 
 export default MouseContainer;

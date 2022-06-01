@@ -9,7 +9,6 @@ import NavLink from '../atoms/NavLink';
 const grow = keyframes``;
 const shrink = keyframes``;
 
-
 const MobileMenuContainer = styled.div.attrs(
   ({ isOpen, visible, setInitialState, setOpen, setVisible }: SProps) => ({
     onClick: () => {
@@ -20,7 +19,7 @@ const MobileMenuContainer = styled.div.attrs(
       setInitialState(false);
     },
   })
-) <SProps>`
+)<SProps>`
   position: relative;
   top: 0;
   left: 0;
@@ -31,7 +30,7 @@ const MobileMenuContainer = styled.div.attrs(
   @media screen and (min-width: 800px) {
     display: none;
   }
-`
+`;
 
 // Intend to include the navbar here
 const MobileMenu: FC = (): ReactElement => {

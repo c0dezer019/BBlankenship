@@ -1,4 +1,4 @@
-import { FC, ReactElement, useState} from 'react';
+import { FC, ReactElement, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import classNames from 'classnames';
 
@@ -37,7 +37,7 @@ const MobileMenuIconStyle = styled.div.attrs(
   position: absolute;
   display: block;
   margin: ${2 / 6}em;
-  padding: .1em;
+  padding: 0.1em;
   width: 30px;
 
   .grow-bar {
@@ -88,6 +88,5 @@ const MobileMenuIcon: FC = (): ReactElement => {
     </MobileMenuIconStyle>
   );
 };
-
 
 export default MobileMenuIcon;

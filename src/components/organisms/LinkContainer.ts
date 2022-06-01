@@ -7,14 +7,16 @@ interface Props {
   setOpen: Dispatch<SetStateAction<boolean>>;
 }
 
-const LinkContainer = styled.div.attrs(({ changeVisibility, setOpen }: Props) => ({
-  onClick: (e: MouseEvent) => {
-    if (e.currentTarget.className.match('nav-link')) {
-      changeVisibility(false);
-      setOpen(false);
-    }
-  },
-}))<Props>`
+const LinkContainer = styled.div.attrs(
+  ({ changeVisibility, setOpen }: Props) => ({
+    onClick: (e: MouseEvent) => {
+      if (e.currentTarget.className.match('nav-link')) {
+        changeVisibility(false);
+        setOpen(false);
+      }
+    },
+  })
+)<Props>`
   width: fit-content;
   height: 100%;
   margin: 1em 0 0 6em;
@@ -23,7 +25,7 @@ const LinkContainer = styled.div.attrs(({ changeVisibility, setOpen }: Props) =>
     width: 100%;
   }
   @media screen and (max-width: 1279px) {
-    display: ${ ({ visible }: Props) => (visible ? 'flex' : 'none') };
+    display: ${({ visible }: Props) => (visible ? 'flex' : 'none')};
     flex-direction: column;
     align-items: center;
     width: fit-content;

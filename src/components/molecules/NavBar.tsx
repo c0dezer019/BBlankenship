@@ -1,6 +1,6 @@
 import { FC, ReactElement, useState } from 'react';
 import classNames from 'classnames';
-import MobileMenu from "../organisms/MobileMenu";
+import MobileMenu from '../organisms/MobileMenu';
 import NavContainer from '../organisms/NavContainer';
 import LinkContainer from '../organisms/LinkContainer';
 import NavLink from '../atoms/NavLink';
@@ -9,8 +9,10 @@ const NavBar: FC = (): ReactElement => {
   const [isOpen, setOpen] = useState<boolean>(false);
   const [visible, setVisible] = useState<boolean>(false);
 
-  const linkContainerClass = classNames({ 'fade-in': isOpen, 'fade-out': !isOpen });
-
+  const linkContainerClass = classNames({
+    'fade-in': isOpen,
+    'fade-out': !isOpen,
+  });
 
   return (
     <NavContainer id="nav-container" isOpen={isOpen}>
@@ -22,30 +24,20 @@ const NavBar: FC = (): ReactElement => {
         setOpen={setOpen}
         visible={visible}
       >
-        <NavLink
-          className="nav-link"
-          href="#"
-        >Home
+        <NavLink className="nav-link" href="#">
+          Home
         </NavLink>
-        <NavLink
-          className="nav-link"
-          href="#about"
-        >About
+        <NavLink className="nav-link" href="#about">
+          About
         </NavLink>
-        <NavLink
-          className="nav-link"
-          href="#techStack"
-        >The Stack
+        <NavLink className="nav-link" href="#techStack">
+          The Stack
         </NavLink>
-        <NavLink
-          className="nav-link"
-          href="#projects"
-        >Projects
+        <NavLink className="nav-link" href="#projects">
+          Projects
         </NavLink>
-        <NavLink
-          className="nav-link"
-          href="#contact"
-        >Contact
+        <NavLink className="nav-link" href="#contact">
+          Contact
         </NavLink>
       </LinkContainer>
     </NavContainer>

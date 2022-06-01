@@ -8,9 +8,10 @@ export default class MyDocument extends Document {
     const originalRenderPage = ctx.renderPage;
 
     try {
-      ctx.renderPage = () => originalRenderPage({
-        enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
-      });
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: App => props => sheet.collectStyles(<App {...props} />),
+        });
 
       const initialProps = await Document.getInitialProps(ctx);
       return {
@@ -19,7 +20,7 @@ export default class MyDocument extends Document {
           <React.Fragment key={1}>
             {initialProps.styles}
             {sheet.getStyleElement()}
-          </React.Fragment>
+          </React.Fragment>,
         ],
       };
     } finally {

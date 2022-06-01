@@ -14,7 +14,9 @@ const AnimationContainer = styled.div`
     margin-top: 1px;
   }
 
-  .one, .two, .three {
+  .one,
+  .two,
+  .three {
     animation: ${chevronAnimation} 1s infinite;
   }
 
@@ -24,17 +26,17 @@ const AnimationContainer = styled.div`
   }
 
   .two {
-    animation-delay: .2s;
+    animation-delay: 0.2s;
     animation-direction: alternate;
     margin-top: -6px;
   }
 
   .three {
-    animation-delay: .3s;
+    animation-delay: 0.3s;
     animation-direction: alternate;
     margin-top: -6px;
   }
-`
+`;
 
 const Chevrons: FC = (): ReactElement => (
   <AnimationContainer>
@@ -44,4 +46,4 @@ const Chevrons: FC = (): ReactElement => (
   </AnimationContainer>
 );
 
-export default Chevrons
+export default Chevrons;
