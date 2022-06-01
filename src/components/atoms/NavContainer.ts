@@ -32,7 +32,6 @@ const rotateIconClosed = keyframes`
 `;
 
 const NavContainer = styled.div<Props>`
-  height: 3.5em;
   position: absolute;
   width: 100%;
 
@@ -52,12 +51,13 @@ const NavContainer = styled.div<Props>`
     animation: ${rotateIconClosed} 0.5s backwards;
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (min-width: 800px) {
     background-color: ${({ isOpen }) =>
       isOpen ? '#342b2b' : 'rgba(255, 255, 255, 0)'};
     transition: width 0.5s, height 0.5s, background-color 0.5s;
-    width: ${({ isOpen }) => (isOpen ? '50%' : '3em')};
+    width: ${({ isOpen }) => (isOpen ? '50%' : null)};
     height: ${({ isOpen }) => (isOpen ? '100%' : '3.4em')};
+    padding: 3em 0 0 3em;
   }
 `;
 
