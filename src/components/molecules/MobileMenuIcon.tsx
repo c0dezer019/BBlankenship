@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import classNames from 'classnames';
 
 import { SProps } from '../props/types';
-import Bar from '../atoms/Bar';
+import { Bar } from '../atoms';
 
 const growBar = keyframes`
   from {
