@@ -3,8 +3,8 @@ import styled, { keyframes } from 'styled-components';
 import classNames from 'classnames';
 
 import { SProps } from '../props/types';
-import MobileMenuIcon from '../molecules/MobileMenuIcon';
-import NavLink from '../atoms/NavLink';
+import { MobileMenuIcon } from '.';
+import { NavLink } from '../atoms';
 
 const grow = keyframes``;
 const shrink = keyframes``;
