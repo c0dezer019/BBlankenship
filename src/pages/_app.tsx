@@ -1,4 +1,5 @@
 import { AppProps } from 'next/app';
+import { DefaultSeo } from 'next-seo';
 import {
   createGlobalStyle,
   ThemeProvider,
@@ -48,12 +49,26 @@ const theme: DefaultTheme = {
   },
 };
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps, router }: AppProps) {
+  const url = `https://bblankenship.me${router.route}`;
   return (
     <>
+      <DefaultSeo
+        titleTemplate="%s - Brian Blankenship"
+        openGraph={{
+          type: 'website',
+          locale: 'en_IE',
+          url,
+          description:
+            'Professional portfolio for Brian Blankenship, Full Stack Developer.',
+          site_name: 'Brian Blankenship | bblankenship.me',
+          images: [],
+        }}
+        canonical={url}
+      />
       <GlobalStyle />
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+        <Component {...pageProps} canonical={url} key={url} />
       </ThemeProvider>
     </>
   );
