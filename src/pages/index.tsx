@@ -1,7 +1,6 @@
 import Head from 'next/head';
-import NavBar from '../components/molecules/NavBar';
-import Intro from '../components/molecules/Intro';
-import ScrollDown from '../components/organisms/scrollAnimation/ScrollDown';
+import NavBar from '../components/organisms/NavBar';
+import Intro from '../components/organisms/Intro';
 
 const Home = () => (
   <>
@@ -14,9 +13,6 @@ const Home = () => (
       <NavBar />
       <Intro />
     </main>
-    <aside>
-      <ScrollDown />
-    </aside>
   </>
 );
 

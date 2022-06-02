@@ -17,11 +17,9 @@ const LinkContainer = styled.div.attrs(
     },
   })
 )<Props>`
-  width: fit-content;
   height: 100%;
-  margin: 1em 0 0 6em;
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 800px) {
     width: 100%;
   }
   @media screen and (max-width: 1279px) {
@@ -31,7 +29,7 @@ const LinkContainer = styled.div.attrs(
     width: fit-content;
     height: 50%;
     text-align: center;
-    margin: 30% auto;
+    margin: 0;
   }
 `;
 

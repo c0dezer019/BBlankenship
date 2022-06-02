@@ -2,7 +2,7 @@ import { FC, ReactElement } from 'react';
 import IntroContainer from '../atoms/IntroContainer';
 import Header from '../atoms/Header';
 import Subtitle from '../atoms/Subtitle';
-import ScrollDown from '../organisms/scrollAnimation/ScrollDown';
+import ScrollDown from './scrollAnimation/ScrollDown';
 
 const Intro: FC = (): ReactElement => (
   <IntroContainer id="intro-parent-container">

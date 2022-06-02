@@ -8,18 +8,24 @@ const StyledContainer = styled.div`
   margin: 0 auto;
   width: 24px;
   height: 100px;
-  margin-top: 125px;
 
   @media screen and (min-width: 800px) {
     display: block;
   }
 `;
 
+const Aside = styled.aside`
+  position: absolute;
+  bottom: 0;
+`;
+
 const ScrollDown: FC = (): ReactElement => (
-  <StyledContainer>
-    <Mouse />
-    <Chevrons />
-  </StyledContainer>
+  <Aside>
+    <StyledContainer>
+      <Mouse />
+      <Chevrons />
+    </StyledContainer>
+  </Aside>
 );
 
 export default ScrollDown;
