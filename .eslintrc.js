@@ -77,6 +77,7 @@ module.exports = {
     'react/function-component-definition': 0,
     'react/require-default-props': 0,
     'import/extensions': 0,
-    "eol-last": ["error"],
+    'eol-last': ['error'],
+    '@typescript-eslint/no-non-null-assertion': 0,
   },
 };
