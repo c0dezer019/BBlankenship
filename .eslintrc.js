@@ -76,6 +76,7 @@ module.exports = {
     'react/jsx-filename-extension': 0,
     'react/function-component-definition': 0,
     'react/require-default-props': 0,
+    'react-hooks/exhaustive-deps': 0,
     'import/extensions': 0,
     'eol-last': ['error'],
     '@typescript-eslint/no-non-null-assertion': 0,
