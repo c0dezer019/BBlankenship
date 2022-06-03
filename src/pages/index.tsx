@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import NavBar from '../components/organisms/NavBar';
-import Intro from '../components/organisms/Intro';
+import { SectionOne, SectionTwo } from '../components/layouts';
 
 const Home = () => (
   <>
@@ -11,7 +11,7 @@ const Home = () => (
     </Head>
     <main>
       <NavBar />
-      <Intro />
+      <SectionOne />
     </main>
   </>
 );

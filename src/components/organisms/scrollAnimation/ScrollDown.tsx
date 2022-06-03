@@ -15,8 +15,7 @@ const StyledContainer = styled.div`
 `;
 
 const Aside = styled.aside`
-  position: absolute;
-  bottom: 0;
+  width: 99vw;
 `;
 
 const ScrollDown: FC = (): ReactElement => (
