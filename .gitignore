@@ -10,20 +10,18 @@
 /coverage
 
 # next.js
-out
-.next
+/.next/
+/out/
+/dist/
 
 # production
 /build
-/dist
 
 # misc
 .DS_Store
-.idea
 *.pem
-storybook-static
-.storybook
-src/stories
+.idea
+.vscode
 
 # debug
 npm-debug.log*
@@ -38,6 +36,4 @@ yarn-error.log*
 
 # vercel
 .vercel
-
-# log files
 *.log

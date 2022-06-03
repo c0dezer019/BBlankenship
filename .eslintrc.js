@@ -4,9 +4,17 @@ module.exports = {
     es2021: true,
   },
   extends: [
-    'plugin:react/recommended',
     'airbnb',
+    'next',
+    'eslint:recommended',
+    'next/core-web-vitals',
+    'plugin:react/recommended',
+    'plugin:prettier/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'prettier',
   ],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -14,22 +22,31 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-  ],
+  plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {
-    'array-element-newline': ['error', {
-      ArrayExpression: 'consistent',
-      ArrayPattern: { minItems: 20 },
-    }],
+    'prettier/prettier': 0,
+    'array-element-newline': [
+      'error',
+      {
+        ArrayExpression: 'consistent',
+        ArrayPattern: {
+          minItems: 20,
+        },
+      },
+    ],
     'arrow-parens': [
       0,
       'as-needed',
-      { requireForBlockBody: true },
+      {
+        requireForBlockBody: true,
+      },
     ],
     'block-spacing': 2,
     camelcase: [
-      'error', { properties: 'never' },
+      'error',
+      {
+        properties: 'never',
+      },
     ],
     'jsx-quotes': ['error', 'prefer-double'],
     'import/newline-after-import': 0,
@@ -46,9 +63,9 @@ module.exports = {
     'object-shorthand': 0,
     'operator-linebreak': 0,
     'prefer-const': 0,
-    'prettier/prettier': 0,
-    'template-curly-spacing': ['error', 'always'],
+    'template-curly-spacing': 0,
     'react/jsx-pascal-case': 2,
+    'react/react-in-jsx-scope': 0,
     'react/self-closing-comp': 0,
     'react/jsx-props-no-spreading': 0,
     'react/forbid-prop-types': 0,
@@ -56,5 +73,12 @@ module.exports = {
     'react/jsx-one-expression-per-line': 0,
     'react/jsx-curly-spacing': 0,
     'react/no-array-index-key': 0,
+    'react/jsx-filename-extension': 0,
+    'react/function-component-definition': 0,
+    'react/require-default-props': 0,
+    'react-hooks/exhaustive-deps': 0,
+    'import/extensions': 0,
+    'eol-last': ['error'],
+    '@typescript-eslint/no-non-null-assertion': 0,
   },
 };
