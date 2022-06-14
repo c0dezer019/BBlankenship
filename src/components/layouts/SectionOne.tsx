@@ -1,9 +1,8 @@
-import { Intro, ScrollDown } from '../organisms';
+import { Intro } from '../organisms';
 
 const SectionOne = () => (
   <section>
     <Intro />
-    <ScrollDown />
   </section>
 );
 

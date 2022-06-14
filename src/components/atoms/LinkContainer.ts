@@ -21,7 +21,9 @@ const LinkContainer = styled.div.attrs(
 
   @media screen and (min-width: 800px) {
     width: 100%;
+    margin: 3em 0 0 3em;
   }
+
   @media screen and (max-width: 1279px) {
     display: ${({ visible }: Props) => (visible ? 'flex' : 'none')};
     flex-direction: column;
