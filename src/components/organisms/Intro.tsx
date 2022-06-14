@@ -1,11 +1,12 @@
 import { FC, ReactElement } from 'react';
-import { IntroContainer, Header, Subtitle } from '../atoms';
+import { Content, Header, Subtitle } from '../atoms';
 
 const Intro: FC = (): ReactElement => (
-  <IntroContainer id="intro-parent-container">
+  <Content id="intro-parent-container">
     <Header>Brian Blankenship</Header>
     <Subtitle>Full Stack Web Developer</Subtitle>
-  </IntroContainer>
+    <p>Designing functional apps.</p>
+  </Content>
 );
 
 export default Intro;
