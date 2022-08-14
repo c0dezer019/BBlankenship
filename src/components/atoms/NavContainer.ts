@@ -32,7 +32,10 @@ const rotateIconClosed = keyframes`
 `;
 
 const NavContainer = styled.div<Props>`
-  width: 100%;
+  width: 97.48%;
+  height: 5rem;
+  padding-left: 3rem;
+  position: relative;
 
   .fade-in {
     animation: ${fade} 2s forwards;
