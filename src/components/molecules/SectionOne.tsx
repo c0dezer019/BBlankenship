@@ -1,9 +1,10 @@
 import { Intro } from '../organisms';
+import { Section } from '../atoms';
 
 const SectionOne = () => (
-  <section>
+  <Section>
     <Intro />
-  </section>
+  </Section>
 );
 
 export default SectionOne;

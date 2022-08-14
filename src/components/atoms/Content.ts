@@ -6,7 +6,7 @@ const Content = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  height: fit-content;
   padding: 5px;
 `;
 

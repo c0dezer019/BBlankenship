@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import NavBar from '../components/organisms/NavBar';
-import { SectionOne, SectionTwo } from '../components/layouts';
+import { MainContent } from '../components/layouts';
 
 const Home = () => (
   <>
@@ -9,9 +9,9 @@ const Home = () => (
       <meta name="description" content="A portfolio for Brian Blankenship" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Head>
+    <NavBar />
     <main>
-      <NavBar />
-      <SectionOne />
+      <MainContent />
     </main>
   </>
 );

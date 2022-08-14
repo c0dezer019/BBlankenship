@@ -17,11 +17,11 @@ const LinkContainer = styled.div.attrs(
     },
   })
 )<Props>`
-  height: 100%;
+  position: absolute;
+  bottom: 0;
 
   @media screen and (min-width: 800px) {
     width: 100%;
-    margin: 3em 0 0 3em;
   }
 
   @media screen and (max-width: 1279px) {
