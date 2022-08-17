@@ -6,6 +6,8 @@ import {
   DefaultTheme,
 } from 'styled-components';
 
+export { reportWebVitals } from 'next-axiom';
+
 const GlobalStyle = createGlobalStyle`
   body, html {
     background-color: #261f1f;
@@ -65,6 +67,15 @@ function MyApp({ Component, pageProps, router }: AppProps) {
           images: [],
         }}
         canonical={url}
+        twitter={{
+          handle: '@c0dezer019',
+          site: '@c0dezer019',
+          cardType: 'summary_large_image',
+        }}
+        robotsProps={{
+          noarchive: true,
+          maxImagePreview: 'standard',
+        }}
       />
       <GlobalStyle />
       <ThemeProvider theme={theme}>
