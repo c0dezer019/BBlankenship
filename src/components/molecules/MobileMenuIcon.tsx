@@ -1,9 +1,10 @@
 import { FC, ReactElement, useState } from 'react';
+
 import styled, { keyframes } from 'styled-components';
 import classNames from 'classnames';
 
+import Bar from '../atoms/Bar';
 import { SProps } from '../props/types';
-import { Bar } from '../atoms';
 
 const growBar = keyframes`
   from {

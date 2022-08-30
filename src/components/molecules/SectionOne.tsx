@@ -1,5 +1,5 @@
-import { Intro } from '../organisms';
-import { Section } from '../atoms';
+import Intro from './Intro';
+import Section from '../atoms/Section';
 
 const SectionOne = () => (
   <Section>

@@ -1,13 +1,13 @@
 import { FC, ReactElement, useState } from 'react';
-import styled, { keyframes } from 'styled-components';
+
 import classNames from 'classnames';
+import styled from 'styled-components';
 
+import MobileMenuIcon from './MobileMenuIcon';
 import { SProps } from '../props/types';
-import { MobileMenuIcon } from '.';
-import { NavLink } from '../atoms';
 
-const grow = keyframes``;
-const shrink = keyframes``;
+// const grow = keyframes``;
+// const shrink = keyframes``;
 
 const MobileMenuContainer = styled.div.attrs(
   ({ isOpen, visible, setInitialState, setOpen, setVisible }: SProps) => ({

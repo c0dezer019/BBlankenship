@@ -1,6 +1,7 @@
 import Head from 'next/head';
+
+import MainContent from '../components/layouts/MainContent';
 import NavBar from '../components/organisms/NavBar';
-import { MainContent } from '../components/layouts';
 
 const Home = () => (
   <>

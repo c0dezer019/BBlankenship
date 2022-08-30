@@ -1,7 +1,11 @@
 import { FC, ReactElement, useState } from 'react';
+
 import classNames from 'classnames';
-import { MobileMenu } from '../molecules';
-import { NavContainer, LinkContainer, NavLink } from '../atoms';
+
+import LinkContainer from '../atoms/LinkContainer';
+import MobileMenu from '../molecules/MobileMenu';
+import NavContainer from '../atoms/NavContainer';
+import NavLink from '../atoms/NavLink';
 
 const NavBar: FC = (): ReactElement => {
   const [isOpen, setOpen] = useState<boolean>(false);

@@ -1,7 +1,7 @@
 import { FC, ReactElement } from 'react';
 
-import { Section } from '../atoms';
-import { About } from '.';
+import About from './About';
+import Section from '../atoms/Section';
 
 const SectionTwo: FC = (): ReactElement => (
   <Section>

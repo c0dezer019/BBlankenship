@@ -1,7 +1,7 @@
 import { FC, ReactElement } from 'react';
 import styled from 'styled-components';
 
-import { ScrollDown } from '../organisms';
+import ScrollDown from '../organisms/scrollAnimation/ScrollDown';
 
 const FooterContainer = styled.div`
   display: flex;

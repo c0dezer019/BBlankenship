@@ -1,10 +1,10 @@
+import {
+  DefaultTheme,
+  ThemeProvider,
+  createGlobalStyle,
+} from 'styled-components';
 import { AppProps } from 'next/app';
 import { DefaultSeo } from 'next-seo';
-import {
-  createGlobalStyle,
-  ThemeProvider,
-  DefaultTheme,
-} from 'styled-components';
 
 export { reportWebVitals } from 'next-axiom';
 

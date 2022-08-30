@@ -1,7 +1,8 @@
 import { FC, ReactElement } from 'react';
+
 import styled, { keyframes } from 'styled-components';
 
-import { AnimatedChevron } from '../../atoms';
+import AnimatedChevron from '../../atoms/scrollAnimation/AnimatedChevron';
 
 const chevronAnimation = keyframes`
   0%   { opacity: 0;}

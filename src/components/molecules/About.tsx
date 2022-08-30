@@ -1,6 +1,7 @@
 import { FC, ReactElement } from 'react';
 
-import { Content, Header } from '../atoms';
+import Content from '../atoms/Content';
+import Header from '../atoms/Header';
 
 const About: FC = (): ReactElement => (
   <Content id="about-parent-container">

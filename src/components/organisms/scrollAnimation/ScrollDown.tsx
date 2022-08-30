@@ -1,7 +1,8 @@
 import { FC, ReactElement } from 'react';
 import styled from 'styled-components';
 
-import { Chevrons, Mouse } from '../../molecules/scrollAnimation';
+import Chevrons from '../../molecules/scrollAnimation/Chevrons';
+import Mouse from '../../molecules/scrollAnimation/Mouse';
 
 const StyledContainer = styled.div`
   display: none;

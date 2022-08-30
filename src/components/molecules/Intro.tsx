@@ -1,5 +1,8 @@
 import { FC, ReactElement } from 'react';
-import { Content, Header, Subtitle } from '../atoms';
+
+import Content from '../atoms/Content';
+import Header from '../atoms/Header';
+import Subtitle from '../atoms/Subtitle';
 
 const Intro: FC = (): ReactElement => (
   <Content id="intro-parent-container">
