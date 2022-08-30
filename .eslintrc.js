@@ -49,7 +49,6 @@ module.exports = {
       },
     ],
     'jsx-quotes': ['error', 'prefer-double'],
-    'import/newline-after-import': 0,
     'import/prefer-default-export': 0,
     'jsx-a11y/anchor-is-valid': 0,
     'max-len': ['error', 119],
@@ -83,5 +82,6 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 0,
     'lines-between-class-members': 0,
     'max-classes-per-file': 0,
+    'no-bitwise': 0,
   },
 };

@@ -23,6 +23,7 @@
 *.pem
 .idea
 .vscode
+.dependencygraph
 
 # debug
 npm-debug.log*
