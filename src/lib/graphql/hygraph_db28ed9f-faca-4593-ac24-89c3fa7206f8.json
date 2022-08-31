@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "409452ed-2a1d-42e8-ac75-1718a4ecd9e9",
+		"name": "hygraph",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "queries",
+			"item": [
+				{
+					"name": "contactMethods",
+					"id": "095b51de-4375-457b-a235-35a2ce558f33",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query contactMethods ($transformation: Transformation) {\n    contactMethods {\n        method\n        iconImage {\n            url (transformation: $transformation)\n        }\n        url\n    }\n}",
+								"variables": "{\n  \"transformation\": {\n    \"image\": {\n      \"resize\": {\n        \"height\": 0,\n        \"width\": 0\n      }\n    }\n  }\n}"
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "developer",
+					"id": "80b655d1-b460-4a3e-9f92-3c158cb7c9f1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query developer ($transformation: Transformation, $transformation1: Transformation, $where: Name!) {\n    developer (where: $where) {\n        slug\n        name\n        about\n        location {\n            latitude\n            longitude\n        }\n        images {\n            url (transformation: $transformation)\n        }\n        profilePicture {\n            url (transformation: $transformation1)\n        }\n        email\n        portfolio\n        github\n        LinkedIn\n        otherWebsites\n    }\n}",
+								"variables": "{\n  \"transformation\": {\n    \"image\": {\n      \"resize\": {\n        \"height\": 0,\n        \"width\": 0\n      }\n    }\n  },\n  \"transformation1\": {\n    \"image\": {\n      \"resize\": {\n        \"height\": 0,\n        \"width\": 0\n      }\n    }\n  },\n  \"where\": {\n    \"name\": \"\"\n  }\n}"
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "projects",
+					"id": "7da6280e-e356-4e57-85a8-62043295b030",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query projects ($transformation: Transformation) {\n    projects {\n        slug\n        projectName\n        previewImages {\n            url (transformation: $transformation)\n        }\n        Description\n        tags\n        demo\n        sourceCode\n    }\n}",
+								"variables": "{\n  \"transformation\": {\n    \"image\": {\n      \"resize\": {\n        \"height\": 0,\n        \"width\": 0\n      }\n    }\n  }\n}"
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "posts",
+					"id": "04f9519e-5bf1-46ea-a600-8034b1fad22d",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query posts ($transformation: Transformation) {\n    posts {\n        slug\n        title\n        subtitle\n        category\n        coverImage {\n            url (transformation: $transformation)\n        }\n        content\n        tags\n        source\n    }\n}",
+								"variables": "{\n  \"transformation\": {\n    \"image\": {\n      \"resize\": {\n        \"height\": 0,\n        \"width\": 0\n      }\n    }\n  }\n}"
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "3bc1ecbc-3743-45f2-aa22-59b7ffaa1ea4"
+		}
+	],
+	"variable": [
+		{
+			"id": "url",
+			"key": "url",
+			"value": "",
+			"type": "any",
+			"description": "URL for the request."
+		}
+	]
+}

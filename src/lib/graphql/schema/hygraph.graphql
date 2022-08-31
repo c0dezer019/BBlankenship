@@ -1,0 +1,90 @@
+schema {
+  query: Query
+}
+
+scalar Slug
+scalar Url
+scalar Email
+scalar Json
+scalar MultilineText
+scalar RichText
+scalar Category
+
+input Origin {
+  latitude: Float!
+  longitude: Float!
+}
+
+input Dimensions {
+  height: Int! = 10
+  width: Int! = 10
+}
+
+input Resize {
+  resize: Dimensions!
+}
+
+input Transformation {
+  image: Resize!
+}
+
+input Name {
+  name: String! = "Brian Blankenship"
+}
+
+type Image {
+  url(transformation: Transformation): String!
+}
+
+type ContactMethod {
+  method: String!
+  iconImage: Image!
+  url: Url!
+}
+
+type Location {
+  latitude: Float!
+  longitude: Float!
+}
+
+type Developer {
+  slug: Slug!
+  name: String!
+  about: RichText
+  location: Location
+  images: [Image]
+  profilePicture: Image
+  email: Email
+  portfolio: Url
+  github: String
+  LinkedIn: String
+  otherWebsites: [Json]
+}
+
+type Project {
+  slug: Slug!
+  projectName: String!
+  previewImages: [Image]
+  Description: MultilineText
+  tags: [String]
+  demo: Url
+  sourceCode: Url!
+}
+
+type Post {
+  slug: Slug!
+  title: String!
+  subtitle: String
+  category: Category
+  coverImage: Image!
+  content: RichText!
+  tags: [String]
+  source: Url
+}
+
+type Query {
+  contactMethods: [ContactMethod]!
+  developer(where: Name!): Developer!
+  projects: [Project]!
+  posts: [Post]!
+}
