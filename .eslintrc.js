@@ -80,8 +80,12 @@ module.exports = {
     'eol-last': ['error'],
     '@typescript-eslint/no-non-null-assertion': 0,
     '@typescript-eslint/no-var-requires': 0,
+    '@typescript-eslint/no-shadow': 2,
     'lines-between-class-members': 0,
     'max-classes-per-file': 0,
     'no-bitwise': 0,
+    'no-underscore-dangle': 0,
+    'no-shadow': 0,
+ 
   },
 };

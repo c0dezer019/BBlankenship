@@ -24,7 +24,7 @@ input Resize {
   resize: Dimensions!
 }
 
-input Transformation {
+input AssetTransformationInput {
   image: Resize!
 }
 
@@ -33,7 +33,7 @@ input Name {
 }
 
 type Image {
-  url(transformation: Transformation): String!
+  url(transformation: AssetTransformationInput): String!
 }
 
 type ContactMethod {
